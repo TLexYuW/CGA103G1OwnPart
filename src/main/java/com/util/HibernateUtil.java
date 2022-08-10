@@ -15,11 +15,11 @@ public class HibernateUtil {
      
     static{
         try{
-            sessionFactory = new Configuration().addPackage("testany.model")
+            sessionFactory = new Configuration().addPackage("model")
     				.addAnnotatedClass(Student.class)
     				.addAnnotatedClass(Employee.class)
     				.addAnnotatedClass(Emp2.class)
-    				.configure()
+    				.configure("hibernate.cfg.xml")
     				.buildSessionFactory();
  
         }catch (Throwable ex) {
