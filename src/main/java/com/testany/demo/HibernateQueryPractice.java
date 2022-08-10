@@ -29,7 +29,7 @@ public class HibernateQueryPractice {
 	 
 	        @SuppressWarnings("unchecked")
 	        List<Emp2> employees = (List<Emp2>) session.createQuery(
-	                "from emp2").list();
+	                "from Emp2").list();
 	 
 	        session.getTransaction().commit();
 	        session.close();
