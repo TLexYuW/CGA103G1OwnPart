@@ -1,16 +1,18 @@
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-<!-- 框架暫時先不使用，配置檔內容除帳號、密碼、DB名稱外，請勿隨意更改 -->
 <hibernate-configuration>
 
     <session-factory>
 
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/DB名稱?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/db01?useSSL=false&amp;serverTimezone=UTC</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">密碼</property>
+        <property name="connection.password">TibameYu04</property>
+        
+        <!-- JNDI 還需配寫 Listener -->
+<!--       	<property name="hibernate.connection.datasource">java:comp/env/jdbc/TestDB2</property> -->
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1</property>
@@ -28,7 +30,7 @@
 		perform mapping for classes refereed by class attribute.  -->
 <!-- 		 <mapping class="model.Student"/> -->
 <!-- 		 <mapping class="model.Employee"/> -->
- 
+<!--  			<mapping class="model.Emp2"/> -->
     </session-factory>
 
 </hibernate-configuration>
