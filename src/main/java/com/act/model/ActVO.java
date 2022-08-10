@@ -1,6 +1,7 @@
 package com.act.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public class ActVO implements Serializable{
 	
@@ -14,10 +15,10 @@ public class ActVO implements Serializable{
 	private Integer act_current_count;
 	private Integer act_max_count;
 	private Integer act_min_count;
-	private Integer act_enroll_begin;
-	private Integer act_enroll_end;
-	private Integer act_start;
-	private Integer act_end;
+	private LocalDateTime act_enroll_begin;
+	private LocalDateTime act_enroll_end;
+	private LocalDateTime act_start;
+	private LocalDateTime act_end;
 	private String act_loc;
 	private String act_pl;
 	private Integer act_rate_sum;
@@ -28,8 +29,8 @@ public class ActVO implements Serializable{
 	}
 
 	public ActVO(Integer act_no, Integer men_no, Integer act_type_no, String act_title, String act_content,
-			Integer act_current_count, Integer act_max_count, Integer act_min_count, Integer act_enroll_begin,
-			Integer act_enroll_end, Integer act_start, Integer act_end, String act_loc, String act_pl,
+			Integer act_current_count, Integer act_max_count, Integer act_min_count, LocalDateTime act_enroll_begin,
+			LocalDateTime act_enroll_end, LocalDateTime act_start, LocalDateTime act_end, String act_loc, String act_pl,
 			Integer act_rate_sum, Integer eval_sum, Boolean act_status) {
 		this.act_no = act_no;
 		this.men_no = men_no;
@@ -115,35 +116,35 @@ public class ActVO implements Serializable{
 		this.act_min_count = act_min_count;
 	}
 
-	public Integer getAct_enroll_begin() {
+	public LocalDateTime getAct_enroll_begin() {
 		return act_enroll_begin;
 	}
 
-	public void setAct_enroll_begin(Integer act_enroll_begin) {
+	public void setAct_enroll_begin(LocalDateTime act_enroll_begin) {
 		this.act_enroll_begin = act_enroll_begin;
 	}
 
-	public Integer getAct_enroll_end() {
+	public LocalDateTime getAct_enroll_end() {
 		return act_enroll_end;
 	}
 
-	public void setAct_enroll_end(Integer act_enroll_end) {
+	public void setAct_enroll_end(LocalDateTime act_enroll_end) {
 		this.act_enroll_end = act_enroll_end;
 	}
 
-	public Integer getAct_start() {
+	public LocalDateTime getAct_start() {
 		return act_start;
 	}
 
-	public void setAct_start(Integer act_start) {
+	public void setAct_start(LocalDateTime act_start) {
 		this.act_start = act_start;
 	}
 
-	public Integer getAct_end() {
+	public LocalDateTime getAct_end() {
 		return act_end;
 	}
 
-	public void setAct_end(Integer act_end) {
+	public void setAct_end(LocalDateTime act_end) {
 		this.act_end = act_end;
 	}
 
