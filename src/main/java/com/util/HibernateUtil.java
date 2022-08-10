@@ -15,7 +15,7 @@ public class HibernateUtil {
      
     static{
         try{
-            sessionFactory = new Configuration().addPackage("model")
+            sessionFactory = new Configuration().addPackage("testany.model")
     				.addAnnotatedClass(Student.class)
     				.addAnnotatedClass(Employee.class)
     				.addAnnotatedClass(Emp2.class)

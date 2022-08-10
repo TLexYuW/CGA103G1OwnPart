@@ -24,6 +24,7 @@ public class HibernateQueryPractice {
 	
 	 public List<Emp2> getAllEmployees() {
 	        Session session = HibernateUtil.getSessionFactory().openSession();
+	        
 	        session.beginTransaction();
 	 
 	        @SuppressWarnings("unchecked")

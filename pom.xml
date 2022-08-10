@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.cga103g1test</groupId>
-  <artifactId>travelplatform</artifactId>
+  <artifactId>CGA103G1</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>travelplatform Maven Webapp</name>
+  <name>CGA103G1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
   <!-- Lombok -->
@@ -104,7 +104,7 @@
   </dependencies>
 
   <build>
-    <finalName>travelplatform</finalName>
+    <finalName>CGA103G1</finalName>
      <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
