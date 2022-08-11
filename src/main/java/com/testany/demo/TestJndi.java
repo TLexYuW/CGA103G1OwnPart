@@ -33,7 +33,7 @@ public class TestJndi extends HttpServlet {
 		
 		try {
 			Context ctx = new javax.naming.InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/TestDB2");
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/TestDB");
 			conn = ds.getConnection();
 			stmt = conn.createStatement();
 			
