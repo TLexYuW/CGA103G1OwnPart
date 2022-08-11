@@ -30,7 +30,7 @@
 		perform mapping for classes refereed by class attribute.  -->
 <!-- 		 <mapping class="model.Student"/> -->
 <!-- 		 <mapping class="model.Employee"/> -->
-<!--  			<mapping class="model.Emp2"/> -->
+		 <mapping class="Emp2"/>
     </session-factory>
 
 </hibernate-configuration>

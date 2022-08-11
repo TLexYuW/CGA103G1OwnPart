@@ -16,10 +16,10 @@ public class HibernateUtil {
     static{
         try{
             sessionFactory = new Configuration().addPackage("model")
-    				.addAnnotatedClass(Student.class)
-    				.addAnnotatedClass(Employee.class)
-    				.addAnnotatedClass(Emp2.class)
-    				.configure("hibernate.cfg.xml")
+//    				.addAnnotatedClass(Student.class)
+//    				.addAnnotatedClass(Employee.class)
+//    				.addAnnotatedClass(Emp2.class)
+    				.configure()
     				.buildSessionFactory();
  
         }catch (Throwable ex) {

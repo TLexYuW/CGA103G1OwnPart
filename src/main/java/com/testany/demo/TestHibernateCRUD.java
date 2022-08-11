@@ -5,7 +5,6 @@ import java.util.List;
 import org.hibernate.Session;
 
 import com.testany.model.*;
-import com.testany.model.Student;
 import com.util.*;
 
  
@@ -31,9 +30,9 @@ public class TestHibernateCRUD {
         /*
          * Retrieve all saved objects
          */
-        List<Student> students = application.getAllStudents();
+        List<Emp2> students = application.getAllStudents();
         System.out.println("List of all persisted students >>>");
-        for (Student student : students) {
+        for (Emp2 student : students) {
             System.out.println("Persisted Student :" + student);
         }
  
@@ -80,17 +79,17 @@ public class TestHibernateCRUD {
      * This method returns list of all persisted Student objects/tuples from
      * database
      */
-    public List<Student> getAllStudents() {
+    public List<Emp2> getAllStudents() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
  
         @SuppressWarnings("unchecked")
-        List<Student> employees = (List<Student>) session.createQuery(
-                "FROM Student s ORDER BY s.firstName ASC").list();
+        List<Emp2> students = (List<Emp2>) session.createQuery(
+                "FROM Emp2").list();
  
         session.getTransaction().commit();
         session.close();
-        return employees;
+        return students;
     }
  
     /**
