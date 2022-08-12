@@ -6,10 +6,10 @@ public interface I_ActParticipantDAO {
 
 	
 	// 新增 活動參與者
-	void insertActParti(ActParticipantVO actParticipantVO);
+	void insert(ActParticipantVO actParticipantVO);
 	
 	// 更新、修改 活動參與者 報名狀態 ? 審核 活動參與者 ?
-	void updateActParti(ActParticipantVO actParticipantVO);
+	void update(ActParticipantVO actParticipantVO);
 	
 	// 取得 所有 活動參與者
 	List<ActParticipantVO> getAll();

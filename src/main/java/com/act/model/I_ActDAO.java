@@ -3,7 +3,7 @@ package com.act.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface I_ActivityDAO {
+public interface I_ActDAO {
 	
 	// 建立揪團活動
 	void insert(ActVO actVO);
