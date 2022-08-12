@@ -11,8 +11,10 @@
         <property name="connection.username">root</property>
         <property name="connection.password">TibameYu04</property>
         
-        <!-- JNDI 還需配寫 Listener -->
-<!--       	<property name="hibernate.connection.datasource">java:comp/env/jdbc/TestDB2</property> -->
+        <!-- JNDI -->
+<!--       	<property name="hibernate.connection.datasource"> -->
+<!--       	java:comp/env/jdbc/TestDB -->
+<!--       	</property> -->
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1</property>

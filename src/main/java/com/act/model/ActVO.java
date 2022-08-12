@@ -19,19 +19,19 @@ public class ActVO implements Serializable{
 	private LocalDateTime act_enroll_end;
 	private LocalDateTime act_start;
 	private LocalDateTime act_end;
-	private String act_loc;
+	private Integer act_loc;
 	private String act_pl;
 	private Integer act_rate_sum;
 	private Integer eval_sum;
-	private Boolean act_status;
+	private Integer act_status;
 	
 	public ActVO() {
 	}
 
 	public ActVO(Integer act_no, Integer men_no, Integer act_type_no, String act_title, String act_content,
 			Integer act_current_count, Integer act_max_count, Integer act_min_count, LocalDateTime act_enroll_begin,
-			LocalDateTime act_enroll_end, LocalDateTime act_start, LocalDateTime act_end, String act_loc, String act_pl,
-			Integer act_rate_sum, Integer eval_sum, Boolean act_status) {
+			LocalDateTime act_enroll_end, LocalDateTime act_start, LocalDateTime act_end, Integer act_loc, String act_pl,
+			Integer act_rate_sum, Integer eval_sum, Integer act_status) {
 		this.act_no = act_no;
 		this.men_no = men_no;
 		this.act_type_no = act_type_no;
@@ -148,11 +148,11 @@ public class ActVO implements Serializable{
 		this.act_end = act_end;
 	}
 
-	public String getAct_loc() {
+	public Integer getAct_loc() {
 		return act_loc;
 	}
 
-	public void setAct_loc(String act_loc) {
+	public void setAct_loc(Integer act_loc) {
 		this.act_loc = act_loc;
 	}
 
@@ -180,11 +180,11 @@ public class ActVO implements Serializable{
 		this.eval_sum = eval_sum;
 	}
 
-	public Boolean getAct_status() {
+	public Integer getAct_status() {
 		return act_status;
 	}
 
-	public void setAct_status(Boolean act_status) {
+	public void setAct_status(Integer act_status) {
 		this.act_status = act_status;
 	}
 
