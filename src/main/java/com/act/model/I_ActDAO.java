@@ -3,7 +3,7 @@ package com.act.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface I_ActivityDAO {
+public interface I_ActDAO {
 	
 	// 建立揪團活動
 	void insert(ActVO actVO);
@@ -28,17 +28,17 @@ public interface I_ActivityDAO {
 	List<ActVO> findActByType(Integer actTypeNo);
 	
 	// 查詢 活動報名起始日期之後活動列表 ActEnrollBegin
-	List<ActVO> findAEB(LocalDateTime actEnrollBegin);
+	List<ActVO> findActByAEB(LocalDateTime actEnrollBegin);
 	
 	// 查詢 活動報名截止日期之後活動列表 ActEnrollEnd
-	List<ActVO> findAEE(LocalDateTime actEnrollEnd);
+	List<ActVO> findActByAEE(LocalDateTime actEnrollEnd);
 	
 	// 查詢、篩選 活動報名起訖日期區間的活動列表 ActEnrollBegin & ActEnrollEnd
-	List<ActVO> findAEBE(LocalDateTime actEnrollBegin, LocalDateTime actEnrollEnd);
+	List<ActVO> findActByAEBE(LocalDateTime actEnrollBegin, LocalDateTime actEnrollEnd);
 	
 	// 查詢、篩選 活動開始結束日期區間的活動列表 ActStart & ActEnd
-	List<ActVO> findASBE(LocalDateTime actStart, LocalDateTime actEnd);
-		
+	List<ActVO> findActByASBE(LocalDateTime actStart, LocalDateTime actEnd);
+	
 	// 取得 活動 符合 篩選之評價平均數(評價總星數 / 評價總人數) 的活動列表 
 	List<ActVO> getActEvalAvg(Integer actRateSum, Integer actEvalSum);
 	
@@ -48,6 +48,14 @@ public interface I_ActivityDAO {
 	// 取得	活動起訖時間區間之活動列表 ActStarEndTime
 	List<ActVO> getASET(LocalDateTime actStart, LocalDateTime actEnd);
 	
+	// 篩選 活動 人數最少限制
+	List<ActVO> findActByMinCount(Integer minCount);
+	
+	// 篩選 活動 人數最多限制
+	List<ActVO> findActByMaxCount(Integer maxCount);
+	
+	// 篩選 活動 人數最少至最多區間 
+	List<ActVO> findPeriodCount(Integer minCount, Integer maxCount);
 	
 	
 	
