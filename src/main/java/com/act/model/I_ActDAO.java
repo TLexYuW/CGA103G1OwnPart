@@ -1,5 +1,6 @@
 package com.act.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -16,7 +17,13 @@ public interface I_ActDAO {
 	 *  則 將 活動狀態 改為 已取消。
 	 *  反之，活動報名截止時間到，報名人數>=最少人數，狀態改為已成團。
 	 */
-	void updateActStatus(Integer actStatus);
+	void updateActStatus(ActVO actVO);
+	
+	void updateRateSum(ActVO actVO);
+	
+	void updateEvalSum(ActVO actVO);
+
+	void updateRateEval(ActVO actVO);
 	
 	// 取得 所有揪團活動
 	List<ActVO> getAll();
@@ -40,13 +47,13 @@ public interface I_ActDAO {
 	List<ActVO> findActByASBE(LocalDateTime actStart, LocalDateTime actEnd);
 	
 	// 取得 活動 符合 篩選之評價平均數(評價總星數 / 評價總人數) 的活動列表 
-	List<ActVO> getActEvalAvg(Integer actRateSum, Integer actEvalSum);
+	List<ActVO> getActEvalAvg(Integer starAvg);
 	
 	// 取得	活動 舉辦縣市列表
 	List<ActVO> getActLoc(Integer actLoc);
 	
-	// 取得	活動起訖時間區間之活動列表 ActStarEndTime
-	List<ActVO> getASET(LocalDateTime actStart, LocalDateTime actEnd);
+	// 篩選 活動 目前報名人數
+	List<ActVO> findActByCurrentCount(Integer currentCount);
 	
 	// 篩選 活動 人數最少限制
 	List<ActVO> findActByMinCount(Integer minCount);
