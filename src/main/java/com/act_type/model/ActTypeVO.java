@@ -36,7 +36,7 @@ public class ActTypeVO implements Serializable{
 
 	@Override
 	public String toString() {
-		return "ActTypeVO [act_type_no=" + act_type_no + ", act_type_name=" + act_type_name + "]";
+		return "ActTypeVO [活動種類=" + act_type_no + ", 活動名稱=" + act_type_name + "]";
 	}
 	
 	
