@@ -23,11 +23,35 @@ public class ActVO implements Serializable{
 	private String act_pl;
 	private Integer act_rate_sum;
 	private Integer eval_sum;
+	private Integer star_avg;
 	private Integer act_status;
 	
 	public ActVO() {
 	}
 
+	public ActVO(Integer act_no, Integer men_no, Integer act_type_no, String act_title, String act_content,
+			Integer act_current_count, Integer act_max_count, Integer act_min_count, LocalDateTime act_enroll_begin,
+			LocalDateTime act_enroll_end, LocalDateTime act_start, LocalDateTime act_end, Integer act_loc, String act_pl
+			,Integer star_avg , Integer act_status) {
+		this.act_no = act_no;
+		this.men_no = men_no;
+		this.act_type_no = act_type_no;
+		this.act_title = act_title;
+		this.act_content = act_content;
+		this.act_current_count = act_current_count;
+		this.act_max_count = act_max_count;
+		this.act_min_count = act_min_count;
+		this.act_enroll_begin = act_enroll_begin;
+		this.act_enroll_end = act_enroll_end;
+		this.act_start = act_start;
+		this.act_end = act_end;
+		this.act_loc = act_loc;
+		this.act_pl = act_pl;
+		this.star_avg = star_avg;
+		this.act_status = act_status;
+	}
+
+	
 	public ActVO(Integer act_no, Integer men_no, Integer act_type_no, String act_title, String act_content,
 			Integer act_current_count, Integer act_max_count, Integer act_min_count, LocalDateTime act_enroll_begin,
 			LocalDateTime act_enroll_end, LocalDateTime act_start, LocalDateTime act_end, Integer act_loc, String act_pl,
@@ -191,12 +215,12 @@ public class ActVO implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "ActVO [act_no=" + act_no + ", men_no=" + men_no + ", act_type_no=" + act_type_no + ", act_title="
-				+ act_title + ", act_content=" + act_content + ", act_current_count=" + act_current_count
-				+ ", act_max_count=" + act_max_count + ", act_min_count=" + act_min_count + ", act_enroll_begin="
-				+ act_enroll_begin + ", act_enroll_end=" + act_enroll_end + ", act_start=" + act_start + ", act_end="
-				+ act_end + ", act_loc=" + act_loc + ", act_pl=" + act_pl + ", act_rate_sum=" + act_rate_sum
-				+ ", eval_sum=" + eval_sum + ", act_status=" + act_status + "]";
+		return "ActVO [活動編號=" + act_no + ", 舉辦者(會員)編號=" + men_no + ", 活動種類=" + act_type_no + ", 活動標題="
+				+ act_title + ", 活動內容=" + act_content + ", 目前報名人數=" + act_current_count
+				+ ", 活動人數最大限制=" + act_max_count + ", 活動人數最小限制=" + act_min_count + ", 報名起始日="
+				+ act_enroll_begin + ", 報名截止日=" + act_enroll_end + ", 活動起始日=" + act_start + ", 活動結束日="
+				+ act_end + ", 揪團活動舉辦縣市=" + act_loc + ", 活動舉辦地址=" + act_pl + ", 評價總星數=" + act_rate_sum
+				+ ", 評價總人數=" + eval_sum + ", 活動狀態=" + act_status + "]";
 	}
 
 }
