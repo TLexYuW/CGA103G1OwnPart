@@ -10,12 +10,12 @@ public interface I_ActPicDAO {
 	void insert(ActPicVO actPicVO);
 
 	// 更新、修改 活動照片
-	ActPicVO update(Integer actPicNo);
+	void update(ActPicVO actPicVO);
 	
 	// 取得 活動 照片
-	ActVO findActPic(byte[] actPic);
+	List<ActPicVO> findActPic(Integer act_pic_no, Integer actNo);
 	
-	List<ActPicVO> getAll(byte[] actPic);
+	List<ActPicVO> getAll();
 	
 	
 }
