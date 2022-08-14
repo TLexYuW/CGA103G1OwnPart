@@ -46,7 +46,7 @@ public class ActPicVO implements Serializable{
 
 	@Override
 	public String toString() {
-		return "ActPicVO [act_pic_no=" + act_pic_no + ", act_no=" + act_no + "]";
+		return "ActPicVO [活動照片流水號=" + act_pic_no + ", 活動編號=" + act_no + "]";
 	}
 	
 	
