@@ -2,6 +2,7 @@ package com.act.model;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ActService {
 	
@@ -90,7 +91,10 @@ public class ActService {
 	
 	// 取得所有揪團活動的所有資訊
 	public List<ActVO> getAll() {
-		return dao.getAll().stream().filter(act -> act.getAct_status() == 0).toList();
+		return dao.getAll()
+				.stream()
+				.filter(act -> act.getAct_status() == 0)
+				.collect(Collectors.toList());
 	};
 	
 }
