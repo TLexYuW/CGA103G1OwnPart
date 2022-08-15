@@ -211,8 +211,15 @@ public class ActVO implements Serializable{
 	public void setAct_status(Integer act_status) {
 		this.act_status = act_status;
 	}
-
 	
+	public Integer getStar_avg() {
+		return star_avg;
+	}
+
+	public void setStar_avg(Integer star_avg) {
+		this.star_avg = star_avg;
+	}
+
 	@Override
 	public String toString() {
 		return "ActVO [活動編號=" + act_no + ", 舉辦者(會員)編號=" + men_no + ", 活動種類=" + act_type_no + ", 活動標題="
