@@ -10,6 +10,7 @@ public class ActService {
 		dao = new ActDAO();
 	}
 	
+	// 創建揪團活動
 	public ActVO CreateAct(Integer men_no, Integer act_type_no, String act_title
 			, String act_content, Integer act_current_count, Integer act_max_count
 			, Integer act_min_count, LocalDateTime act_enroll_begin,
