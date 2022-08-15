@@ -1,9 +1,7 @@
 package com.act_participant.model;
 
-import static com.util.JdbcUtil.*;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,9 +9,23 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.act.model.ActVO;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
-public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
+public class ActParticipantDAO implements I_ActParticipantDAO {
+	
+	private static DataSource ds = null;
+	static {
+		try {
+			Context ctx = new InitialContext();
+			ds = (DataSource) ctx.lookup("java:comp/env/jdbc/TestDB");
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	private static final String INSERT = "insert into act_participant (act_no, mem_no, enroll_time) "
 			+ "values(?, ?, ?)";
@@ -28,7 +40,7 @@ public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
 	
 	@Override
 	public void insert(ActParticipantVO actParticipantVO) {
-		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		try(Connection conn = ds.getConnection();
 				PreparedStatement ps = conn.prepareStatement(INSERT)) {
 			ps.setInt(1, actParticipantVO.getAct_no());
 			ps.setInt(2, actParticipantVO.getMem_no());
@@ -38,9 +50,10 @@ public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
 			e.printStackTrace();
 		}				
 	}
+	
 	@Override
 	public void update(ActParticipantVO actParticipantVO) {
-		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		try(Connection conn = ds.getConnection();
 				PreparedStatement ps = conn.prepareStatement(UPDATE)) {
 			ps.setInt(1, actParticipantVO.getEnroll_status());
 			ps.setInt(2, actParticipantVO.getAct_no());
@@ -50,10 +63,11 @@ public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
 			e.printStackTrace();
 		}				
 	}
+	
 	@Override
 	public List<ActParticipantVO> getAll() {
 		List<ActParticipantVO> actPartiList = new ArrayList<ActParticipantVO>();
-		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		try(Connection conn = ds.getConnection();
 				PreparedStatement ps = conn.prepareStatement(GET_ALL)) {
 			ResultSet rs1 = ps.executeQuery();
 			while (rs1.next()) {
@@ -74,7 +88,7 @@ public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
 	@Override
 	public List<ActParticipantVO> getOneOfAll(Integer actNo) {
 		List<ActParticipantVO> actPartiList = new ArrayList<ActParticipantVO>();
-		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		try(Connection conn = ds.getConnection();
 				PreparedStatement ps = conn.prepareStatement(GET_ONE_OF_ACT_PARTICIPANT)) {
 			ps.setInt(1, actNo);
 			ResultSet rs1 = ps.executeQuery();
@@ -96,7 +110,7 @@ public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
 	@Override
 	public List<ActParticipantVO> getAPES(Integer memNo) {
 		List<ActParticipantVO> actPartiList = new ArrayList<ActParticipantVO>();
-		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		try(Connection conn = ds.getConnection();
 				PreparedStatement ps = conn.prepareStatement(GET_APES)) {
 			ps.setInt(1, memNo);
 			ResultSet rs1 = ps.executeQuery();
@@ -114,36 +128,5 @@ public class ActParticipantJDBCDAO implements I_ActParticipantDAO {
 			e.printStackTrace();
 		}				
 		return actPartiList;
-	}
-	
-	public static void main(String[] args) {
-		ActParticipantJDBCDAO actParticipantJDBCDAO = new ActParticipantJDBCDAO();
-		
-		// insert
-		ActParticipantVO actParticipantVO = new ActParticipantVO();
-		actParticipantVO.setAct_no(2);
-		actParticipantVO.setMem_no(1);
-		actParticipantVO.setEnroll_time(LocalDateTime.of(2022,8,18,14,00));
-		actParticipantJDBCDAO.insert(actParticipantVO);
-		
-		// update
-//		actParticipantVO.setEnroll_status(1);
-//		actParticipantVO.setAct_no(3);
-//		actParticipantVO.setMem_no(2);
-//		actParticipantJDBCDAO.update(actParticipantVO);
-
-//		getAll()
-//		List<ActParticipantVO> actPartilist = actParticipantJDBCDAO.getAll();
-//		System.out.println(actPartilist);
-//		actPartilist.forEach(actParti -> System.out.println(actParti));
-		
-//		getAll(Integer, Integer)
-//		List<ActParticipantVO> actPartilist = actParticipantJDBCDAO.getOneOfAll(3);
-//		actPartilist.forEach(actParti -> System.out.println(actParti));	
-		
-//		getAPES()
-//		List<ActParticipantVO> actPartilist = actParticipantJDBCDAO.getAPES(2);
-//		actPartilist.forEach(actParti -> System.out.println(actParti));
-		
 	}
 }

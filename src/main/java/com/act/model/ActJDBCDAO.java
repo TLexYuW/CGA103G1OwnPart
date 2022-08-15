@@ -798,20 +798,20 @@ public class ActJDBCDAO implements I_ActDAO{
 			
 			// insert
 			ActVO actVO1 = new ActVO();
-	//		actVO1.setMen_no(1);
-	//		actVO1.setAct_type_no(2);
-	//		actVO1.setAct_title("羽球團");
-	//		actVO1.setAct_content("歡迎新手加入，一起運動趣!");
-	//		actVO1.setAct_current_count(1);
-	//		actVO1.setAct_min_count(4);
-	//		actVO1.setAct_max_count(100);
-	//		actVO1.setAct_enroll_begin(LocalDateTime.of(2022,10,10,14,00,00));
-	//		actVO1.setAct_enroll_end(LocalDateTime.of(2022,10,18,14,00,00));
-	//		actVO1.setAct_start(LocalDateTime.of(2022,10,20,14,00,00));
-	//		actVO1.setAct_end(LocalDateTime.of(2022,10,20,14,00,00));
-	//		actVO1.setAct_loc(0);
-	//		actVO1.setAct_pl("中山區 中山國小 羽球場");
-	//		actJBCDDAO.insert(actVO1);
+//			actVO1.setMen_no(1);
+//			actVO1.setAct_type_no(2);
+//			actVO1.setAct_title("羽球團");
+//			actVO1.setAct_content("歡迎新手加入，一起運動趣!");
+//			actVO1.setAct_current_count(1);
+//			actVO1.setAct_min_count(4);
+//			actVO1.setAct_max_count(100);
+//			actVO1.setAct_enroll_begin(LocalDateTime.of(2022,10,10,14,00,00));
+//			actVO1.setAct_enroll_end(LocalDateTime.of(2022,10,18,14,00,00));
+//			actVO1.setAct_start(LocalDateTime.of(2022,10,20,14,00,00));
+//			actVO1.setAct_end(LocalDateTime.of(2022,10,20,14,00,00));
+//			actVO1.setAct_loc(0);
+//			actVO1.setAct_pl("中山區 中山國小 羽球場");
+//			actJBCDDAO.insert(actVO1);
 			
 			// update
 	//		actVO1.setAct_type_no(2);
@@ -847,7 +847,7 @@ public class ActJDBCDAO implements I_ActDAO{
 //			acts.forEach(act -> System.out.println(act));
 //				
 			// getHostAct(Integer)
-//			List<ActVO> acts = actJBCDDAO.getHostAct(1);
+//			List<ActVO> acts = actJBCDDAO.getHostAct(3);
 //			acts.forEach(System.out::println);
 
 			// findActByType(Integer)
