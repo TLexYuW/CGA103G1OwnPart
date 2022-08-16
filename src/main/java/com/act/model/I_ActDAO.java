@@ -1,6 +1,5 @@
 package com.act.model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -64,10 +63,5 @@ public interface I_ActDAO {
 	// 篩選 活動 人數最少至最多區間 
 	List<ActVO> findPeriodCount(Integer minCount, Integer maxCount);
 	
-	
-	
-
-	
-
 	
 }
