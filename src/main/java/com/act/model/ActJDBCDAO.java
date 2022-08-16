@@ -880,8 +880,8 @@ public class ActJDBCDAO implements I_ActDAO{
 //				acts.forEach(System.out::println);
 			
 			// getActEvalAvg(Integer, Integer)
-//			List<ActVO> acts = actJBCDDAO.getActEvalAvg(5);
-//			acts.forEach(System.out::println);
+			List<ActVO> acts = actJBCDDAO.getActEvalAvg(3);
+			acts.forEach(System.out::println);
 							
 			// getActLoc(Integer)
 //			List<ActVO> acts = actJBCDDAO.getActLoc(0);
