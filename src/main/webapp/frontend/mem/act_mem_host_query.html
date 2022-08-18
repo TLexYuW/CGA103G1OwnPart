@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <!-- Bootstrap CSS -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Touch Icons -->
+    <link href="imgs/LOGO2.png" rel="shortcut icon" type="image/png" />
+    <link href="imgs/LOGO2.png" rel="apple-touch-icon" />
+    <link href="imgs/LOGO2.png" rel="apple-touch-icon" sizes="72x72" />
+    <link href="imgs/LOGO2.png" rel="apple-touch-icon" sizes="114x114" />
+    <link href="imgs/LOGO2.png" rel="apple-touch-icon" sizes="144x144" />
+    <title>
+        會員中心-查詢團主活動
+    </title>
+</head>
+
+<body>
+    <!-- header Start-->
+    <header class="header-static navbar-sticky navbar-light shadow">
+        <div class="navbar-top d-none d-lg-block">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown"
+                                href="#" id="dropdownLanguage" role="button">
+                                中文
+                            </a>
+                            <div aria-labelledby="dropdownLanguage" class="dropdown-menu mt-2 shadow">
+                                <span class="dropdown-item-text">
+                                    Select language
+                                </span>
+                                <div class="dropdown-divider">
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    English
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="nav list-unstyled ml-3">
+                            <li class="nav-item mr-3">
+                                <a class="navbar-link" href="#">
+                                    <strong>
+                                        Phone:
+                                    </strong>
+                                    (02) 666-666
+                                </a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="navbar-link" href="#">
+                                    <strong>
+                                        Email:
+                                    </strong>
+                                    Helper@Memory.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown"
+                                href="#" id="dropdownAccount" role="button">
+                                <i class="far fa-user mr-2">
+                                </i>
+                                帳戶
+                            </a>
+                            <div aria-labelledby="dropdownAccount" class="dropdown-menu mt-2 shadow">
+                                <a class="dropdown-item" href="sign-in.html">
+                                    登入
+                                </a>
+                                <a class="dropdown-item" href="sign-up.html">
+                                    註冊
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    會員中心
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="social-icons">
+                            <li class="social-icons-item social-facebook m-0">
+                                <a class="social-icons-link w-auto px-2" href="#">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="social-icons-item social-instagram m-0">
+                                <a class="social-icons-link w-auto px-2" href="#">
+                                    <i class="fab fa-twitter">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="social-icons-item social-twitter m-0">
+                                <a class="social-icons-link w-auto pl-2" href="#">
+                                    <i class="fab fa-instagram">
+                                    </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="front.html">
+                    <img alt="MEMORY" height="75px" src="imgs/LOGO2.png" width="75px" />
+                    MEMORY 美陌旅
+                </a>
+                <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler ml-auto" data-target="#navbarCollapse" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link " href="#" id="docMenu">
+                                線上訂房 Room
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link " href="#" id="docMenu">
+                                票券商成
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link" href="454545" id="docMenu">
+                                揪團活動
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        </li>
+                        <li class="nav-item dropdown">
+                        </li>
+                        <li class="nav-item dropdown megamenu">
+                        </li>
+                        <li class="nav-item dropdown megamenu">
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-nav">
+                    <div class="nav-item search border-0 pl-3 pr-0 px-lg-2" id="search">
+                    </div>
+                    <div class="nav-item border-0 d-none d-lg-inline-block align-self-center">
+                        <a class="btn btn-sm btn-grad text-white mb-0" href="#">
+                            即時客服
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header End-->
+
+    <!-- 圖片 -->
+    <div class="innerpage-banner left bg-overlay-dark-7 py-7"
+        style="background:url(images/07.jpg) repeat; background-size:cover;">
+        <div class="container">
+            <div class="row all-text-white">
+                <div class="col-md-12 align-self-center">
+                    <h1 class="innerpage-title">
+                        會員中心
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主內容 start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- h5 改 h3 -->
+                <h3 class="mt-5 mb-3">
+                    會員功能選單
+                </h3>
+                <div class="accordion" id="accordion1">
+                    <!-- item -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <a class="h6 mb-0" data-toggle="collapse" href="#collapse-1">
+                                基本資料維護
+                            </a>
+                        </div>
+                        <div class="collapse" data-parent="#accordion1" id="collapse-1">
+                            <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+                            <div class="accordion-content d-flex flex-column align-items-start">
+                                <button class="btn" type="button">
+                                    密碼修改
+                                </button>
+                                <button class="btn" type="button">
+                                    基本資料修改
+                                </button>
+                                <button class="btn" type="button">
+                                    系統訊息
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-2">
+                                訂單管理
+                            </a>
+                        </div>
+                        <div class="collapse" data-parent="#accordion1" id="collapse-2">
+                            <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+                            <div class="accordion-content d-flex flex-column align-items-start">
+                                <button class="btn" type="button">
+                                    尚未付款
+                                </button>
+                                <button class="btn" type="button">
+                                    取消訂單/退款
+                                </button>
+                                <button class="btn" type="button">
+                                    訂單列表
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-3">
+                                揪團活動管理
+                            </a>
+                        </div>
+                        <div class="collapse" data-parent="#accordion1" id="collapse-3">
+                            <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+                            <div class="accordion-content d-flex flex-column align-items-start">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMB"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        查詢揪團紀錄
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMB">
+                                        <a class="dropdown-item" id="queryHost" href="act_mem_host_query.html">團主查詢</a>
+                                        <a class="dropdown-item" href="act_mem_query.html">參團者查詢</a>
+                                    </div>
+                                    <button class="btn" type="button">
+                                        <a href="create_activity.html">
+                                            創建揪團活動
+                                        </a>
+                                    </button>
+                                    <button class="btn" type="button">
+                                        修改揪團活動條件
+                                    </button>
+                                    <button class="btn" type="button">
+                                        取消揪團活動
+                                    </button>
+                                    <button class="btn" type="button">
+                                        審核活動參團者
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-4">
+                                信用卡管理
+                            </a>
+                        </div>
+                        <div class="collapse" data-parent="#accordion1" id="collapse-4">
+                            <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+                            <div class="accordion-content d-flex flex-column align-items-start">
+                                <button class="btn" type="button">
+                                    新增信用卡
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-5">
+                                優惠券管理
+                            </a>
+                        </div>
+                        <div class="collapse" data-parent="#accordion1" id="collapse-5">
+                            <!-- 這邊有加 flex-column align-items-start 讓按鈕垂直排列靠左 因為註解調不需要的欄位也會跑版 -->
+                            <div class="accordion-content d-flex flex-column align-items-start">
+                                <button class="btn" type="button">
+                                    已到期
+                                </button>
+                                <button class="btn" type="button">
+                                    輸入優惠券號碼
+                                </button>
+                                <button class="btn" type="button">
+                                    未使用
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主要內容 Start -->
+            <!-- 
+        活動名稱、選擇活動類別、填寫活動說明、
+        設定參團人數最大最小限制、設定報名起訖時間、設定活動起訖時間、
+        填寫舉辦縣市與地點，並附上一張圖檔 
+      -->
+
+            <!-- 內容Start -->
+            <div class="col-lg-9">
+                <!-- h5 改 h3 -->
+                <h3 class="mt-5 mb-3">
+                    <button id="ajaxBtn1">查詢</button>
+                    <!-- <button id="ajaxBtn2">查詢</button> -->
+
+                </h3>
+                <div class="col-sm-12 mb-5">
+                    <h5 class="text-center mb-4">活動列表</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#活動編號</th>
+                                    <th scope="col">會員編號</th>
+                                    <th scope="col">活動種類</th>
+                                    <th scope="col">活動標題</th>
+                                    <th scope="col">活動內容</th>
+                                    <th scope="col">活動目前人數</th>
+                                    <th scope="col">活動最少人數</th>
+                                    <th scope="col">活動最多人數</th>
+                                    <th scope="col">活動報名開始日期</th>
+                                    <th scope="col">活動報名結束日期</th>
+                                    <th scope="col">活動開始日期</th>
+                                    <th scope="col">活動結束日期</th>
+                                    <th scope="col">活動縣市</th>
+                                    <th scope="col">活動地址</th>
+                                    <th scope="col">活動狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hostList">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主內容 end -->
+
+
+    <!--  footer  -->
+    <footer class="footer footer-dark pt-6 position-relative">
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-3 col-sm-6 order-sm-1">
+                        <div class="widget address">
+                            <a class="footer-logo mb-3 d-block" href="front.html">
+                                <h1>
+                                    <img src="imgs/LOGO2.png" />
+                                    Memory 美陌旅
+                                </h1>
+                            </a>
+                            <p>
+                                最好的旅行不在乎終點，是在一個陌生的地方，
+                                發現人、事、物，和那些美好的記憶與景色。
+                                那是一種久違的感動，能讓你成為一個有故事的人。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 order-sm-4">
+                        <div class="widget">
+                            <h6>
+                                關於我們
+                            </h6>
+                            <ul class="nav flex-column primary-hover">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        公司理念
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-4 order-sm-5">
+                        <div class="widget">
+                            <h6>
+                                幫助中心
+                            </h6>
+                            <ul class="nav flex-column primary-hover">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="front.html">
+                                        討論區
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        使用條款
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 order-sm-2">
+                        <div class="widget address">
+                            <ul class="list-unstyled">
+                                <li class="media mb-3">
+                                    <i class="fas fa-map-marked-alt mr-3 display-8">
+                                    </i>
+                                    320桃園市中壢區復興路46號9樓
+                                </li>
+                                <li class="media mb-3">
+                                    <i class="mr-3 display-8 fas fa-headphones-alt">
+                                    </i>
+                                    (03) 425 1108
+                                </li>
+                                <li class="media mb-3">
+                                    <i class="mr-3 display-8 far fa-envelope">
+                                    </i>
+                                    Helper@Memory.com
+                                </li>
+                                <li class="media mb-3">
+                                    <i class="mr-3 display-8 far fa-clock">
+                                    </i>
+                                    <p>
+                                        禮拜一 ~ 禮拜五:
+                                        <strong>
+                                            09:00 - 21:00
+                                        </strong>
+                                        <br />
+                                        禮拜六 & 禮拜日:
+                                        <strong>
+                                            非營業時段
+                                        </strong>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  footer end -->
+
+    <script type="text/javascript">
+        $(function () {
+               $("#ajaxBtn1").click(function(e){
+            	e.preventDefault();
+                    $.ajax({
+                        url:"/CGA103G1/HostQueryAjaxServlet",
+                        data:"action=hostQuery",
+                        type:"GET",
+                        success:function (data) {
+                            // let head = ``;
+                            // let headEnd = ``;
+                            let output = "";
+                            data.forEach(function(actVO){
+                                output += `
+                                        <tr>
+                                            <th scope="row">${actVO.act_no}</th>
+                                                <td>${actVO.men_no}</td>
+                                                <td>${actVO.act_type_no}</td>
+                                                <td>${actVO.act_title}</td>
+                                                <td>${actVO.act_content}</td>
+                                                <td>${actVO.act_current_count}</td>
+                                                <td>${actVO.act_max_count}</td>
+                                                <td>${actVO.act_min_count}</td>
+                                                <td>${actVO.act_enroll_begin}</td>
+                                                <td>${actVO.act_enroll_end}</td>
+                                                <td>${actVO.act_start}</td>
+                                                <td>${actVO.act_end}</td>
+                                                <td>${actVO.act_loc}</td>
+                                                <td>${actVO.act_pl}</td>
+                                                <td>${actVO.act_status}</td>
+                                        </tr>
+                                `;
+                                });					
+                            $("#hostList").html(output);
+                        },
+                        dataType : "json"
+                    });
+                });
+        });
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="js/popper.min.js" type="text/javascript">
+    </script>
+    <script src="js/bootstrap.min.js" type="text/javascript">
+    </script>
+    <script src="js/functions.js" type="text/javascript">
+    </script>
+    <script src="js/owl.carousel.min.js" type="text/javascript">
+    </script>
+    <script src="js/slick.js" type="text/javascript">
+    </script>
+    <script src="js/swiper.min.js" type="text/javascript">
+    </script>
+    <script src="js/main.js" type="text/javascript">
+    </script>
+    <script src="js/jquery.fancybox.min.js" type="text/javascript">
+    </script>
+    <script src="js/bootstrap-datepicker.min.js" type="text/javascript">
+    </script>
+    <script src="js/jquery-ui.min.js" type="text/javascript">
+    </script>
+    <script></script>
+</body>
+
+</html>
