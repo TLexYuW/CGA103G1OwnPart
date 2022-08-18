@@ -1,17 +1,13 @@
 package com.act_pic.model;
 
-import static com.util.JdbcUtil.*;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +15,6 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-
-import com.act.model.ActVO;
-import com.act_participant.model.ActParticipantVO;
 
 public class ActPicDAO implements I_ActPicDAO {
 	
@@ -46,12 +39,9 @@ public class ActPicDAO implements I_ActPicDAO {
 	@Override
 	public void insert(ActPicVO actPicVO) {
 		try(Connection conn = ds.getConnection();
-				PreparedStatement ps = conn.prepareStatement(INSERT);
-				FileInputStream fis = new FileInputStream("src/main/webapp/backend/act/桌遊.jpg");
-				BufferedInputStream bis = new BufferedInputStream(fis)) {
+				PreparedStatement ps = conn.prepareStatement(INSERT);) {
 				ps.setInt(1, actPicVO.getAct_no());
-				byte[] actPic = bis.readAllBytes();
-				ps.setBytes(2, actPic);
+				ps.setBytes(2, actPicVO.getAct_pic());
 				ps.executeUpdate();			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -61,11 +51,8 @@ public class ActPicDAO implements I_ActPicDAO {
 	@Override
 	public void update(ActPicVO actPicVO) {
 		try(Connection conn = ds.getConnection();
-				PreparedStatement ps = conn.prepareStatement(UPDATE);
-				FileInputStream fis = new FileInputStream("src/main/webapp/backend/act/Bar.jpg");
-				BufferedInputStream bis = new BufferedInputStream(fis)) {
-			byte[] actPic = bis.readAllBytes();
-			ps.setBytes(1, actPic);
+				PreparedStatement ps = conn.prepareStatement(UPDATE);) {
+			ps.setBytes(1, actPicVO.getAct_pic());
 			ps.setInt(2, actPicVO.getAct_pic_no());
 			ps.setInt(3, actPicVO.getAct_no());
 			ps.executeUpdate();			
@@ -78,9 +65,7 @@ public class ActPicDAO implements I_ActPicDAO {
 	public List<ActPicVO> findActPic(Integer actPicNo, Integer actNo) {
 		List<ActPicVO> list = new ArrayList<>();
 		try(Connection conn = ds.getConnection();
-				PreparedStatement ps = conn.prepareStatement(GET_ONE_OF_ACT_PIC);
-				FileOutputStream fos = new FileOutputStream("src/main/webapp/backend/act/LoadAndSaveImg.jpg");
-				BufferedOutputStream bos = new BufferedOutputStream(fos)) {
+				PreparedStatement ps = conn.prepareStatement(GET_ONE_OF_ACT_PIC);) {
 			ps.setInt(1, actPicNo);
 			ps.setInt(2, actNo);
 			ResultSet rs = ps.executeQuery();
@@ -88,7 +73,6 @@ public class ActPicDAO implements I_ActPicDAO {
 				Integer actPic_No = rs.getInt(1);
 				Integer act_No = rs.getInt(2);
 				byte[] actPicFile = rs.getBytes(3);
-				bos.write(actPicFile);
 				ActPicVO actPicVO = 
 						new ActPicVO(actPic_No,
 								act_No, actPicFile);
@@ -104,15 +88,12 @@ public class ActPicDAO implements I_ActPicDAO {
 	public List<ActPicVO> getAll() {
 		List<ActPicVO> list = new ArrayList<>();
 		try(Connection conn = ds.getConnection();
-				PreparedStatement ps = conn.prepareStatement(GET_ALL);
-				FileOutputStream fos = new FileOutputStream("src/main/webapp/backend/act/LoadAndSaveImg2.jpg");
-				BufferedOutputStream bos = new BufferedOutputStream(fos)) {
+				PreparedStatement ps = conn.prepareStatement(GET_ALL);) {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				Integer actPic_No = rs.getInt(1);
 				Integer act_No = rs.getInt(2);
 				byte[] actPicFile = rs.getBytes(3);
-				bos.write(actPicFile);
 				ActPicVO actPicVO = 
 						new ActPicVO(actPic_No,
 								act_No, actPicFile);
