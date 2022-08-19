@@ -1,0 +1,16 @@
+
+${actVO.act_no}
+${actVO.men_no}
+${actVO.act_type_no}
+${actVO.act_title}
+${actVO.act_content}
+${actVO.act_current_count}
+${actVO.act_max_count}
+${actVO.act_min_count}
+${actVO.act_enroll_begin}
+${actVO.act_enroll_end}
+${actVO.act_start}
+${actVO.act_end}
+${actVO.act_loc}
+${actVO.act_pl}
+${actVO.act_status}

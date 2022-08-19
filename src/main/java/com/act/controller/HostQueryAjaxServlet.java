@@ -19,29 +19,26 @@ import com.util.LocalDateTimeDeserializer;
 import com.util.LocalDateTimeSerializer;
 import com.act.model.*;
 
-@WebServlet("/HostQueryAjaxServlet")
-public class HostQueryAjaxServlet extends BaseServlet {
+@WebServlet("/hostQueryAjax")
+public class HostQueryAjaxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	// @Override
-	protected void hostQuery(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		System.out.println("jQueryAjax Request 過來了");
 		// 解決 post 中文亂碼問題
-        // req.setCharacterEncoding("UTF-8");
+         req.setCharacterEncoding("UTF-8");
         // 解決 response 中文亂碼問題
-        // res.setContentType("text/html; charset=UTF-8");
+         res.setContentType("text/html; charset=UTF-8");
         
         ActService actService = new ActService();
- 
-		List<ActVO> actList = actService.getAll();
-		
+		List<ActVO> actList = actService.getAll();		
         GsonBuilder gsonBuilder = new GsonBuilder();  
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());      
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
 		// Java物件 轉成 JSON 字串
 		Gson gson = gsonBuilder.setPrettyPrinting().create();
 		String personJsonString = gson.toJson(actList);
-
 		res.getWriter().write(personJsonString);
 	}
 

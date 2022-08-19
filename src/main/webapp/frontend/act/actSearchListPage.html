@@ -2,12 +2,19 @@
 <html lang="en">
 
 <head>
+
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- JS -->
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/actSearchListPage.js" type="text/javascript"></script>
+
   <!-- Bootstrap CSS -->
   <link href="css/style.css" type="text/css" rel="stylesheet" />
   <link href="css/bootstrap-datepicker.css" type="text/css" rel="stylesheet" />
+
   <!-- Favicon -->
   <!-- Favicon and Touch Icons -->
   <link href="imgs/LOGO2.png" rel="shortcut icon" type="image/png" />
@@ -16,20 +23,17 @@
   <link href="imgs/LOGO2.png" rel="apple-touch-icon" sizes="114x114" />
   <link href="imgs/LOGO2.png" rel="apple-touch-icon" sizes="144x144" />
   <title>揪團活動頁</title>
+
 </head>
 
 <body>
-
-  <!-- =======================
-	header Start-->
+  
+  <!-- 	header Start -->
   <header class="header-static navbar-sticky navbar-light shadow">
-    <!-- Navbar top start-->
     <div class="navbar-top d-none d-lg-block">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <!-- navbar top Left-->
           <div class="d-flex align-items-center">
-            <!-- Language -->
             <div class="dropdown">
               <a class="dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -41,7 +45,6 @@
                 <a class="dropdown-item" href="#"> English</a>
               </div>
             </div>
-            <!-- Top info -->
             <ul class="nav list-unstyled ml-3">
               <li class="nav-item mr-3">
                 <a class="navbar-link" href="#"><strong>Phone:</strong> (02) 666-666</a>
@@ -52,9 +55,7 @@
             </ul>
           </div>
 
-          <!-- navbar top Right-->
           <div class="d-flex align-items-center">
-            <!-- Top Account -->
             <div class="dropdown">
               <a class="dropdown-toggle" href="#" role="button" id="dropdownAccount" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false"><i class="far fa-user mr-2"></i>帳戶</a>
@@ -64,9 +65,7 @@
                 <a class="dropdown-item" href="#">會員中心</a>
               </div>
             </div>
-            <!-- top link -->
 
-            <!-- top social -->
             <ul class="social-icons">
               <li class="social-icons-item social-facebook m-0">
                 <a class="social-icons-link w-auto px-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -82,25 +81,19 @@
         </div>
       </div>
     </div>
-    <!-- Navbar top End-->
 
-    <!-- Logo Nav Start -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <!-- Logo -->
         <a class="navbar-brand" href="front.html">
           <img src="imgs/LOGO2.png" width="75px" height="75px" alt="MEMORY" />
           MEMORY 美陌旅
         </a>
-        <!-- Menu opener button -->
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"> </span>
         </button>
-        <!-- Main Menu Start -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
-            <!-- Menu item 1 Demos-->
 
             <li class="nav-item">
               <a class="nav-link " href="#" id="docMenu" aria-haspopup="true" aria-expanded="false">線上訂房 Room</a>
@@ -119,41 +112,29 @@
             <li class="nav-item dropdown">
             </li>
 
-            <!-- Menu item 5 Elements-->
             <li class="nav-item dropdown megamenu">
 
             </li>
-            <!-- Menu item 6 Docs-->
 
-            <!-- Menu item 5 Elements-->
             <li class="nav-item dropdown megamenu">
 
             </li>
-            <!-- Menu item 6 Docs-->
           </ul>
         </div>
-        <!-- Main Menu End -->
-        <!-- Header Extras Start-->
         <div class="navbar-nav">
-          <!-- extra item Search-->
           <div class="nav-item search border-0 pl-3 pr-0 px-lg-2" id="search">
 
           </div>
-          <!-- extra item Btn-->
           <div class="nav-item border-0 d-none d-lg-inline-block align-self-center">
             <a href="#" class="btn btn-sm btn-grad text-white mb-0">即時客服</a>
           </div>
         </div>
-        <!-- Header Extras End-->
       </div>
     </nav>
-    <!-- Logo Nav End -->
   </header>
-  <!-- =======================
-	header End-->
+  <!-- 	header End-->
 
-  <!-- =======================
-	Banner innerpage -->
+  <!-- 	Banner innerpage -->
   <div class="innerpage-banner left bg-overlay-dark-7 py-7"
     style="background:url(imgs/group.png) repeat; background-size:cover;">
     <div class="container">
@@ -165,72 +146,43 @@
       </div>
     </div>
   </div>
-  <!-- =======================
-	Banner innerpage -->
+  <!-- Banner innerpage -->
 
   <section class="pt80 pb80 cruise-grid-view">
     <div class="container">
+      <button id="testBtn">測試按鈕</button>
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
           <div class="Filter-left">
-            <form action="#" autocomplete="off">
-              <div class="mb-left">
-                <label for="form_dates" class="form-label">選擇日期</label>
-                <div class="form-group">
-                  <input class="form-control" type="text" id="datepicker" autocomplete="off"
-                    placeholder="Choose your dates">
-                </div>
-              </div>
-              <div class="mb-left">
-                <label for="form_guests" class="form-label">評價星數</label>
-                <select class="custom-select select-big ">
-                  <option selected="">平均星數</option>
-                  <option value="guests_0">1</option>
-                  <option value="guests_1">2</option>
-                  <option value="guests_2">3</option>
-                  <option value="guests_3">4</option>
-                  <option value="guests_4">5</option>
-                </select>
-              </div>
-              <div class="mb-left">
-                <label for="form_type" class="form-label">活動種類</label>
-                <select class="custom-select select-big ">
-                  <option value="type_0">戶外活動</option>
-                  <option value="type_1">戶內活動</option>
-                  <option value="type_2">...etc</option>
-                </select>
-              </div>
-              <div class="mb-left">
-                <label class="form-label">人數限制</label>
-                <div class="range-slider">
-                  <input type="range" value="1" min="0" max="999" range="true">
-                  <span class="range-value">100</span>
-                </div>
-              </div>
-              <div class="mb-left">
-                <label class="form-label">活動狀態</label>
-                <ul class="list-inline mb-0 mt-1">
-                  <li class="list-inline-item">
-                    <div class="custom-control custom-switch">
-                      <input id="instantBook" type="checkbox" class="custom-control-input">
-                      <label for="instantBook" class="custom-control-label"> 
-                        <span class="text-sm">揪團中</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-inline-item">
-                    <div class="custom-control custom-switch">
-                      <input id="superhost" type="checkbox" class="custom-control-input">
-                      <label for="superhost" class="custom-control-label"> <span
-                          class="text-sm">已成團</span></label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <form action="#" method="post" autocomplete="off">
               <div class="pb-left">
                 <div id="moreFilters" class="collapse show">
                   <div class="filter-block">
-                    <!-- <h6 class="mb-3">舉辦地點</h6> -->
+                    <h6 class="mb-3"></h6>
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <div class="custom-control custom-radio">
+                          <form action="doPost" method="post">
+                            <input type="radio" id="actAll" name="actList" class="custom-control-input" >
+                            <label for="actAll" class="custom-control-label">全部 </label>
+                          </form>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="act_1" name="actList" class="custom-control-input">
+                          <label for="act_1" class="custom-control-label">揪團進行中 </label>
+                        </div>
+                      </li> 
+                      <li>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="act_2" name="actList" class="custom-control-input">
+                          <label for="act_2" class="custom-control-label">已成團 </label>
+                        </div>
+                      </li>              
+                    </ul>
+                  </div>
+                  <div class="filter-block">
                     <div class="form-group">
                       <label for="form_neighbourhood" class="form-label">舉辦縣市</label>
                       <select class="custom-select select-big mb-3">
@@ -281,27 +233,71 @@
                         <option value="neighbourhood_19">嘉義市</option>
                       </select>
                     </div>
-                  <div class="filter-block">
-                    <h6 class="mb-3"></h6>
-                    <ul class="list-unstyled mb-0">
-                      <li>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" id="amenities_0" name="amenities[]" class="custom-control-input">
-                          <label for="amenities_0" class="custom-control-label">Kitchen </label>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" id="amenities_1" name="amenities[]" class="custom-control-input">
-                          <label for="amenities_1" class="custom-control-label">Shampoo </label>
-                        </div>
-                      </li>           
-                    </ul>
                   </div>
-                    <div class="form-group mb-0">
-                    
+                  <div class="mb-left">
+                    <label for="form_dates" class="form-label">選擇日期</label>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="datepicker" autocomplete="off"
+                        placeholder="Choose your dates">
                     </div>
                   </div>
+                  <div class="mb-left">
+                    <label for="form_guests" class="form-label">評價星數</label>
+                    <select class="custom-select select-big ">
+                      <option selected="">平均星數</option>
+                      <option value="guests_0">1</option>
+                      <option value="guests_1">2</option>
+                      <option value="guests_2">3</option>
+                      <option value="guests_3">4</option>
+                      <option value="guests_4">5</option>
+                    </select>
+                  </div>
+                  <div class="mb-left">
+                    <label for="form_type" class="form-label">活動種類</label>
+                    <select class="custom-select select-big ">
+                      <option value="type_0">競技</option>
+                      <option value="type_1">運動</option>
+                      <option value="type_2">美食</option>
+                      <option value="type_2">露營</option>
+                      <option value="type_2">電影</option>
+                      <option value="type_2">社會服務</option>
+                      <option value="type_2">音樂會</option>
+                      <option value="type_2">展覽</option>
+                    </select>
+                  </div>
+                  <div class="mb-left">
+                    <label class="form-label">人數限制</label>
+                    <div class="range-slider">
+                      <input type="range" value="1" min="0" max="999" range="true">
+                      <span class="range-value">100</span>
+                    </div>
+                  </div>
+                  <div class="mb-left">
+                    <!-- <label class="form-label">活動狀態</label>
+                    <ul class="list-inline mb-0 mt-1">
+                      <li class="list-inline-item">
+                        <div class="custom-control custom-switch">
+                          <input id="instantBook" type="checkbox" class="custom-control-input">
+                          <label for="instantBook" class="custom-control-label"> 
+                            <span class="text-sm">揪團中</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-inline-item">
+                        <div class="custom-control custom-switch">
+                          <input id="superhost" type="checkbox" class="custom-control-input">
+                          <label for="superhost" class="custom-control-label"> <span
+                              class="text-sm">已成團</span></label>
+                        </div>
+                      </li>
+                    </ul> -->
+                  </div>
+                  
+                  <div class="mb-left">
+                    <button type="submit" class="btn btn-primary btn-grad FilterBtn"> <i
+                        class="fas fa-filter mr-1"></i> 篩選 </button>
+                  </div>
+
                   <div class="filter-block">
                     <h6 class="mb-3"></h6>
                     <div class="form-group ">
@@ -362,10 +358,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="mb-left">
-                  <button type="submit" class="btn btn-primary btn-grad FilterBtn"> <i
-                      class="fas fa-filter mr-1"></i>Filter </button>
-                </div>
+
               </div>
             </form>
           </div>
@@ -374,45 +367,47 @@
         <!-- 商品列表 -->
         <div class="col-lg-8 col-md-8 col-sm-12">
           <div class="resultBar barSpaceAdjust">
-            <h2>We found <span>7</span> Results for you</h2>
-         
+            <h2>目前活動有<span id="actCount"> </span> 個</h2>
           </div>
+
           <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="actListDiv">
+              
+              <!-- <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="row listroBox">
                     <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 Nopadding">
-                      <figure> <a href="activity-detailed-view.html" class="wishlist_bt"></a> <a href="activity-detailed-view.html"><img
-                            src="images/hotels/room6.jpg" class="img-fluid" alt="">
+                      <figure> 
+                        <a href="activity-detailed-view.html" class="wishlist_bt"></a>
+                         <a href="activity-detailed-view.html">
+                          <img src="images/hotels/room6.jpg" class="img-fluid" alt="">
                           <div class="read_more"><span>Read more</span></div>
-                        </a> </figure>
+                        </a> 
+                      </figure>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 Nopadding">
                       <div class="listroBoxmain">
                         <h3><a href="activity-detailed-view.html" alt="揪團活動詳情頁面">資料庫Table 揪團活動 一筆</a></h3>
                         <p>Table 活動說明</p>
-                        <a class="address" href="">Get directions</a>
                       </div>
                       <ul>
-                        <li><span class="Ropen">Now Open</span></li>
+                        <li><span class="Ropen">揪團中</span></li>
                         <li>
-                          <div class="R_retings"><span>舉辦者 姓名<em>122 Reviews</em></span><strong>5</strong></div>
+                          <div class="R_retings"><span>舉辦者 姓名<em>100評價總人數</em></span><strong>評價平均星數</strong></div>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
+             
             </div>
-
-
-
+            
           </div>
 
 
 
-          <div class="paginationCommon blogPagination categoryPagination">
+          <!-- <div class="paginationCommon blogPagination categoryPagination">
             <nav aria-label="Page navigation">
               <ul class="pagination">
                 <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left"
@@ -426,12 +421,7 @@
                         aria-hidden="true"></i></span> </a> </li>
               </ul>
             </nav>
-          </div>
-
-
-
-
-
+          </div> -->
 
         </div>
       </div>
@@ -439,19 +429,15 @@
   </section>
 
 
-  <!-- =======================
-	footer  -->
+  <!-- 	footer  -->
   <footer class="footer footer-dark pt-6 position-relative">
     <div class="footer-content">
       <div class="container">
         <div class="row">
-          <!-- Footer widget 1 -->
           <div class="col-lg-4 col-md-3 col-sm-6 order-sm-1">
             <div class="widget address">
               <a href="front.html" class="footer-logo mb-3 d-block">
-                <!-- SVG Logo Start -->
                 <h1><img src="imgs/LOGO2.png" /> Memory 美陌旅</h1>
-                <!-- SVG Logo End -->
               </a>
               <p>
                 最好的旅行不在乎終點，是在一個陌生的地方，
@@ -461,7 +447,6 @@
             </div>
           </div>
 
-          <!-- Footer widget 3 -->
           <div class="col-lg-2 col-md-2 col-sm-4 order-sm-4">
             <div class="widget">
               <h6>關於我們</h6>
@@ -473,7 +458,6 @@
               </ul>
             </div>
           </div>
-          <!-- Footer widget 4 -->
           <div class="col-lg-3 col-md-2 col-sm-4 order-sm-5">
             <div class="widget">
               <h6>幫助中心</h6>
@@ -521,12 +505,145 @@
         </div>
       </div>
     </div>
-    <!-- =======================
-	footer  -->
+    <!-- footer  -->
+
+
+    <!-- <script type="text/javascript" src="js/actSearchListPage.js">
+      // $(function () {
+      //       $("#actAll").change(function(){
+      //           // alert("觸發了");
+      //           let count = 0;
+      //           $("#actCount").html(0);    	
+      //           $.ajax({
+      //                   url:"/CGA103G1/getAllAct",
+      //                   data:"action=doPost",
+      //                   type:"POST",
+      //                   success:function (data) {
+      //                         let output = "";
+      //                         console.log(data);
+      //                         count = Object.keys(data).length;
+      //                         console.log(count);         
+      //                         data.forEach(function(actVO){
+
+      //                           if(actVO.act_status === 0){
+      //                             actVO.act_status = "揪團中";                
+      //                           }else if(actVO.act_status === 1){
+      //                             actVO.act_status = "已成團";
+      //                           };
+
+      //                         output += `
+      //                           <div class="row">
+      //                             <div class="col-md-12 col-sm-12 col-xs-12">
+      //                               <div class="row listroBox">
+      //                                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 Nopadding">
+      //                                   <figure> 
+      //                                     <a href="activity-detailed-view.html" class="wishlist_bt"></a>
+      //                                     <a href="activity-detailed-view.html">
+      //                                       <img src="images/hotels/room6.jpg" class="img-fluid" alt="">
+      //                                       <div class="read_more"><span>Read more</span></div>
+      //                                       </a> 
+      //                                       </figure>
+      //                                       </div>
+      //                                       <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 Nopadding">
+      //                                         <div class="listroBoxmain">
+      //                                     <h3><a href="activity-detailed-view.html" alt="揪團活動詳情頁面">${actVO.act_title}</a></h3>
+      //                                     <p>${actVO.act_content}</p>
+      //                                   </div>
+      //                                   <ul>
+      //                                     <li><span class="Ropen">${actVO.act_status}</span></li>
+      //                                     <li>
+      //                                       <div class="R_retings"><span>${actVO.act_loc}<em>${actVO.eval_sum} 評價總人數</em></span><strong>${actVO.act_rate_sum} 評價平均星數</strong></div>
+      //                                     </li>
+      //                                   </ul>
+      //                                 </div>
+      //                               </div>
+      //                               </div>
+      //                               </div>
+      //                               `;                 
+      //                           });
+      //                       console.log(count);         
+      //                       $("#actCount").html(data.length);    					
+      //                       $("#actListDiv").html(output);            
+      //                   },
+      //                   dataType : "json"
+      //                 });
+      //             });
+      //         });
+
+        // if($("#actAll").is(":checked")){
+        // // $("#testBtn").click(function(e){
+        //           // e.preventDefault();
+        //           let count = 0;
+        //           $("#actCount").html(0);    					
+        //           $.ajax({
+        //               url:"/CGA103G1/getAllAct",
+        //               data:"action=doPost",
+        //               type:"POST",
+        //               success:function (data) {
+        //                     let output = "";
+        //                     count = Object.keys(data).length;
+        //                     console.log(count);         
+        //                     data.forEach(function(actVO){
+        //                       if(actVO.act_status === 0){
+        //                         actVO.act_status = "揪團中";                
+        //                       }else if(actVO.act_status === 1){
+        //                         actVO.act_status = "已成團";
+        //                       }else {
+        //                         actVO.act_status = "已取消";
+        //                       }
+        //                       output += `
+        //                       <div class="row">
+        //                         <div class="col-md-12 col-sm-12 col-xs-12">
+        //                           <div class="row listroBox">
+        //                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 Nopadding">
+        //                               <figure> 
+        //                                 <a href="activity-detailed-view.html" class="wishlist_bt"></a>
+        //                                 <a href="activity-detailed-view.html">
+        //                                   <img src="images/hotels/room6.jpg" class="img-fluid" alt="">
+        //                                   <div class="read_more"><span>Read more</span></div>
+        //                                   </a> 
+        //                                   </figure>
+        //                                   </div>
+        //                                   <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 Nopadding">
+        //                                     <div class="listroBoxmain">
+        //                                 <h3><a href="activity-detailed-view.html" alt="揪團活動詳情頁面">${actVO.act_title}</a></h3>
+        //                                 <p>${actVO.act_content}</p>
+        //                               </div>
+        //                               <ul>
+        //                                 <li><span class="Ropen">${actVO.act_status}</span></li>
+        //                                 <li>
+        //                                   <div class="R_retings"><span>${actVO.act_loc}<em>${actVO.eval_sum} 評價總人數</em></span><strong>${actVO.act_rate_sum} 評價平均星數</strong></div>
+        //                                 </li>
+        //                               </ul>
+        //                             </div>
+        //                           </div>
+        //                           </div>
+        //                           </div>
+        //                           `;                 
+        //                       });
+        //                   // console.log(count);         
+        //                   $("#actCount").html(data.length);    					
+        //                   $("#actListDiv").html(output);            
+        //               },
+        //               dataType : "json"
+        //           });
+        //         }
+
+    // });
+
+
+
+         
+    </script> -->
+
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/popper.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/functions.js" type="text/javascript"></script>

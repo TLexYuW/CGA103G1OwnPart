@@ -91,9 +91,10 @@ public class ActService {
 	
 	// 取得所有揪團活動的所有資訊
 	public List<ActVO> getAll() {
+//		return dao.getAll();
 		return dao.getAll()
 				.stream()
-				.filter(act -> act.getAct_status() == 0)
+				.filter(act -> act.getAct_status() == 0 || act.getAct_status() == 1)
 				.collect(Collectors.toList());
 	};
 	

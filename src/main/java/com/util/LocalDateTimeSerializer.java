@@ -11,7 +11,7 @@ import com.google.gson.JsonSerializer;
 
 public class LocalDateTimeSerializer implements JsonSerializer <LocalDateTime> {
 
-	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d::MMM::uuuu HH::mm::ss");
+	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(" uuuu 年 MM 月 d 日 HH 時 mm 分 ss 秒");
 
 	@Override
 	public JsonElement serialize(LocalDateTime localDateTime, Type typeOfSrc, JsonSerializationContext context) {

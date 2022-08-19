@@ -460,9 +460,9 @@
                $("#ajaxBtn1").click(function(e){
             	e.preventDefault();
                     $.ajax({
-                        url:"/CGA103G1/HostQueryAjaxServlet",
-                        data:"action=hostQuery",
-                        type:"GET",
+                        url:"/CGA103G1/hostQueryAjax",
+                        data:"action=doPost",
+                        type:"POST",
                         success:function (data) {
                             // let head = ``;
                             // let headEnd = ``;
