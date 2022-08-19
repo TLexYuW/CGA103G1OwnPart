@@ -46,9 +46,7 @@
                   ><i class="fas fa-car-side"></i><span>揪團</span></label
                 >
                 <input id="tab4" type="radio" name="tabs" />
-                <!-- <label for="tab4"><i class="fas fa-ship"></i><span>Cruises</span></label>
-              <input id="tab5" type="radio" name="tabs">
-              <label for="tab5"><i class="fas fa-route"></i><span>Tours</span></label> -->
+
                 <section id="content1" class="tab-content">
                   <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 padding8">
