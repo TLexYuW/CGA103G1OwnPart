@@ -1,35 +1,37 @@
 package com.util;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
-import com.testany.model.Employee;
-import com.testany.model.Student;
-import com.testany.model.Emp2;
- 
-/*
- * 測試框架，請暫時勿使用
- */
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+
 public class HibernateUtil {
-     
-    private static final SessionFactory sessionFactory;
-     
-    static{
-        try{
-            sessionFactory = new Configuration().addPackage("model")
-//    				.addAnnotatedClass(Student.class)
-//    				.addAnnotatedClass(Employee.class)
-//    				.addAnnotatedClass(Emp2.class)
-    				.configure()
-    				.buildSessionFactory();
- 
-        }catch (Throwable ex) {
-            System.err.println("Session Factory could not be created." + ex);
-            throw new ExceptionInInitializerError(ex);
-        }   
-    }
-     
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-     
+	private static StandardServiceRegistry registry;
+	private static SessionFactory sessionFactory;
+
+	private static void buildSessionFactory() {
+		try {
+			registry = new StandardServiceRegistryBuilder().configure().build();
+			MetadataSources metadataSource = new MetadataSources(registry);
+			Metadata metadata = metadataSource.getMetadataBuilder().build();
+			sessionFactory = metadata.getSessionFactoryBuilder().build();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static SessionFactory getSessionFactory() {
+		if (sessionFactory == null) {
+			buildSessionFactory();
+		}
+		return sessionFactory;
+	}
+
+	public static void shutdown() {
+		if (registry != null) {
+			StandardServiceRegistryBuilder.destroy(registry);
+		}
+	}
+
 }
