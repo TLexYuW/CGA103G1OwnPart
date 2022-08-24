@@ -3,15 +3,32 @@ package com.ac_reply.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ac_reply")
 public class AcReplyVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ac_reply_no", insertable = false)
 	private Integer ac_reply_no;
+	@Column(name = "ac_no")
 	private Integer ac_no;
+	@Column(name = "mem_no")
 	private Integer mem_no;
+	@Column(name = "reply_content")
 	private String reply_content;
+	@Column(name = "reply_time")
 	private LocalDateTime reply_time;
+	@Column(name = "ac_reply_update")
 	private Integer ac_reply_update;
 	
 	public AcReplyVo() {

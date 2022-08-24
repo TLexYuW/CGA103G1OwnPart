@@ -3,22 +3,40 @@ package com.ac.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class AcVo implements Serializable {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ac")
+public class AcVO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ac_no", updatable = false, insertable = false)
 	private Integer ac_no;
+	@Column(name = "mem_no", updatable = false)
 	private Integer mem_no;
+	@Column(name = "ac_type_no")
 	private Integer ac_type_no;
+	@Column(name = "ac_title")
 	private String ac_title;
+	@Column(name = "ac_content")
 	private String ac_content;
+	@Column(name = "ac_time")
 	private LocalDateTime ac_time;
+	@Column(name = "ac_update", updatable = false)
 	private Integer ac_update;
 	
-	public AcVo() {
+	public AcVO() {
 	}
 
-	public AcVo(Integer ac_no, Integer mem_no, Integer ac_type_no, String ac_title, String ac_content,
+	public AcVO(Integer ac_no, Integer mem_no, Integer ac_type_no, String ac_title, String ac_content,
 			LocalDateTime ac_time, Integer ac_update) {
 		this.ac_no = ac_no;
 		this.mem_no = mem_no;
