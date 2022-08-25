@@ -13,7 +13,7 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>新增文章</title>
+<title>修改文章</title>
 
 
 	<%-- CSS --%>
@@ -22,18 +22,6 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 <body>
 	<%-- header --%>
 	<%@ include file="/frontend/header.file" %>
-	
-	<%-- 錯誤表列 --%>
-<%-- <c:if test="${not empty errorMsgs}"> --%>
-<!-- 	<font style="color:red">請修正以下錯誤:</font> -->
-<!-- 	<ul> -->
-<%-- 		<c:forEach var="message" items="${errorMsgs}"> --%>
-<%-- 			<li style="color:red">${message}</li> --%>
-<%-- 		</c:forEach> --%>
-<!-- 	</ul> -->
-<%-- </c:if> --%>
-
-<a class="btn btn-grad btn-xs" href="acUpdate.jsp"><i class="fas fa-arrow-right"></i>修改文章</a>
 
 
 <form method="POST" action="${pageContext.request.contextPath}/updateAc" enctype="multipart/form-data">
@@ -44,7 +32,7 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 	<div class="row">
 		<div class="col-md-8">
 			<div class="form-group">
-				<input class="form-control" placeholder="標題" name="title" value="<%= (ac==null)? "" : ac.getAc_title()%>"/>
+				<input class="form-control" placeholder="標題" name="title" value="${param.title}"/>
 			</div>
 		</div>
 		<div class="col-md-4">
@@ -55,7 +43,7 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 	</div>
 	
 	
-	<h3>文章種類</h3>
+	<h3>文章種類</h3> 	${param.type}
 	<h6 style="color:red">${errorMsgs.customRadio}</h6>
 	<div class="custom-control custom-radio" >
 		<input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="1" >
@@ -93,6 +81,20 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 		<input type="radio" id="customRadio9" name="customRadio" class="custom-control-input" value="9">
 		<label class="custom-control-label" for="customRadio9">飲食</label>
 	</div>
+	
+	<script>
+	let typeNumArr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	let customRadio = document.getElementsByName("customRadio");
+	for (let i = 0; i < typeNumArr.length; i++) {
+	    if(${param.type} === typeNumArr[i]){
+	        customRadio[i].checked = true;
+// 	        ${param.type} = i;
+	        break;
+	    }
+	}
+	</script>
+	
+	
 
 	<div class="row">
 		<div class="col-md-12">
@@ -100,7 +102,7 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 				<h6 style="color:red">${errorMsgs.content}</h6>
 				<h3>文章內容</h3>
 				<div class="form-group">
-					<textarea class="form-control" rows="8" placeholder="Example textarea" name="content" ></textarea>			
+					<textarea class="form-control" rows="8" placeholder="Example textarea" name="content" >${param.content}</textarea>			
 				</div>	
 			</div>
 		</div>
@@ -109,7 +111,7 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 	
 	<div class="bg-light py-6 mb-6">	
 		<h3>發表時間</h3>
-		<input type="text" id="currentDateTime" name="createTime"><br>
+		<input type="text" id="currentDateTime" name="updateTime"><br>
 	</div>
 	
 	<script>
@@ -131,7 +133,9 @@ AcVO ac = (AcVO)request.getAttribute("ac");
 	</div>
     
    	<div class="bg-light py-6 mb-6">
-		<input class="btn btn-danger" type="submit" name="action" value="發表">
+<%--    		<a href="<%=request.getContextPath()%>/updateAc?action=finalAlter&acNo=${acVO.ac_no}">   	 --%>
+		<input class="btn btn-danger" type="submit" name="action" value="確定修改">
+<!-- 	              		 </a> -->
 	</div>
 </div>
 </section>

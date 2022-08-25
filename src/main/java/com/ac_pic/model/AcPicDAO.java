@@ -16,7 +16,7 @@ import com.act.model.ActVO;
 
 public class AcPicDAO implements I_AcPicDAO {
 	private static final String INSERT = "INSERT INTO ac_pic(ac_no, ac_pic_img)VALUES(?,?)";
-	private static final String UPDATE = "UPDATE ac_pic SET ac_no=?, ac_pic_img=? WHERE ac_pic_no=?";
+	private static final String UPDATE = "UPDATE ac_pic SET ac_pic_img=? WHERE ac_no=?";
 	private static final String DELETE = "DELETE FROM ac_pic WHERE ac_pic_no=?";
 	private static final String GET_ONE = "SELECT * FROM ac_pic WHERE ac_pic_no=?";
 	private static final String GET_ALL = "SELECT * FROM ac_pic";
@@ -60,9 +60,8 @@ public class AcPicDAO implements I_AcPicDAO {
 			con = ds.getConnection();
 			ps = con.prepareStatement(UPDATE);
 
-			ps.setInt(1, acPicVO.getAc_no());
-			ps.setBytes(2, acPicVO.getAc_pic_img());
-			ps.setInt(3, acPicVO.getAc_pic_no());
+			ps.setBytes(1, acPicVO.getAc_pic_img());
+			ps.setInt(2, acPicVO.getAc_no());
 			ps.executeUpdate();
 
 		} catch (SQLException e) {
@@ -151,6 +150,8 @@ public class AcPicDAO implements I_AcPicDAO {
 		}
 		return acAll;
 	}
+	
+	
 	
 	@Override
 	public List<AcPicVO> getOneByAcNo(Integer acNo){

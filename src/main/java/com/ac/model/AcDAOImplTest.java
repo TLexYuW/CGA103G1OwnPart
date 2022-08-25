@@ -94,7 +94,7 @@ public class AcDAOImplTest implements CoreDao<AcVO, Integer> {
 //		acDAOImplTest.getAll().forEach(System.out::println);
 		
 		// Get One
-//		System.out.println(acDAOImplTest.getOneById(1));
+		System.out.println(acDAOImplTest.getOneById(6));
 		
 		// Insert
 //		acVo.setMem_no(3);

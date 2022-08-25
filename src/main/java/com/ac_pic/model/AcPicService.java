@@ -14,6 +14,11 @@ public class AcPicService {
 		dao.insert(acPicVO);
 	}
 	
+	public void updateImage(AcPicVO acPicVO) {
+		dao.update(acPicVO);
+	}
+	
+	
 	public AcPicVO getOne(Integer ac_pic_no) {
 		return dao.getOne(ac_pic_no);
 	}
