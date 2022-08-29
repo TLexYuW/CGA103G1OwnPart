@@ -13,25 +13,20 @@ public class ActService {
 	}
 	
 	// 創建揪團活動
-	public ActVO createAct(Integer men_no, Integer act_type_no, String act_title
-			, String act_content, Integer act_current_count, Integer act_max_count
-			, Integer act_min_count, LocalDateTime act_enroll_begin,
-			LocalDateTime act_enroll_end, LocalDateTime act_start, LocalDateTime act_end
-			, Integer act_loc, String act_pl) {
-		ActVO actVO = new ActVO();
-		actVO.setMen_no(men_no);
-		actVO.setAct_type_no(act_type_no);
-		actVO.setAct_title(act_title);
-		actVO.setAct_content(act_content);
-		actVO.setAct_current_count(act_current_count);
-		actVO.setAct_min_count(act_max_count);
-		actVO.setAct_max_count(act_min_count);
-		actVO.setAct_enroll_begin(act_enroll_begin);
-		actVO.setAct_enroll_end(act_enroll_end);
-		actVO.setAct_start(act_start);			
-		actVO.setAct_end(act_end);
-		actVO.setAct_loc(act_loc);			
-		actVO.setAct_pl(act_pl);
+	public ActVO createAct(ActVO actVO) {
+		actVO.setMen_no(actVO.getMen_no());
+		actVO.setAct_type_no(actVO.getAct_type_no());
+		actVO.setAct_title(actVO.getAct_title());
+		actVO.setAct_content(actVO.getAct_content());
+		actVO.setAct_current_count(actVO.getAct_current_count());
+		actVO.setAct_min_count(actVO.getAct_min_count());
+		actVO.setAct_max_count(actVO.getAct_min_count());
+		actVO.setAct_enroll_begin(actVO.getAct_enroll_begin());
+		actVO.setAct_enroll_end(actVO.getAct_enroll_end());
+		actVO.setAct_start(actVO.getAct_start());			
+		actVO.setAct_end(actVO.getAct_end());
+		actVO.setAct_loc(actVO.getAct_loc());			
+		actVO.setAct_pl(actVO.getAct_pl());
 		
 		dao.insert(actVO);
 		

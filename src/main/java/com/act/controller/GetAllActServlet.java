@@ -26,9 +26,9 @@ public class GetAllActServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		System.out.println("jQueryAjax Request 過來了");
         req.setCharacterEncoding("UTF-8");
         res.setContentType("text/html; charset=UTF-8");
+        System.out.println("jQuery Ajax Request -> GetAllActServlet");
        
         ActService actService = new ActService();
 		List<ActVO> actList = actService.getAll();		

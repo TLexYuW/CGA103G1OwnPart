@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <link href="css/bootstrap-datepicker.css" type="text/css" rel="stylesheet" />
+  <link href="fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
+  <!-- Favicon -->
+  <!-- Favicon and Touch Icons -->
+  <link href="/CGA103G1/frontend/assets/imgs/logo.png" rel="shortcut icon" type="image/png" />
+  <link href="/CGA103G1/frontend/assets/imgs/logo.png" rel="apple-touch-icon" />
+  <link href="/CGA103G1/frontend/assets/imgs/logo.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="/CGA103G1/frontend/assets/imgs/logo.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/CGA103G1/frontend/assets/imgs/logo.png" rel="apple-touch-icon" sizes="144x144" />
+  <title>揪團活動明細頁</title>
+</head>
+
+<body>
+
+  <header class="header-static navbar-sticky navbar-light shadow">
+
+  </header>
+
+
+  <div id="actBanner">
+
+  </div>
+
+  <section class="pt80 pb80 listingDetails Campaigns">
+    <div class="container">
+      <div class="row">
+        <!-- 左邊主內容 -->
+        <div class="col-lg-8 col-md-12 col-sm-12">
+          <ul class="nav nav-tabs tab-line">
+            <li class="nav-item">
+              <a class="nav-link active " data-toggle="tab" href="#tab-de-1" checked>
+                活動標題
+              </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-de-1">
+              <div class="text-block NopaddingDetails">
+                <h5 class="mb-4">活動詳細說明</h5>
+                <p class="text-muted font-weight-light">
+                  活動內容
+                </p>
+              </div>
+              <div class="">
+                <!-- Listing Location 地圖 可刪除 前端要串API-->
+                <!-- <h5 class="mb-4"></h5> -->
+                <!-- <div class="map-wrapper-300 mb-3">
+                <div class="map-container fw-map">
+                  <div id="map-main"></div>
+                </div>
+              </div> -->
+              </div>
+              <div class="text-block">
+
+                <h5 class="mb-4">活動圖片</h5>
+                <div class="row gallery ml-n1 mr-n1">
+                  <div class="col-12 px-1 mb-2">
+                    <!-- <a href="#"> -->
+                      <img src="#" alt="imagesloaded" class="img-fluid" />
+                    <!-- </a> -->
+                  </div>           
+                </div>
+              </div>
+
+              <div class="text-block">
+                <h5 class="mb-4">各項說明</h5>
+                <div class="row">
+                  <div class="col-md-6">
+
+                    <ul class="list-unstyled text-muted">
+                      <li class="mb-2">
+                        <i class="fa-solid fa-person-arrow-down-to-line text-secondary w-1rem mr-3 text-center"></i>
+                        <span class="text-sm">人數最小限制</span>
+                      </li>
+                      <li class="mb-2">
+                        <i class="fa-solid fa-tv text-secondary w-1rem mr-3 text-center"></i>
+                        <span class="text-sm">活動開始日</span>
+                      </li>
+                      <li class="mb-2">
+                        <i class="fa-solid fa-snowflake text-secondary w-1rem mr-3 text-center"></i>
+                        <span class="text-sm">詳細地址：</span>
+                      </li>
+                    </ul>
+
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <ul class="list-unstyled text-muted">
+                      <li class="mb-2">
+                        <i class="fa fa-bath text-secondary w-1rem mr-3 text-center"></i>
+                        <span class="text-sm">人數最大限制</span>
+                      </li>
+                      <li class="mb-2">
+                        <i class="fa fa-utensils text-secondary w-1rem mr-3 text-center"></i>
+                        <span class="text-sm">活動結束日</span>
+                      </li>            
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="text-block">
+                <p class="subtitle text-sm text-primary">留言 & 評價</p>
+                <h5 class="mb-4">留言列表</h5>
+                <div class="media d-block d-sm-flex review">
+                  <div class="text-md-center mr-4 mr-xl-5">
+                    <img src="images/img-22.jpg" alt="Padmé Amidala" class="avatar avatar-xl p-2 mb-2" />
+                  </div>
+                  <div class="media-body">
+                    <h6 class="mt-2 mb-1">路人甲</h6>
+                    <div class="mb-2">
+                      <i class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-primary"></i><i
+                        class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-primary"></i><i
+                        class="fa fa-xs fa-star text-primary"></i>
+                    </div>
+                    <p class="text-muted text-sm">
+                      差評
+                    </p>
+                  </div>
+                </div>
+                <div class="media d-block d-sm-flex review">
+                  <div class="text-md-center mr-4 mr-xl-5">
+                    <img src="images/img-11.jpg" alt="Jabba Hut" class="avatar avatar-xl p-2 mb-2" />
+                  </div>
+                  <div class="media-body">
+                    <h6 class="mt-2 mb-1">路人乙</h6>
+                    <div class="mb-2">
+                      <i class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-primary"></i><i
+                        class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-primary"></i><i
+                        class="fa fa-xs fa-star text-primary"></i>
+                    </div>
+                    <p class="text-muted text-sm">
+                      好評
+                    </p>
+                  </div>
+                </div>
+                <div class="rebiew_section">
+                  <div id="leaveReview" class="mt-4 collapse show" style="">
+                    <h5 class="mb-4">留言</h5>
+                    <form id="contact-form" method="get" action="#" class="form">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="輸入姓名" required class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <select name="rating" id="rating" class="custom-select focus-shadow-0">
+                              <option value="5">★★★★★ (5/5)</option>
+                              <option value="4">★★★★☆ (4/5)</option>
+                              <option value="3">★★★☆☆ (3/5)</option>
+                              <option value="2">★★☆☆☆ (2/5)</option>
+                              <option value="1">★☆☆☆☆ (1/5)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="輸入 XXXXX" required
+                          class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <textarea rows="4" name="review" id="review" placeholder="留下評論" required
+                          class="form-control"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        送出評論
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div> -->
+           
+            </div>
+          </div>
+        </div>
+
+        <!-- 右邊 sidebar -->
+        <div class="col-lg-4 col-md-12 col-sm-12 right_Details text-center">
+          <div class="p-4 shadow ml-lg-4 rounded sticky-top" style="top: 100px">
+            <p class="text-muted">
+              <span class="text-primary h2">免費</span>
+            </p>
+            <hr class="my-4" />
+            <a href="#" class="btn btn-danger text-center">
+              確定加入
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--  footer  -->
+  <footer class="footer footer-dark pt-6 position-relative">
+
+  </footer>
+  <!-- footer  -->
+
+
+  <script src="/CGA103G1/frontend/act/ownJS/includeFooterHeader.js" type="text/javascript"></script>
+  <script src="/CGA103G1/frontend/act/ownJS/includeActBanner.js" type="text/javascript"></script>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/popper.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/functions.js" type="text/javascript"></script>
+  <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script src="js/swiper.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  <script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="js/isotope.pkgd.min.js" type="text/javascript"></script>
+  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRSEJH8Z2UVyyaAv0TD7MY-IgclK5Izm8&amp;libraries=places&amp;callback=initAutocomplete"></script>
+  <script src="js/map_infobox.js"></script>
+  <script src="js/markerclusterer.js"></script>
+  <script src="js/maps.js"></script>
+</body>
+
+</html>

@@ -28,6 +28,16 @@ public class ActVO implements Serializable{
 	
 	public ActVO() {
 	}
+	
+	
+
+	public ActVO(String act_title, String act_content) {
+		super();
+		this.act_title = act_title;
+		this.act_content = act_content;
+	}
+
+
 
 	public ActVO(Integer act_no, Integer men_no, Integer act_type_no, String act_title, String act_content,
 			Integer act_current_count, Integer act_max_count, Integer act_min_count, LocalDateTime act_enroll_begin,

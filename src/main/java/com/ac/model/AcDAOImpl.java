@@ -15,6 +15,7 @@ public class AcDAOImpl implements AcDAO {
 	@Override
 	public Integer insert(AcVO acVo) {
 		Transaction transaction = getSession().beginTransaction();
+		acVo.setAc_update(0);
         getSession().save(acVo);
         transaction.commit();
 		return 1;
