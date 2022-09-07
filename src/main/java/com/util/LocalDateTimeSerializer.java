@@ -12,7 +12,7 @@ import com.google.gson.JsonSerializer;
 
 public class LocalDateTimeSerializer implements JsonSerializer <LocalDateTime> {
 
-	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(" uuuu : MM : d  HH : mm : ss");
+	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd HH:mm");
 
 	@Override
 	public JsonElement serialize(LocalDateTime localDateTime, Type typeOfSrc, JsonSerializationContext context) {

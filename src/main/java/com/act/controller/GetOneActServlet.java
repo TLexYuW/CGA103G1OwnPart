@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.act.model.ActService;
 import com.act.model.ActVO;
@@ -24,28 +25,21 @@ public class GetOneActServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-        res.setContentType("text/html; charset=UTF-8");
-        System.out.println("actSearchListPage <a> Request -> GetOneActServlet");
+        res.setContentType("application/json, text/html; charset=UTF-8");
+        res.setCharacterEncoding("UTF-8");
+        System.out.println("DetailPage Fetch Request -> GetOneActServlet"); 
         
-		String action = req.getParameter("action");
-        if ("actInner".equals(action)) {
-        	try {
-				Integer actNo = Integer.parseInt(req.getParameter("actNo")); 
-				ActService actService = new ActService();
-				ActVO actVO = actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get();		
-				GsonBuilder gsonBuilder = new GsonBuilder();  
-				gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());      
-				gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
-				Gson gson = gsonBuilder.setPrettyPrinting().create();
-				String personJsonString = gson.toJson(actVO);
-				res.getWriter().write(personJsonString);
-				res.sendRedirect("/CGA103G1/frontend/act/actDetailJoinPage.html");
-				return;
-			} catch (Exception e) {
-				res.sendRedirect("/CGA103G1/frontend/act/actSearchListPage.html");
-				return;
-			}
-		}
+        HttpSession actSession = req.getSession();       
+		Integer actNo = (Integer) actSession.getAttribute("actNo");
+		System.out.println("GetOneActServlet : " + actNo);
+		ActService actService = new ActService();
+		ActVO actVO = actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get();		
+		GsonBuilder gsonBuilder = new GsonBuilder();  
+		gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());      
+		gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
+		Gson gson = gsonBuilder.setPrettyPrinting().create();
+		String personJsonString = gson.toJson(actVO);
+		res.getWriter().write(personJsonString);
 	}
 
 	@Override

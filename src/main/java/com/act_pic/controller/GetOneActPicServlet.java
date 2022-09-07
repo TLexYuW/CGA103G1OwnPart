@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.act_pic.model.ActPicService;
 import com.act_pic.model.ActPicVO;
+import com.google.gson.Gson;
 
 @WebServlet("/getOneActPic")
 public class GetOneActPicServlet extends HttpServlet {
@@ -26,7 +27,7 @@ public class GetOneActPicServlet extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		res.setContentType("image/jpeg, image/jpg, image/png, */*");
 		String action = req.getParameter("action");	
-		System.out.println("actSearchListPage <img> Request -> GetOneActPicServlet");
+		System.out.println("<img> Request -> GetOneActPicServlet");
 		
 		if("actImg".equals(action)) {
 			ActPicService actPicService = new ActPicService();

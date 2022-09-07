@@ -14,17 +14,16 @@ public class ActPicService {
 	// 新增 活動照片
 	public void uploadActPic(ActPicVO actPicVO) {
 		ActPicVO actPic = new ActPicVO();
-		actPic.setAct_no(actPicVO.getAct_no());
 		actPic.setAct_pic(actPicVO.getAct_pic());
+		actPic.setAct_no(actPicVO.getAct_no());
 		dao.insert(actPic);
 	}
 
 	// 更新、修改 活動照片
-	public void alterActPic(Integer act_pic_no, Integer act_no, byte[] act_pic) {
+	public void alterActPic(ActPicVO actPicVO) {
 		ActPicVO actPic = new ActPicVO();
-		actPic.setAct_pic(act_pic);
-		actPic.setAct_pic_no(act_pic_no);
-		actPic.setAct_no(act_no);
+		actPic.setAct_pic(actPicVO.getAct_pic());
+		actPic.setAct_no(actPicVO.getAct_no());
 		dao.update(actPic);
 	}
 	

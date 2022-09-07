@@ -28,10 +28,12 @@ public class GetAllActServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         res.setContentType("text/html; charset=UTF-8");
-        System.out.println("jQuery Ajax Request -> GetAllActServlet");
+        res.setCharacterEncoding("UTF-8");
+        System.out.println("jQuery Ajax / Fetch Request -> GetAllActServlet");
        
         ActService actService = new ActService();
-		List<ActVO> actList = actService.getAll();		
+		List<ActVO> actList = actService.getAll();
+		actList.forEach(System.out::println);
         GsonBuilder gsonBuilder = new GsonBuilder();  
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());      
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());

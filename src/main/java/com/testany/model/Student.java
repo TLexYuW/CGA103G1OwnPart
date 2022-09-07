@@ -25,8 +25,20 @@ public class Student implements Serializable {
  
     @Column(name = "SECTION", nullable = false)
     private String section;
- 
-    public int getId() {
+    
+    public Student() {
+		super();
+	}
+
+	public Student(int id, String firstName, String lastName, String section) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.section = section;
+	}
+
+	public int getId() {
         return id;
     }
  

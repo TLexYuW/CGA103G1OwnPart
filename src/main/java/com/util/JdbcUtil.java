@@ -5,7 +5,7 @@ package com.util;
  */
 public class JdbcUtil {
 	public static final String URL 
-	= "jdbc:mysql://localhost:3306/cga103g1?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
+	= "jdbc:mysql://localhost:3306/cga103g1test?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
 	public static final String USERNAME = "root";
 	public static final String PASSWORD = "TibameYu04";
 

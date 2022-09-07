@@ -5,5 +5,5 @@
     maxIdle="10" maxTotal="20" maxWaitMillis="-1" 
     name="jdbc/TestDB" password="TibameYu04" 
     type="javax.sql.DataSource" 
-    url="jdbc:mysql://localhost:3306/cga103g1?serverTimezone=Asia/Taipei" username="root"/>
+    url="jdbc:mysql://localhost:3306/cga103g1test?serverTimezone=Asia/Taipei" username="root"/>
 </Context>

@@ -15,14 +15,14 @@
         .then(data => {
             document.querySelector("footer").innerHTML = data;
         });
-    fetch("memSideBar.html")
+    fetch("actMemSideBar.html")
         .then(response => {
             return response.text()
         })
         .then(data => {
             document.querySelector("#sidebar").innerHTML = data;
         });   
-    fetch("memBanner.html")
+    fetch("actMemBanner.html")
         .then(response => {
             return response.text()
         })
