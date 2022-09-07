@@ -28,9 +28,9 @@ flowchart LR
 		W
 	end
 	
-	W -->|Ajax&Fetch&JSON| Svl -->|JavaBean| S -->|JavaBean| M -->|JDBC| DB
+	W -->|Ajax & Fetch & JSON| Svl -->|JavaBean| S -->|JavaBean| M -->|JDBC| DB
 	
-	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax&Fetch&JSON| W
+	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
 ### 實作功能
 會員可於平台上使
