@@ -1,0 +1,7 @@
+{
+  "show-checkboxes": true,
+  "date-format": "YYYY-MM-DD",
+  "show-relative-date": true,
+  "prepend-archive-date": true,
+  "prepend-archive-format": "YYYY-MM-DD"
+}

@@ -1,0 +1,8 @@
+svg[id^="m"][width][height][viewBox] {
+  width: auto;
+  height: auto;
+}
+div.mermaid {
+  text-align: left;
+  width: 100%;
+}
