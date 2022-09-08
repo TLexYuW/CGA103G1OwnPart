@@ -48,7 +48,7 @@ flowchart LR
 #### 使用技術
 ```mermaid
 flowchart LR
-	J[JSP]
+	J[JSP + EL]
 	Svl[Controller / Servlet]
 	S[Service]
 	M[DAO]
@@ -65,12 +65,12 @@ flowchart LR
 	end
 	
 	subgraph Frontend
-		W
+		J
 	end
 	
-	W -->|Ajax & Fetch & JSON & GSON| Svl -->|JavaBean| S -->|JavaBean| M -->|JDBC| DB
+	J -->|JavaBean| Svl -->|JavaBean| S -->|JavaBean| M -->|Hibernate| DB
 	
-	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON & GSON| W
+	DB -->|Hibernate| M -->|JavaBean| S -->|JavaBean| Svl -->|JavaBean| J
 ```
 #### 實作功能
 
