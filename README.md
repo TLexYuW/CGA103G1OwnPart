@@ -2,7 +2,7 @@
 tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 ---
 # CGA103G1 - OwnPart 專題 (旅遊平台 - 揪團功能&討論區) 練習
-*專題整合網址︰[MyCorpLexTW/CGA103G1: 其他人請使用 Fork，複製到自己Github Repo](https://github.com/MyCorpLexTW/CGA103G1)*
+*專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
 ## 揪團活動
 ### 使用技術
