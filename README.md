@@ -4,11 +4,12 @@ tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 # CGA103G1 - OwnPart 專題 (旅遊平台 - 揪團功能&討論區) 練習
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 ## 目錄
-[TOC]
+
 1. 實作功能
 	- 揪團活動
 	- 討論區
-2. Project Tree [^5]
+2. Project Tree
+
 
 ### 揪團活動
 #### 使用技術
