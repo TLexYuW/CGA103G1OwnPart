@@ -7,7 +7,7 @@ tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 1. 實作功能
 	- [揪團活動](#揪團活動)
 	- [討論區](#討論區)
-2. Project Tree
+2. [ProjectTree](#ProjectTree)
 
 
 ### 揪團活動
@@ -44,9 +44,38 @@ flowchart LR
 2. 加入 任一 其他會員所創立之揪團活動
 3. 於活動瀏覽頁搜尋
 
-### 討論區 - 實作功能
+### 討論區
+#### 使用技術
+```mermaid
+flowchart LR
+	J[JSP]
+	Svl[Controller / Servlet]
+	S[Service]
+	M[DAO]
+	DB[(MySQL)]
+	
+	subgraph Database
+		DB
+	end
+	
+	subgraph Backend
+		Svl
+		S
+		M
+	end
+	
+	subgraph Frontend
+		W
+	end
+	
+	W -->|Ajax & Fetch & JSON & GSON| Svl -->|JavaBean| S -->|JavaBean| M -->|JDBC| DB
+	
+	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON & GSON| W
+```
+#### 實作功能
 
-# Project Tree [^5]
+
+# ProjectTree
 ```bash
 .
 |-- pom.xml
