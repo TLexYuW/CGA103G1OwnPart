@@ -1,5 +1,5 @@
 ---
-tags: Java, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
+tags: Java, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
@@ -62,7 +62,7 @@ flowchart LR
 ```mermaid
 flowchart LR
 	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
-	GOAS -->|使用GSON 將資料轉JSON格式| gOADP -->|Fetch Response| aDJP
+	GOAS -->|使用GSON將資料轉JSON格式| gOADP -->|Fetch Response| aDJP
 	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
 ``` 
 4. 
