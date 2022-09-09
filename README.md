@@ -42,7 +42,7 @@ flowchart LR
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
 #### 實作功能
-1. 會員可於平台 - 會員中心內選擇 `創建揪團活動` 
+1. 會員可於會員中心內選擇 `創建揪團活動` 
    - 若任一欄位空白，點擊`創建揪團`按鈕，經過驗證，則會回傳錯誤訊息提示
    - 資料填寫完畢，再次點擊，會顯示`創建揪團活動成功`，若回傳失敗，後端發生錯誤，則顯示`創建揪團活動失敗`
 ```mermaid
@@ -66,7 +66,7 @@ flowchart LR
 	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
 ``` 
 4. 
-5. 
+5. 會員可查詢自己主辦之揪團活動
 
 ### 討論區
 #### 使用技術
