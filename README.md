@@ -1,13 +1,16 @@
 ---
 tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 ---
-# CGA103G1 - OwnPart 專題 (旅遊平台 - 揪團功能&討論區) 練習
+# CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
-## 目錄
-1. 實作功能
-	- [揪團活動](#揪團活動)
-	- 討論區
-2. Project Tree
+## 目錄 TOC
+1. [揪團活動 Activity](#揪團活動)
+   - [使用技術 Tech](#使用技術)
+   - [實作功能說明 Function DESC.](#實作功能)
+2. [討論區 Forum](#討論區)
+   - [使用技術 Tech](#使用技術)
+   - [實作功能說明 Function DESC.](#實作功能)
+3. [ProjectTree](#ProjectTree)
 
 
 ### 揪團活動
@@ -39,14 +42,45 @@ flowchart LR
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON & GSON| W
 ```
 #### 實作功能
-會員可於平台上使
-1. 創建 揪團活動
+會員可於平台 - 會員中心內
+1. 創建 揪團活動 ()
+   - 若輸入欄位空白，經過驗證，則回傳錯誤訊息
+   - 
 2. 加入 任一 其他會員所創立之揪團活動
 3. 於活動瀏覽頁搜尋
 
-### 討論區 - 實作功能
+### 討論區
+#### 使用技術
+```mermaid
+flowchart LR
+	J[JSP + EL]
+	Svl[Controller / Servlet]
+	S[Service]
+	M[DAO]
+	DB[(MySQL)]
+	
+	subgraph Database
+		DB
+	end
+	
+	subgraph Backend
+		Svl
+		S
+		M
+	end
+	
+	subgraph Frontend
+		J
+	end
+	
+	J -->|JavaBean| Svl -->|JavaBean| S -->|JavaBean| M -->|Hibernate| DB
+	
+	DB -->|Hibernate| M -->|JavaBean| S -->|JavaBean| Svl -->|JavaBean| J
+```
+#### 實作功能
 
-# Project Tree [^5]
+
+### ProjectTree
 ```bash
 .
 |-- pom.xml
