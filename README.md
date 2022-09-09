@@ -50,7 +50,7 @@ flowchart LR
 flowchart LR
 	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
 ```
-2. 於活動瀏覽頁選擇想要的條件進行搜索各類活動，並產生清單列表 
+2. 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
 ```mermaid
 flowchart LR
 	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] --> GAAS[GetAllActServlet.java]
@@ -70,7 +70,10 @@ flowchart LR
 2. 於會員中心內選擇 `查詢揪團紀錄` 
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無主辦任何活動`
-6. 修改
+3. 於會員中心內選擇 `修改揪團活動條件`
+   - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
+   - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
+   - 於欄位輸入主辦活動編號
 
 ### 討論區
 #### 使用技術
