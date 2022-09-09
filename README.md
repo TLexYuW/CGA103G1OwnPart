@@ -6,10 +6,10 @@ tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 ## 目錄 TOC
 1. [揪團活動 Activity](#揪團活動)
    - [使用技術 Tech](#使用技術)
-   - [實作功能說明 Function Description](#實作功能)
+   - [實作功能說明 Function DESC.](#實作功能)
 2. [討論區 Forum](#討論區)
    - [使用技術 Tech](#使用技術)
-   - [實作功能說明](#實作功能)
+   - [實作功能說明 Function DESC.](#實作功能)
 3. [ProjectTree](#ProjectTree)
 
 
