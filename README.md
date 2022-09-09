@@ -122,18 +122,12 @@ flowchart LR
         |       |   |   `-- UpdateActPeopleAmount.java
         |       |   `-- model
         |       |       |-- ActDAO.java
-        |       |       |-- ActJDBCDAO.java
-        |       |       |-- ActService.java
-        |       |       |-- ActVO.java
         |       |       `-- I_ActDAO.java
         |       |-- act_participant
         |       |   |-- controller
         |       |   |   `-- JoinActServlet.java
         |       |   `-- model
         |       |       |-- ActParticipantDAO.java
-        |       |       |-- ActParticipantJDBCDAO.java
-        |       |       |-- ActParticipantService.java
-        |       |       |-- ActParticipantVO.java
         |       |       `-- I_ActParticipantDAO.java
         |       |-- act_pic
         |       |   |-- controller
@@ -143,36 +137,22 @@ flowchart LR
         |       |   |   `-- UploadActImageServlet.java
         |       |   `-- model
         |       |       |-- ActPicDAO.java
-        |       |       |-- ActPicJDBCDAO.java
-        |       |       |-- ActPicService.java
-        |       |       |-- ActPicVO.java
         |       |       `-- I_ActPicDAO.java
         |       |-- act_type
         |       |   |-- controller
         |       |   `-- model
         |       |       |-- ActTypeDAO.java
-        |       |       |-- ActTypeJDBCDAO.java
-        |       |       |-- ActTypeService.java
-        |       |       |-- ActTypeVO.java
         |       |       `-- I_ActTypeDAO.java
         |       |-- mem
         |       |   `-- model
         |       |       |-- I_MemDAO.java
-        |       |       |-- MemDAO.java
-        |       |       |-- MemService.java
-        |       |       |-- MemVO.java
         |       |       `-- MemjdbcDAO.java
         |       |-- testany
         |       |   |-- demo
         |       |   |   |-- HibernateQueryPractice.java
-        |       |   |   |-- TestDsConn.java
-        |       |   |   |-- TestHibernateCRUD.java
-        |       |   |   |-- TestJdbc.java
         |       |   |   `-- TestJndi.java
         |       |   `-- model
         |       |       |-- Emp2.java
-        |       |       |-- Employee.java
-        |       |       |-- Student.java
         |       |       `-- testAc.java
         |       `-- util
         |           |-- CoreDao.java
@@ -215,6 +195,16 @@ flowchart LR
                 |   |-- header.html
                 |   |-- memPage.html
                 |   |-- ownJS
+                |   |   |-- actDetailJoin.js
+                |   |   |-- actMemQuery.js
+                |   |   |-- actMemUpdate2.js
+                |   |   |-- actSearchListPage.js
+                |   |   |-- createAct.js
+                |   |   |-- getOneActDetailPage.js
+                |   |   |-- includeActBanner.js
+                |   |   |-- includeFooterHeader.js
+                |   |   |-- includePart.js
+                |   |   `-- ......
                 |   |-- ......
                 |-- assets
                 |   |-- ......
