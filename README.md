@@ -122,18 +122,12 @@ flowchart LR
         |       |   |   `-- UpdateActPeopleAmount.java
         |       |   `-- model
         |       |       |-- ActDAO.java
-        |       |       |-- ActJDBCDAO.java
-        |       |       |-- ActService.java
-        |       |       |-- ActVO.java
         |       |       `-- I_ActDAO.java
         |       |-- act_participant
         |       |   |-- controller
         |       |   |   `-- JoinActServlet.java
         |       |   `-- model
         |       |       |-- ActParticipantDAO.java
-        |       |       |-- ActParticipantJDBCDAO.java
-        |       |       |-- ActParticipantService.java
-        |       |       |-- ActParticipantVO.java
         |       |       `-- I_ActParticipantDAO.java
         |       |-- act_pic
         |       |   |-- controller
@@ -143,17 +137,11 @@ flowchart LR
         |       |   |   `-- UploadActImageServlet.java
         |       |   `-- model
         |       |       |-- ActPicDAO.java
-        |       |       |-- ActPicJDBCDAO.java
-        |       |       |-- ActPicService.java
-        |       |       |-- ActPicVO.java
         |       |       `-- I_ActPicDAO.java
         |       |-- act_type
         |       |   |-- controller
         |       |   `-- model
         |       |       |-- ActTypeDAO.java
-        |       |       |-- ActTypeJDBCDAO.java
-        |       |       |-- ActTypeService.java
-        |       |       |-- ActTypeVO.java
         |       |       `-- I_ActTypeDAO.java
         |       |-- mem
         |       |   `-- model
