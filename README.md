@@ -1,5 +1,5 @@
 ---
-tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
+tags: Java, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 ---
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
@@ -37,9 +37,9 @@ flowchart LR
 		W
 	end
 	
-	W -->|Ajax & Fetch & JSON & GSON| Svl -->|JavaBean| S -->|JavaBean| M -->|JDBC| DB
+	W -->|Ajax & Fetch & JSON| Svl -->|JavaBean| S -->|JavaBean| M -->|JDBC| DB
 	
-	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON & GSON| W
+	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
 #### 實作功能
 1. 會員可於平台 - 會員中心內選擇 `創建揪團活動` 
@@ -59,6 +59,11 @@ flowchart LR
    - 若已加入過，則回傳訊息告知`你已經加入過此活動`
    - 或者人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
    - 若為其他錯誤，則顯示`加入失敗`
+```mermaid
+flowchart LR
+	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
+	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
+``` 
 4. 
 5. 
 
