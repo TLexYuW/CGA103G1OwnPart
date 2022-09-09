@@ -4,11 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "65da39695ea0325e",
+        "id": "b6e7df235a436d03",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": true
+          }
         }
       }
     ],
@@ -74,6 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           }
         ]
@@ -110,7 +118,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "65da39695ea0325e",
+  "active": "b6e7df235a436d03",
   "lastOpenFiles": [
     "README.md",
     "揪團活動.md"
