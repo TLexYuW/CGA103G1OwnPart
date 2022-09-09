@@ -42,8 +42,9 @@ flowchart LR
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON & GSON| W
 ```
 #### 實作功能
-會員可於平台上使
+會員可於平台 - 會員中心內
 1. 創建 揪團活動
+   - 若
 2. 加入 任一 其他會員所創立之揪團活動
 3. 於活動瀏覽頁搜尋
 
@@ -78,7 +79,7 @@ flowchart LR
 #### 實作功能
 
 
-# ProjectTree
+### ProjectTree
 ```bash
 .
 |-- pom.xml
