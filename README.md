@@ -42,7 +42,8 @@ flowchart LR
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
 #### 實作功能
-1. 會員可於會員中心內選擇 `創建揪團活動` 
+會員可於平台網站內進行以下操作
+1. 於會員中心內選擇 `創建揪團活動` 
    - 若任一欄位空白，點擊`創建揪團`按鈕，經過驗證，則會回傳錯誤訊息提示
    - 資料填寫完畢，再次點擊，會顯示`創建揪團活動成功`，若回傳失敗，後端發生錯誤，則顯示`創建揪團活動失敗`
 ```mermaid
@@ -54,7 +55,7 @@ flowchart LR
 flowchart LR
 	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] --> GAAS[GetAllActServlet.java]
 ```     
-3. 點選其中之一活動，進入該活動詳細頁面，
+3. 點選列表內其中之一活動，進入該活動詳細頁面，
    - 點擊`確定加入`按鈕，畫面顯示`加入成功`訊息
    - 若已加入過，則回傳訊息告知`你已經加入過此活動`
    - 或者人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
@@ -65,8 +66,11 @@ flowchart LR
 	GOAS -->|使用GSON將資料轉JSON格式| gOADP -->|Fetch Response| aDJP
 	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
 ``` 
-4. 
-5. 會員可查詢自己主辦之揪團活動
+1. 
+2. 於會員中心內選擇 `查詢揪團紀錄` 
+   - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
+   - 如無參與任何活動，則回傳訊息`目前您無主辦任何活動`
+6. 修改
 
 ### 討論區
 #### 使用技術
