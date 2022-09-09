@@ -158,21 +158,13 @@ flowchart LR
         |       |-- mem
         |       |   `-- model
         |       |       |-- I_MemDAO.java
-        |       |       |-- MemDAO.java
-        |       |       |-- MemService.java
-        |       |       |-- MemVO.java
         |       |       `-- MemjdbcDAO.java
         |       |-- testany
         |       |   |-- demo
         |       |   |   |-- HibernateQueryPractice.java
-        |       |   |   |-- TestDsConn.java
-        |       |   |   |-- TestHibernateCRUD.java
-        |       |   |   |-- TestJdbc.java
         |       |   |   `-- TestJndi.java
         |       |   `-- model
         |       |       |-- Emp2.java
-        |       |       |-- Employee.java
-        |       |       |-- Student.java
         |       |       `-- testAc.java
         |       `-- util
         |           |-- CoreDao.java
@@ -215,6 +207,16 @@ flowchart LR
                 |   |-- header.html
                 |   |-- memPage.html
                 |   |-- ownJS
+                |   |   |-- actDetailJoin.js
+                |   |   |-- actMemQuery.js
+                |   |   |-- actMemUpdate2.js
+                |   |   |-- actSearchListPage.js
+                |   |   |-- createAct.js
+                |   |   |-- getOneActDetailPage.js
+                |   |   |-- includeActBanner.js
+                |   |   |-- includeFooterHeader.js
+                |   |   |-- includePart.js
+                |   |   `-- ......
                 |   |-- ......
                 |-- assets
                 |   |-- ......
