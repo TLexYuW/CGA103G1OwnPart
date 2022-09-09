@@ -61,8 +61,8 @@ flowchart LR
    - 若為其他錯誤，則顯示`加入失敗`
 ```mermaid
 flowchart LR
-	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] --> GOAS[GetOneActServlet.java]
-	GOAS -->|回傳JSON|
+	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
+	GOAS -->|使用GSON 將資料轉JSON格式| gOADP -->|Fetch Response| aDJP
 	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
 ``` 
 4. 
