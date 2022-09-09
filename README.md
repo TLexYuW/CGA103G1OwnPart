@@ -54,14 +54,15 @@ flowchart LR
 flowchart LR
 	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] --> GAAS[GetAllActServlet.java]
 ```     
-3. 點選其中一個活動，進入活動詳細頁面 *(actDetailJoinPage.html > actDetailJoinPage.js > CreateActServlet.java)*
-   - 點擊加入任一其他會員所創立之揪團活動，畫面顯示`加入成功`訊息
+3. 點選其中之一活動，進入該活動詳細頁面，
+   - 點擊`確定加入`按鈕，畫面顯示`加入成功`訊息
    - 若已加入過，則回傳訊息告知`你已經加入過此活動`
    - 或者人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
    - 若為其他錯誤，則顯示`加入失敗`
 ```mermaid
 flowchart LR
-	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
+	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] --> GOAS[GetOneActServlet.java]
+	GOAS -->|回傳JSON|
 	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
 ``` 
 4. 
