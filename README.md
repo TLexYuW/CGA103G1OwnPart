@@ -1,14 +1,14 @@
 ---
 tags: Java, JavaScript, HTML, CSS, JSP, EL, Servlet, Hibernate, MySQL
 ---
-# CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能 ) 
+# CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 ## 目錄 TOC
-1. [揪團活動](#揪團活動)
-   - [使用技術](#使用技術)
-   - [實作功能說明](#實作功能)
-2. [討論區](#討論區)
-   - [使用技術](#使用技術)
+1. [揪團活動 Activity](#揪團活動)
+   - [使用技術 Tech](#使用技術)
+   - [實作功能說明 Function Description](#實作功能)
+2. [討論區 Forum](#討論區)
+   - [使用技術 Tech](#使用技術)
    - [實作功能說明](#實作功能)
 3. [ProjectTree](#ProjectTree)
 
