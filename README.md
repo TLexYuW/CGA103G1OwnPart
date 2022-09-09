@@ -42,9 +42,9 @@ flowchart LR
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON & GSON| W
 ```
 #### 實作功能
-1. 會員可於平台 - 會員中心 創建揪團活動 (actCreate.html > createAct.js > CreateActServlet.java)
+1. 會員可於平台 - 會員中心內選擇 創建揪團活動 *(actCreate.html > createAct.js > CreateActServlet.java)*
    - 若任一欄位空白，經過驗證，則會回傳錯誤訊息提示
-   - 資料填寫完畢，送出
+   - 資料填寫完畢，點擊送出
 2. 於活動瀏覽頁依條件進行搜尋各類活動
 3. 點選其中一個活動，進入活動詳細頁面
    - 點擊加入任一其他會員所創立之揪團活動，DB成功新增
