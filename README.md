@@ -45,12 +45,12 @@ flowchart LR
 1. 會員可於平台 - 會員中心內選擇 `創建揪團活動` *(actCreate.html > createAct.js > CreateActServlet.java)*
    - 若任一欄位空白，點擊`創建揪團`按鈕，經過驗證，則會回傳錯誤訊息提示
    - 資料填寫完畢，再次點擊，會顯示`創建揪團活動成功`，若回傳失敗，後端發生錯誤，則顯示`創建揪團活動失敗`
-2. 於活動瀏覽頁選擇想要的條件進行搜索各類活動，並產生清單列表 *(actCreate.html > createAct.js > CreateActServlet.java)*
-3. 點選其中一個活動，進入活動詳細頁面 *(actCreate.html > createAct.js > CreateActServlet.java)*
+2. 於活動瀏覽頁選擇想要的條件進行搜索各類活動，並產生清單列表 *(actSearchListPage.html > actSearchListPage.js > GetAllActServlet.java)*
+3. 點選其中一個活動，進入活動詳細頁面 *(actDetailJoinPage.html > actDetailJoinPage.js > CreateActServlet.java)*
    - 點擊加入任一其他會員所創立之揪團活動，畫面顯示`加入成功`訊息
    - 若已加入過，則回傳訊息告知`你已經加入過此活動`
    - 或者人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
-   - 若為其他錯誤，則顯示``
+   - 若為其他錯誤，則顯示`加入失敗`
 4. 
 5. 
 
