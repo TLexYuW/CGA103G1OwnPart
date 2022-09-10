@@ -5,7 +5,8 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
 ## 目錄 TOC
-1. [揪團活動 Activity](#揪團活動)
+1. [首頁切版 Home Page - Header Footer 公板](#首頁)
+2. [揪團活動 Activity](#揪團活動)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
      - [會員中心頁面](#會員中心頁面)
@@ -15,14 +16,15 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
      - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
 	     1. [揪團活動查詢](#揪團活動查詢) 
 	     2. [加入揪團活動](#加入揪團活動)  
-2. [討論區 Forum](#討論區)
+3. [討論區 Forum](#討論區)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
 	   - [新增文章頁面](#新增文章頁面) 
 	   - [文章瀏覽頁面](#文章瀏覽頁面) 
 	   - [文章詳細頁面](#文章詳細頁面) 
 	   - [文章修改頁面](#文章修改頁面) 
-3. [ProjectTree](#ProjectTree)
+4. [ProjectTree](#ProjectTree)
+### 首頁
 
 ### 揪團活動
 #### 使用技術
@@ -124,13 +126,20 @@ flowchart LR
 	DB -->|Hibernate| M -->|JavaBean| S -->|JavaBean| Svl -->|JavaBean| J
 ```
 #### 實作功能
+**會員可於討論區內進行以下操作**
 ##### 新增文章頁面
-- 
+- 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
+- 發表文章成功，則會呈現於文章瀏覽頁面上。
 ##### 文章瀏覽頁面
-- 
+- 如果討論區沒有任何文章，則顯示`目前沒有文章`
+- 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
 ##### 文章詳細頁面
+- 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
 ##### 文章修改頁面
-
+- 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
+- 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
+- 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
+- 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
 
 ### ProjectTree
 ```bash
