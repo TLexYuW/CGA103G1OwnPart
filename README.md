@@ -5,7 +5,8 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
 ## 目錄 TOC
-1. [揪團活動 Activity](#揪團活動)
+1. [首頁切版 Home Page - Header Footer 公板](#首頁)
+2. [揪團活動 Activity](#揪團活動)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
      - [會員中心頁面](#會員中心頁面)
@@ -15,15 +16,15 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
      - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
 	     1. [揪團活動查詢](#揪團活動查詢) 
 	     2. [加入揪團活動](#加入揪團活動)  
-2. [討論區 Forum](#討論區)
+3. [討論區 Forum](#討論區)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
 	   - [新增文章頁面](#新增文章頁面) 
 	   - [文章瀏覽頁面](#文章瀏覽頁面) 
 	   - [文章詳細頁面](#文章詳細頁面) 
 	   - [文章修改頁面](#文章修改頁面) 
-3. [ProjectTree](#ProjectTree)
-
+4. [ProjectTree](#ProjectTree)
+### 首頁
 ### 揪團活動
 #### 使用技術
 ```mermaid
