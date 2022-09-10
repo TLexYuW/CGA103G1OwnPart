@@ -7,6 +7,8 @@ tags: Java, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL
 1. [揪團活動 Activity](#揪團活動)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
+     1. [創建揪團活動](#創建揪團活動)
+     2. [](#)
 2. [討論區 Forum](#討論區)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
@@ -43,21 +45,22 @@ flowchart LR
 ```
 #### 實作功能
 會員可於平台網站內進行以下操作
-1. 於會員中心內選擇 `創建揪團活動` 
+##### 創建揪團活動
    - 若任一欄位空白，點擊`創建揪團`按鈕，經過驗證，則會回傳錯誤訊息提示
    - 資料填寫完畢，再次點擊，會顯示`創建揪團活動成功`，若回傳失敗，後端發生錯誤，則顯示`創建揪團活動失敗`
 ```mermaid
 flowchart LR
 	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
 ```
-2. 於會員中心內選擇 `查詢揪團紀錄` 
+ ##### 查詢揪團紀錄
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無主辦任何活動`
-3. 於會員中心內選擇 `修改揪團活動條件`
+#####  修改揪團活動條件
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
    - 於欄位輸入主辦活動編號，並點擊``
-4. 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
+##### 揪團活動瀏覽頁
+於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
 ```mermaid
 flowchart LR
 	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] --> GAAS[GetAllActServlet.java]
