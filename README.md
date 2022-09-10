@@ -3,6 +3,7 @@ tags: Java, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL
 ---
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
+
 ## 目錄 TOC
 1. [揪團活動 Activity](#揪團活動)
    - [使用技術 Tech](#使用技術)
@@ -11,9 +12,9 @@ tags: Java, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL
 	     1. [創建揪團活動](#創建揪團活動)
 	     2. [查詢揪團紀錄](#查詢揪團紀錄)
 	     3. [修改揪團活動條件](#修改揪團活動條件)
-     - [](#) 
-	     1. [](#) 
-	     2. [](#)  
+     - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
+	     1. [揪團活動查詢](#揪團活動查詢) 
+	     2. [加入揪團活動](#加入揪團活動)  
 1. [討論區 Forum](#討論區)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
@@ -67,18 +68,18 @@ flowchart LR
    - 
      
 ##### 揪團活動瀏覽頁面
-######  活動查詢
+###### 揪團活動查詢
 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
 ```mermaid
 flowchart LR
 	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] --> GAAS[GetAllActServlet.java]
 ```     
-###### 
+###### 加入揪團活動
 - 點選列表內其中之一活動，進入該活動詳細頁面，
 - 點擊`確定加入`按鈕，畫面顯示`加入成功`訊息
 - 若已加入過，則回傳訊息告知`你已經加入過此活動`
 - 或者人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
-   - 若為其他錯誤，則顯示`加入失敗`
+- 若為其他錯誤，則顯示`加入失敗`
 ```mermaid
 flowchart LR
 	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
