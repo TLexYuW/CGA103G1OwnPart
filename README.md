@@ -27,7 +27,7 @@ flowchart LR
 		DB
 	end
 	
-	subgraph Backend
+	subgraph Backend / Java
 		Svl
 		S
 		M
