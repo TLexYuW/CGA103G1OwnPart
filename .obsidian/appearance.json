@@ -1,0 +1,10 @@
+{
+  "cssTheme": "Blue Topaz",
+  "baseFontSize": 24,
+  "theme": "obsidian",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "obsidian"
+  ],
+  "baseFontSizeAction": true
+}
