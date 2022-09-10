@@ -17,9 +17,9 @@
 		<property name="hibernate.format_sql">true</property>
 		
 		<mapping class="com.ac.model.AcVO"/>
-		<mapping class="com.ac_reply.model.AcReplyVo"/>
-		<mapping class="com.ac_rp.model.AcRpVo"/>
-		<mapping class="com.ac_msg.model.AcMsgVo"/>
+<!-- 		<mapping class="com.ac_reply.model.AcReplyVo"/> -->
+<!-- 		<mapping class="com.ac_rp.model.AcRpVo"/> -->
+<!-- 		<mapping class="com.ac_msg.model.AcMsgVo"/> -->
 		
 <!-- 		<mapping class="com.ac_type.model.AcTypeVo"/> -->
 <!-- 		<mapping class="com.ac_pic.model.AcPicVo"/> -->
