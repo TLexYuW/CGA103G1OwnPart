@@ -18,9 +18,9 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 2. [討論區 Forum](#討論區)
    - [使用技術 Tech](#使用技術)
    - [實作功能說明 Function Description](#實作功能)
-	   - [討論區文章瀏覽頁面](#討論區文章瀏覽頁面) 
-	   - [討論區文章詳細頁面](#討論區文章詳細頁面) 
-	   - [討論區文章修改頁面](#討論區文章修改頁面) 
+	   - [文章瀏覽頁面](#文章瀏覽頁面) 
+	   - [文章詳細頁面](#文章詳細頁面) 
+	   - [文章修改頁面](#文章修改頁面) 
 3. [ProjectTree](#ProjectTree)
 
 ### 揪團活動
@@ -123,6 +123,11 @@ flowchart LR
 	DB -->|Hibernate| M -->|JavaBean| S -->|JavaBean| Svl -->|JavaBean| J
 ```
 #### 實作功能
+##### 文章瀏覽頁面
+- 
+
+##### 文章詳細頁面
+##### 文章修改頁面
 
 
 ### ProjectTree
