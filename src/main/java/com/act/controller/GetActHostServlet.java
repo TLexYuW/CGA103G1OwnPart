@@ -43,8 +43,13 @@ public class GetActHostServlet extends HttpServlet {
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
 		// Java物件 轉成 JSON 字串
 		Gson gson = gsonBuilder.setPrettyPrinting().create();
-		String personJsonString = gson.toJson(actList);
-		res.getWriter().write(personJsonString);
+		if(actList.size() != 0) {			
+			String personJsonString = gson.toJson(actList);
+			res.getWriter().write(personJsonString);
+		}else {
+			String personJsonString = gson.toJson("您目前無任何主辦活動");
+			res.getWriter().write(personJsonString);
+		}
 	}
 
 }

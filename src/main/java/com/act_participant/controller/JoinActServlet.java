@@ -27,31 +27,37 @@ public class JoinActServlet extends HttpServlet {
 		System.out.println("fetch Request -> JoinActServlet");
 		HttpSession session = req.getSession();
 		Integer actNo =  (Integer) session.getAttribute("actNo");
+		Integer memNo1 =  (Integer) session.getAttribute("memNo1");
+		Integer memNo2 = (Integer) session.getAttribute("memNo2");
 		String memLoginAcc = (String) session.getAttribute("memNo1Acc");
 		MemService memService = new MemService();
 		String memAcc = memService.getOneMem(1).getMem_email();
-		Integer memNo = (Integer) session.getAttribute("memNo2");
 		Gson gson = new Gson();
 		ActService actService = new ActService();
-		if ((memAcc).equals(memLoginAcc)) {
-			ActParticipantService actParticipantService = new ActParticipantService();
-		    LocalDateTime currentTime = LocalDateTime.now();
-			actParticipantService.addActParticipant(actNo, memNo, currentTime);
-			Integer actMaxCount =
-					actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_max_count();
-			Integer actCurrentCount =
-					actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_current_count();
-			String resInfo ="";
-			if(actMaxCount > actCurrentCount) {				
-				actService.updateActPeopleAmount(actNo, memNo);
-				resInfo = gson.toJson("加入成功");
+		ActParticipantService actParticipantService = new ActParticipantService();
+		boolean isJoin = actParticipantService.getAll().stream().anyMatch(actP -> actP.getMem_no() == memNo1);
+		if(!isJoin) {
+			if ((memAcc).equals(memLoginAcc)) {
+			    LocalDateTime currentTime = LocalDateTime.now();
+				actParticipantService.addActParticipant(actNo, memNo1, currentTime);
+				Integer actMaxCount =
+						actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_max_count();
+				Integer actCurrentCount =
+						actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_current_count();
+				String resInfo ="";
+				if(actMaxCount > actCurrentCount) {				
+					actService.updateActPeopleAmount(actNo, memNo1);
+					resInfo = gson.toJson("加入成功");
+				}else {
+					resInfo =  gson.toJson("活動已超過最大限制人數，無法加入");
+				}
+				res.getWriter().write(resInfo);
 			}else {
-				resInfo =  gson.toJson("已超過活動最大限制人數，無法加入");
+				String resInfo = gson.toJson("加入失敗");
+				res.getWriter().write(resInfo);	
 			}
-			res.getWriter().write(resInfo);
 		}else {
-			String resInfo = gson.toJson("加入失敗");
-			res.getWriter().write(resInfo);	
+			res.getWriter().write("你已經加入過此活動！");
 		}
 	}
 
