@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
+import java.util.stream.Stream;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,15 +44,21 @@ public class GetMemOneActServlet extends HttpServlet {
 		gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
 		Gson gson = gsonBuilder.setPrettyPrinting().create();
 		ActVO actfromFront = gson.fromJson(br, ActVO.class);
-		ActVO actVO = 
-				actService.getAll()
-				.stream()
-				.filter(act -> act.getAct_no() == actfromFront.getAct_no())
-				.filter(act -> act.getMen_no() == memNo)
-				.findFirst().get();
-		String json = gson.toJson(actVO);
-	    PrintWriter pw = res.getWriter();
-	    pw.print(json);
+		ActVO actVO = new ActVO();
+		Stream<ActVO> actStream = actService.getAll().stream();
+		if(actStream.anyMatch(act -> act.getAct_no() == actfromFront.getAct_no())) {
+			actVO = actStream
+					.filter(act -> act.getAct_no() == actfromFront.getAct_no())
+					.filter(act -> act.getMen_no() == memNo)
+					.findFirst().get();
+			String JsonString = gson.toJson(actVO);
+			res.getWriter().write(JsonString);
+		}else {
+			String JsonString = gson.toJson("查無此揪團活動編號");
+			res.getWriter().write(JsonString);
+		}
+		
+		
   
 	}
 

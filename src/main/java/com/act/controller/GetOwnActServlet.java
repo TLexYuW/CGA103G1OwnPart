@@ -47,8 +47,13 @@ public class GetOwnActServlet extends HttpServlet {
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
 		// Java物件 轉成 JSON 字串
 		Gson gson = gsonBuilder.setPrettyPrinting().create();
-		String JsonString = gson.toJson(actList);
-		res.getWriter().write(JsonString);
+		if(actList.size() != 0) {
+			String JsonString = gson.toJson(actList);
+			res.getWriter().write(JsonString);			
+		}else {
+			String JsonString = gson.toJson("目前您無參與任何活動");
+			res.getWriter().write(JsonString);
+		}
 	}
 
 }
