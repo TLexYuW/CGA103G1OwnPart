@@ -50,27 +50,10 @@ flowchart LR
 flowchart LR
 	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
 ```
-2. 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
-```mermaid
-flowchart LR
-	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] --> GAAS[GetAllActServlet.java]
-```     
-3. 點選列表內其中之一活動，進入該活動詳細頁面，
-   - 點擊`確定加入`按鈕，畫面顯示`加入成功`訊息
-   - 若已加入過，則回傳訊息告知`你已經加入過此活動`
-   - 或者人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
-   - 若為其他錯誤，則顯示`加入失敗`
-```mermaid
-flowchart LR
-	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
-	GOAS -->|使用GSON將資料轉JSON格式| gOADP -->|Fetch Response| aDJP
-	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
-``` 
-4. 
-5. 於會員中心內選擇 `查詢揪團紀錄` 
+4. 於會員中心內選擇 `查詢揪團紀錄` 
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無主辦任何活動`
-6. 於會員中心內選擇 `修改揪團活動條件`
+5. 於會員中心內選擇 `修改揪團活動條件`
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
    - 於欄位輸入主辦活動編號，並點擊``
