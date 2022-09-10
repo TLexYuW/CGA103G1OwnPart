@@ -14,10 +14,10 @@ public class AcDAOImpl implements AcDAO {
 	
 	@Override
 	public Integer insert(AcVO acVo) {
-		Transaction transaction = getSession().beginTransaction();
+//		Transaction transaction = getSession().beginTransaction();
 		acVo.setAc_update(0);
         getSession().save(acVo);
-        transaction.commit();
+//        transaction.commit();
 		return 1;
 	}
 
@@ -36,19 +36,18 @@ public class AcDAOImpl implements AcDAO {
 
 	@Override
 	public AcVO getOneById(Integer id) {
-		Transaction transaction = getSession().beginTransaction();
-		AcVO getOne = getSession().get(AcVO.class, id);
-		transaction.commit();
-		return getOne;
+//		Transaction transaction = getSession().beginTransaction();
+		return getSession().get(AcVO.class, id);
+//		transaction.commit();
+//		return getOne;
 	}
 
 	@Override
 	public List<AcVO> getAll() {
-		final String GET_ALL = "FROM AcVO";
-		Transaction transaction = getSession().beginTransaction();
-		List<AcVO> list = getSession().createQuery(GET_ALL, AcVO.class).list();
-		transaction.commit();
-		return list;
+		final String hql = "FROM AcVO";
+//		Transaction transaction = getSession().beginTransaction();
+		return getSession().createQuery(hql, AcVO.class).list();
+//		transaction.commit();
 	}
 
 
