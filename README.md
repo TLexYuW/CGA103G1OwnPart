@@ -86,7 +86,7 @@ flowchart LR
 	aMQhtml[actMemQuery.html] -->|點擊Query觸發事件| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
 	-->|Call getOwnActParti Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	
-	DB --> AD --> AS -->|回傳| GOAS --> aMQjs --> aMQhtml
+	DB --> AD --> AS -->|回傳該會員已參加之揪團活動| GOAS -->|將JavaBean轉JSON格式| aMQjs -->|動態生成List呈現於網頁| aMQhtml
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
