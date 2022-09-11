@@ -61,7 +61,7 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] -->|會員點擊submit觸發事件| cA[createAct.js] -->|Fetch1 Request| CAS[CreateActServlet.java] 
+	aC[actCreate.html] -->|點擊submit觸發事件| cA[createAct.js] -->|Fetch1 Request| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
 ```
@@ -83,10 +83,10 @@ flowchart LR
 ###### 查詢揪團紀錄
 ```mermaid
 flowchart LR
-	aMQhtml[actMemQuery.html] --> aMQjs[actMemQuery.js] --> GOAS[GetOwnActServlet.java]
-	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+	aMQhtml[actMemQuery.html] -->|點擊Query觸發事件| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
+	-->|Call getOwnActParti Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	
-	GOAS --> aMQjs --> aMQhtml
+	DB --> AD --> AS -->|回傳| GOAS --> aMQjs --> aMQhtml
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
