@@ -61,7 +61,7 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] -->|會員點擊submit按鈕| cA[createAct.js] -->|Fetch Request| CAS[CreateActServlet.java] -->|Call createAct()| AS[ActService] --> DAO --> DB[(Database)]
+	aC[actCreate.html] -->|會員點擊submit觸發事件| cA[createAct.js] -->|Fetch Request| CAS[CreateActServlet.java] -->|Call createAct| AS[ActService] --> DAO --> DB[(Database)]
 	CAS --> [] -->
 	DB --> DAO --> AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok則顯示成功訊息| aC
 	cA --> UAIS[UploadActImageServlet.java]
@@ -179,7 +179,7 @@ flowchart LR
 
 ### ProjectTree
 ```bash
-.
+.$ tree -L 7 -I 'target|test|imgs|assets|css|fonts|js|webfonts|backend|testany'
 |-- pom.xml
 `-- src
     `-- main
@@ -213,65 +213,68 @@ flowchart LR
         |       |   |   |-- GetMemOneActServlet.java
         |       |   |   |-- GetOneActServlet.java
         |       |   |   |-- GetOwnActServlet.java
-        |       |   |   |-- HostQueryAjaxServlet.java
         |       |   |   |-- RedirectDetailPageServlet.java
-        |       |   |   |-- UpdateActConditionServlet.java
-        |       |   |   `-- UpdateActPeopleAmount.java
+        |       |   |   `-- UpdateActConditionServlet.java
         |       |   `-- model
         |       |       |-- ActDAO.java
+        |       |       |-- ActJDBCDAO.java
+        |       |       |-- ActService.java
+        |       |       |-- ActVO.java
         |       |       `-- I_ActDAO.java
         |       |-- act_participant
         |       |   |-- controller
         |       |   |   `-- JoinActServlet.java
         |       |   `-- model
         |       |       |-- ActParticipantDAO.java
+        |       |       |-- ActParticipantJDBCDAO.java
+        |       |       |-- ActParticipantService.java
+        |       |       |-- ActParticipantVO.java
         |       |       `-- I_ActParticipantDAO.java
         |       |-- act_pic
         |       |   |-- controller
-        |       |   |   |-- GetAllActPicServlet.java
         |       |   |   |-- GetOneActPicServlet.java
         |       |   |   |-- UpdateActImageServlet.java
         |       |   |   `-- UploadActImageServlet.java
         |       |   `-- model
         |       |       |-- ActPicDAO.java
+        |       |       |-- ActPicJDBCDAO.java
+        |       |       |-- ActPicService.java
+        |       |       |-- ActPicVO.java
         |       |       `-- I_ActPicDAO.java
         |       |-- act_type
         |       |   |-- controller
         |       |   `-- model
         |       |       |-- ActTypeDAO.java
+        |       |       |-- ActTypeJDBCDAO.java
+        |       |       |-- ActTypeService.java
+        |       |       |-- ActTypeVO.java
         |       |       `-- I_ActTypeDAO.java
         |       |-- mem
         |       |   `-- model
         |       |       |-- I_MemDAO.java
+        |       |       |-- MemDAO.java
+        |       |       |-- MemService.java
+        |       |       |-- MemVO.java
         |       |       `-- MemjdbcDAO.java
-        |       |-- testany
-        |       |   |-- demo
-        |       |   |   |-- HibernateQueryPractice.java
-        |       |   |   `-- TestJndi.java
-        |       |   `-- model
-        |       |       |-- Emp2.java
-        |       |       `-- testAc.java
         |       `-- util
         |           |-- CoreDao.java
         |           |-- CoreService.java
-        |           |-- DataSourceUtil.java
+        |           |-- HibernateFilter.java
+        |           |-- HibernateListener.java
         |           |-- HibernateUtil.java
         |           |-- JdbcUtil.java
         |           |-- LocalDateTimeDeserializer.java
         |           |-- LocalDateTimeSerializer.java
-        |           |-- TestMain.java
-        |           |-- TestRedis.java
+        |           |-- ......
         |           `-- setSessionValueServlet.java
         |-- resources
         |   `-- hibernate.cfg.xml
         `-- webapp
             |-- META-INF
             |   |-- context.xml
-            |   `-- selfUse.txt
+            |   `-- ......
             |-- WEB-INF
             |   `-- web.xml
-            |-- backend
-            |   `-- act
             `-- frontend
                 |-- ac
                 |   |-- acCardPage.jsp
@@ -288,24 +291,21 @@ flowchart LR
                 |   |-- actMemSideBar.html
                 |   |-- actMemUpdate2.html
                 |   |-- actSearchListPage.html
+                |   |-- fontawesome-free-6.1.2-web
                 |   |-- footer.html
                 |   |-- header.html
                 |   |-- memPage.html
-                |   |-- ownJS
-                |   |   |-- actDetailJoin.js
-                |   |   |-- actMemQuery.js
-                |   |   |-- actMemUpdate2.js
-                |   |   |-- actSearchListPage.js
-                |   |   |-- createAct.js
-                |   |   |-- getOneActDetailPage.js
-                |   |   |-- includeActBanner.js
-                |   |   |-- includeFooterHeader.js
-                |   |   |-- includePart.js
-                |   |   `-- ......
-                |   |-- ......
-                |-- assets
-                |   |-- ......
-                |   `-- ......
+                |   `-- ownJS
+                |       |-- actDetailJoin.js
+                |       |-- actMemQuery.js
+                |       |-- actMemUpdate2.js
+                |       |-- actSearchListPage.js
+                |       |-- createAct.js
+                |       |-- getOneActDetailPage.js
+                |       |-- includeActBanner.js
+                |       |-- includeFooterHeader.js
+                |       |-- includePart.js
+                |       `-- ......
                 |-- commonCSS.file
                 |-- commonJS.file
                 |-- footer.file
@@ -313,6 +313,5 @@ flowchart LR
                 |-- homePage.js
                 |-- homePage.jsp
                 |-- homePageBanner.file
-                |-- memSidebar.file
-                `-- ......
+                `-- memSidebar.file
 ```
