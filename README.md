@@ -63,7 +63,7 @@ flowchart LR
 flowchart LR
 	aC[actCreate.html] -->|會員點擊submit觸發事件| cA[createAct.js] -->|Fetch Request| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
-	DB --> AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功:失敗訊息| aC
+	DB --> AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
 	
 	CAS -->|將AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
 	--> APDAO[ActParticipantDAO.java] --> DB[(Database)]
