@@ -97,7 +97,18 @@ flowchart LR
 	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
 	aMU2js --> GMOAS[GetMemOneActServlet.java]
 	aMU2js --> UACS[UpdateActConditionServlet.java]
-	
+```
+```mermaid
+flowchart LR
+	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
+	aMU2js --> GMOAS[GetMemOneActServlet.java]
+	aMU2js --> UACS[UpdateActConditionServlet.java]
+```  
+```mermaid
+flowchart LR
+	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
+	aMU2js --> GMOAS[GetMemOneActServlet.java]
+	aMU2js --> UACS[UpdateActConditionServlet.java]
 ```  
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
