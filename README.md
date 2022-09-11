@@ -81,7 +81,7 @@ flowchart LR
 ###### 修改揪團活動條件
 ```mermaid
 flowchart LR
-	[actMemUpdate2.html] --> [actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
+	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
 ```  
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
