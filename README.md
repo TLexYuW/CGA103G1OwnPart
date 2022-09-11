@@ -61,7 +61,7 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
+	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java] -->[]
 	CAS --> cA --> aC
 	cA --> UAIS[UploadActImageServlet.java]
 	UAIS --> cA
