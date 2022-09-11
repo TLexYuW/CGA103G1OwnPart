@@ -72,7 +72,8 @@ flowchart LR
 ```
 ```mermaid
 flowchart LR
-	cA[createAct.js] -->|Fetch1完成後,發動Fetch2 Request| UAIS[UploadActImageServlet.java] --> APS[ActPicService.java]
+	cA[createAct.js] -->|Fetch1 done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
+	-->|Call uploadActPic Method| APS[ActPicService.java]
 	--> APD[AcPicDAO.java] --> DB[(Database)]
 	UAIS --> cA
 ```
