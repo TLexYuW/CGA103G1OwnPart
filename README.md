@@ -6,8 +6,8 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 
 ## 目錄 TOC
 1. [首頁切版 Home Page - Header Footer 公板](#首頁)
-2. [揪團活動 Activity](#揪團活動)
-   - [使用技術 Tech](#使用技術)
+2. [揪團活動 Activity](#揪團活動Activity)
+   - [使用技術 Tech](#Tech)
    - [實作功能說明 Function Description](#實作功能)
      - [會員中心頁面](#會員中心頁面)
 	     1. [創建揪團活動](#創建揪團活動)
@@ -16,8 +16,8 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
      - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
 	     1. [揪團活動查詢](#揪團活動查詢) 
 	     2. [加入揪團活動](#加入揪團活動)  
-3. [討論區 Forum](#討論區)
-   - [使用技術 Tech](#使用技術)
+3. [討論區 Forum](#討論區Forum)
+   - [使用技術 Tech](#Tech)
    - [實作功能說明 Function Description](#實作功能)
 	   - [新增文章頁面](#新增文章頁面) 
 	   - [文章瀏覽頁面](#文章瀏覽頁面) 
@@ -27,8 +27,8 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 ### 首頁
 ![L](https://i.imgur.com/150VwUa.png)
 
-### 揪團活動
-#### 使用技術
+### 揪團活動Activity
+#### Tech
 ```mermaid
 flowchart LR
 	W[HTML & CSS & JavaScript & JQuery]
@@ -108,8 +108,8 @@ flowchart LR
 - 如活動人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
 - 若為其他錯誤，則顯示`加入失敗`
 
-### 討論區
-#### 使用技術
+### 討論區Forum
+#### Tech
 ```mermaid
 flowchart LR
 	J[JSP + EL]
