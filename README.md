@@ -72,8 +72,11 @@ flowchart LR
 flowchart LR
 	CAS[CreateActServlet.java] -->|將收到的AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
 	--> APDAO[ActParticipantDAO.java] --> DB[(Database)]
-	
-	cA[createAct.js] -->|Fetch1完成後,發動Fetch2 Request| UAIS[UploadActImageServlet.java] -->
+```
+```mermaid
+flowchart LR
+	cA[createAct.js] -->|Fetch1完成後,發動Fetch2 Request| UAIS[UploadActImageServlet.java] --> APS[ActPicService.java]
+	--> APD[AcPicDAO.java] --> DB[(Database)]
 	UAIS --> cA
 ```
 - 會員選擇`創建揪團活動`，跳出
