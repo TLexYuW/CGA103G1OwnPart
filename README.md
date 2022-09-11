@@ -12,7 +12,7 @@ tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Boots
      - [會員中心頁面 Member Center](#會員中心頁面)
 	     1. [創建揪團活動 Create Activity](#創建揪團活動)
 	     2. [查詢揪團紀錄 Query Joined Activity](#查詢揪團紀錄)
-	     3. [修改揪團活動條件](#修改揪團活動條件)
+	     3. [修改揪團活動條件 Update Host Activity Conditions](#修改揪團活動條件)
      - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
 	     1. [揪團活動查詢](#揪團活動查詢) 
 	     2. [加入揪團活動](#加入揪團活動)  
