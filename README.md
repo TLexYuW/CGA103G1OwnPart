@@ -64,14 +64,11 @@ flowchart LR
 	aC[actCreate.html] -->|會員點擊submit觸發事件| cA[createAct.js] -->|Fetch1 Request| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
-	
-	cA --> UAIS[UploadActImageServlet.java]
-	UAIS --> cA
 ```
 ```mermaid
 flowchart LR
-	CAS[CreateActServlet.java] -->|將收到的AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
-	--> APDAO[ActParticipantDAO.java] --> DB[(Database)]
+	CAS[CreateActServlet.java] -->|將回傳的AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
+	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB[(Database)]
 ```
 ```mermaid
 flowchart LR
