@@ -9,9 +9,9 @@ tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Boots
 2. [揪團活動 Activity](#揪團活動-Activity)
    - [使用技術 Tech](#Tech)
    - [實作功能說明 Function Description](#實作功能)
-     - [會員中心頁面 Member Page](#會員中心頁面)
+     - [會員中心頁面 Member Center](#會員中心頁面)
 	     1. [創建揪團活動 Create Activity](#創建揪團活動)
-	     2. [查詢揪團紀錄](#查詢揪團紀錄)
+	     2. [查詢揪團紀錄 Query Joined Activity](#查詢揪團紀錄)
 	     3. [修改揪團活動條件](#修改揪團活動條件)
      - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
 	     1. [揪團活動查詢](#揪團活動查詢) 
@@ -72,7 +72,7 @@ flowchart LR
 ###### 查詢揪團紀錄
 ```mermaid
 flowchart LR
-	
+	[actMemQuery.html] --> [] --> []
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
