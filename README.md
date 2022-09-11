@@ -61,6 +61,7 @@ flowchart LR
 ###### 創建揪團活動-CreateActivity
 ```mermaid
 flowchart LR
+	aC[actCreate.html] --> [] -->
 	
 ```
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
