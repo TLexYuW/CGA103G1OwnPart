@@ -25,6 +25,7 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 	   - [文章修改頁面](#文章修改頁面) 
 4. [ProjectTree](#ProjectTree)
 ### 首頁
+![L](https://i.imgur.com/CZCUkFm.png)
 
 ### 揪團活動
 #### 使用技術
@@ -63,7 +64,10 @@ flowchart LR
    - 若後端發生錯誤，回傳失敗，則顯示`創建揪團活動失敗`
 ```mermaid
 flowchart LR
-	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
+	aC[actCreate.html] --> cA[createAct.js] -->|Fetch Request| CAS[CreateActServlet.java]
+
+	CAS --> cA --> 
+
 ```
 ###### 查詢揪團紀錄
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
