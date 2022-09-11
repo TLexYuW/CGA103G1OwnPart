@@ -104,6 +104,7 @@ flowchart LR
 	aMU2html[actMemUpdate2.html] -->|於欄位輸入編號,Click '搜尋' 觸發事件| aMU2js[actMemUpdate2.js]
 	--> GMOAS[GetMemOneActServlet.java]
 	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+	DB --> AD --> AS --> GMOAS --> aMU2js --> aMU2html
 ```  
 ```mermaid
 flowchart LR
