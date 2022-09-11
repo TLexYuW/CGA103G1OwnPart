@@ -61,8 +61,8 @@ flowchart LR
 ###### 創建揪團活動-CreateActivity
 ```mermaid
 flowchart LR
-	aC[actCreate.html] --> [] -->
-	
+	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
+	cA --> UAIS[UploadActImageServlet.java]
 ```
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
    - 資料填寫完畢並無誤，再次點擊，會顯示`創建揪團活動成功`且將錯誤訊息及欄位資料清空，以方便立刻創建下一個揪團活動，不須刷新頁面。
