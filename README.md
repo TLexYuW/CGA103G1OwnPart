@@ -67,15 +67,14 @@ flowchart LR
 ```
 ```mermaid
 flowchart LR
-	CAS[CreateActServlet.java] -->|將回傳的AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
+	CAS[CreateActServlet.java] -->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
 	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB[(Database)]
 ```
 ```mermaid
 flowchart LR
 	cA[createAct.js] -->|Fetch1 done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
-	-->|Call uploadActPic Method| APS[ActPicService.java]
+	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS[ActPicService.java]
 	--> APD[AcPicDAO.java] --> DB[(Database)]
-	UAIS --> cA
 ```
 - 會員選擇`創建揪團活動`，跳出
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
