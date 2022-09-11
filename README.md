@@ -61,14 +61,19 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] -->|會員點擊submit觸發事件| cA[createAct.js] -->|Fetch Request| CAS[CreateActServlet.java] 
+	aC[actCreate.html] -->|會員點擊submit觸發事件| cA[createAct.js] -->|Fetch1 Request| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
-	DB --> AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
-	
-	CAS -->|將AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
-	--> APDAO[ActParticipantDAO.java] --> DB[(Database)]
+	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
 	
 	cA --> UAIS[UploadActImageServlet.java]
+	UAIS --> cA
+```
+```mermaid
+flowchart LR
+	CAS[CreateActServlet.java] -->|將收到的AI編號傳入當Parameter, Call addActParticipant Method| APS[ActParticipantService.java] 
+	--> APDAO[ActParticipantDAO.java] --> DB[(Database)]
+	
+	cA[createAct.js] -->|Fetch1完成後,發動Fetch2 Request| UAIS[UploadActImageServlet.java] -->
 	UAIS --> cA
 ```
 - 會員選擇`創建揪團活動`，跳出
