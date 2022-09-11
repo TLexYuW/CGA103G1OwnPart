@@ -95,15 +95,22 @@ flowchart LR
 ```mermaid
 flowchart LR
 	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
-	--> 
+	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 ```
 ```mermaid
 flowchart LR
 	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GMOAS[GetMemOneActServlet.java]
+	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 ```  
 ```mermaid
 flowchart LR
 	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> UACS[UpdateActConditionServlet.java]
+	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+```
+```mermaid
+flowchart LR
+	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> UAIS[UpdateActImageServlet]
+	--> APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
 ```  
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
