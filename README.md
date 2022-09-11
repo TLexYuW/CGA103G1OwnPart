@@ -74,7 +74,7 @@ flowchart LR
 flowchart LR
 	cA[createAct.js] -->|Fetch1 done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS[ActPicService.java]
-	--> APD[AcPicDAO.java] --> DB[(Database)]
+	--> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
 ```
 - 會員選擇`創建揪團活動`，跳出
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
@@ -84,6 +84,8 @@ flowchart LR
 ```mermaid
 flowchart LR
 	aMQhtml[actMemQuery.html] --> aMQjs[actMemQuery.js] --> GOAS[GetOwnActServlet.java]
+	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+	
 	GOAS --> aMQjs --> aMQhtml
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
