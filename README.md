@@ -61,7 +61,7 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, Data轉JSON傳入| CAS[CreateActServlet.java] 
+	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, DataToJSON| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
 ```
@@ -97,7 +97,7 @@ flowchart LR
 	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] 
 	-->|Fetch Request| GAHS[GetActHostServlet.java]
 	-->|Call getHostAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
-	DB --> AD --> AS -->|JavaBean| GAHS --> aMU2js --> aMU2html
+	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create List| aMU2html
 ```
 ```mermaid
 flowchart LR
@@ -113,11 +113,6 @@ flowchart LR
 	aMU2js -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
 	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB[(Database)]
 ```
-```mermaid
-flowchart LR
-	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> UAIS[UpdateActImageServlet]
-	--> APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
-```  
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
    - 於欄位輸入主辦活動編號，並點擊`搜尋`，可以列出該活動所有資料
