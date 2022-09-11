@@ -61,7 +61,7 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, 將資料轉JSON傳入| CAS[CreateActServlet.java] 
+	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, Data轉JSON傳入| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
 ```
@@ -94,9 +94,10 @@ flowchart LR
 ###### 修改揪團活動條件
 ```mermaid
 flowchart LR
-	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] -->
-	GAHS[GetActHostServlet.java]
-	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] 
+	-->|Fetch Request| GAHS[GetActHostServlet.java]
+	-->|Call getHostAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+	DB --> AD --> AS -->|JavaBean| GAHS --> aMU2js --> aMU2html
 ```
 ```mermaid
 flowchart LR
@@ -107,7 +108,7 @@ flowchart LR
 ```mermaid
 flowchart LR
 	aMU2html[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js[actMemUpdate2.js] 
-	-->|Fetch1 Request, 將資料轉為JSON傳入| UACS[UpdateActConditionServlet.java]
+	-->|Fetch1 Request, Data轉為JSON傳入| UACS[UpdateActConditionServlet.java]
 	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	aMU2js -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
 	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB[(Database)]
