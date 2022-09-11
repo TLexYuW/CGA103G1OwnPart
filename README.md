@@ -20,9 +20,9 @@ tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Boots
    - [使用技術 Tech](#Tech)
    - [實作功能說明 Function Description](#實作功能)
 	   - [新增文章頁面 Create an Article](#新增文章頁面) 
-	   - [文章瀏覽頁面 ](#文章瀏覽頁面) 
-	   - [文章詳細頁面](#文章詳細頁面) 
-	   - [文章修改頁面](#文章修改頁面) 
+	   - [文章瀏覽頁面 Article List Page](#文章瀏覽頁面) 
+	   - [文章詳細頁面 One Detailed Article Page](#文章詳細頁面) 
+	   - [文章修改頁面 Update Article Content](#文章修改頁面) 
 4. [ProjectTree](#ProjectTree)
 ### 首頁
 ![L](https://i.imgur.com/150VwUa.png)
