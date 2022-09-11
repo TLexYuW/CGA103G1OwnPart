@@ -94,12 +94,14 @@ flowchart LR
 ###### 修改揪團活動條件
 ```mermaid
 flowchart LR
-	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GAHS[GetActHostServlet.java]
+	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] -->
+	GAHS[GetActHostServlet.java]
 	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 ```
 ```mermaid
 flowchart LR
-	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> GMOAS[GetMemOneActServlet.java]
+	aMU2html[actMemUpdate2.html] -->|於欄位輸入編號,Click '搜尋' 觸發事件| aMU2js[actMemUpdate2.js]
+	--> GMOAS[GetMemOneActServlet.java]
 	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 ```  
 ```mermaid
