@@ -72,7 +72,8 @@ flowchart LR
 ###### 查詢揪團紀錄
 ```mermaid
 flowchart LR
-	[actMemQuery.html] --> [] --> []
+	aMQhtml[actMemQuery.html] --> aMQjs[actMemQuery.js] --> GOAS[GetOwnActServlet.java]
+	GOAS --> aMQjs --> aMQhtml
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
