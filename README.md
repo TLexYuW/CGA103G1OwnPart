@@ -62,17 +62,29 @@ flowchart LR
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
    - 資料填寫完畢並無誤，再次點擊，會顯示`創建揪團活動成功`且將錯誤訊息及欄位資料清空，以方便立刻創建下一個揪團活動，不須刷新頁面。
    - 若後端發生錯誤，回傳失敗，則顯示`創建揪團活動失敗`
-
+```mermaid
+flowchart LR
+	
+```
 ###### 查詢揪團紀錄
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
+```mermaid
+flowchart LR
+	
+```
+
 ###### 修改揪團活動條件
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
    - 於欄位輸入主辦活動編號，並點擊`搜尋`，可以列出該活動所有資料
    - 再點擊`修改活動條件`，即可修改活動資料，接著點選`儲存`再按`送出更新揪團資料`，修改成功則會回傳成功訊息
    - 若修改欄位有空白處或不符合處，則會顯示錯誤訊息提醒。
-     
+```mermaid
+flowchart LR
+	
+```  
+
 ##### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
 ```mermaid
@@ -83,17 +95,18 @@ flowchart LR
 - 若無揪團活動，則顯示 `目前無任何揪團活動`
 - 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`
 ###### 加入揪團活動
-```mermaid
-flowchart LR
-	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
-	GOAS -->|使用GSON將資料轉JSON格式| gOADP -->|Fetch Response| aDJP
-	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
-``` 
 - 點選列表內其中之一活動，進入該活動詳細頁面，
 - 點擊`確定加入`按鈕，畫面顯示`加入成功`訊息
 - 若已加入過，則回傳訊息告知`你已經加入過此活動`
 - 如活動人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
 - 若為其他錯誤，則顯示`加入失敗`
+```mermaid
+flowchart LR
+	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
+	GOAS -->|Response - GSON&JSON| gOADP --> aDJP
+	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
+	JAS --> aDJ --> aDJP
+``` 
 
 ### 討論區
 #### 使用技術
