@@ -61,8 +61,8 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java] --> AS[ActService] --> DAO --> DB[(Database)]
-	DB --> DAO --> CAS --> cA --> aC
+	aC[actCreate.html] -->|會員點擊submit按鈕| cA[createAct.js] -->|Fetch Request| CAS[CreateActServlet.java] -->|呼叫Service創建活動| AS[ActService] --> DAO --> DB[(Database)]
+	DB --> DAO --> AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok則顯示成功訊息| aC
 	cA --> UAIS[UploadActImageServlet.java]
 	UAIS --> cA
 ```
