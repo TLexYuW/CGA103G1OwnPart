@@ -9,8 +9,8 @@ tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Boots
 2. [揪團活動 Activity](#揪團活動-Activity)
    - [使用技術 Tech](#Tech)
    - [實作功能說明 Function Description](#實作功能)
-     - [會員中心頁面](#會員中心頁面)
-	     1. [創建揪團活動](#創建揪團活動-CreateActivity)
+     - [會員中心頁面 Member Page](#會員中心頁面)
+	     1. [創建揪團活動 Create Activity](#創建揪團活動)
 	     2. [查詢揪團紀錄](#查詢揪團紀錄)
 	     3. [修改揪團活動條件](#修改揪團活動條件)
      - [揪團活動瀏覽頁面](#揪團活動瀏覽頁面) 
@@ -27,7 +27,7 @@ tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Boots
 ### 首頁
 ![L](https://i.imgur.com/150VwUa.png)
 
-### 揪團活動-Activity
+### 揪團活動
 #### Tech
 ```mermaid
 flowchart LR
@@ -58,7 +58,7 @@ flowchart LR
 #### 實作功能
 **會員可於平台網站內進行以下操作**
 ##### 會員中心頁面
-###### 創建揪團活動-CreateActivity
+###### 創建揪團活動
 ```mermaid
 flowchart LR
 	aC[actCreate.html] --> cA[createAct.js] --> CAS[CreateActServlet.java]
