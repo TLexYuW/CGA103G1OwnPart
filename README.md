@@ -61,7 +61,7 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 flowchart LR
-	aC[actCreate.html] -->|點擊submit觸發事件| cA[createAct.js] -->|Fetch1 Request| CAS[CreateActServlet.java] 
+	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, 將資料轉JSON傳入| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS -->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
 ```
@@ -72,7 +72,7 @@ flowchart LR
 ```
 ```mermaid
 flowchart LR
-	cA[createAct.js] -->|Fetch1 done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
+	cA[createAct.js] -->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS[ActPicService.java]
 	--> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
 ```
@@ -109,8 +109,8 @@ flowchart LR
 	aMU2html[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js[actMemUpdate2.js] 
 	-->|Fetch1 Request, 將資料轉為JSON傳入| UACS[UpdateActConditionServlet.java]
 	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
-	aMU2js -->|Fetch1 Done, then Fetch2 Req| UAIS[UpdateActImageServlet]
-	--> APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
+	aMU2js -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
+	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB[(Database)]
 ```
 ```mermaid
 flowchart LR
