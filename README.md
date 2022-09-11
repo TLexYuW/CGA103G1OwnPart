@@ -58,7 +58,7 @@ flowchart LR
 #### 實作功能
 **會員可於平台網站內進行以下操作**
 ##### 會員中心頁面
-###### 創建揪團活動
+###### 創建揪團活動-reatActivity
 ```mermaid
 flowchart LR
 	
