@@ -106,8 +106,11 @@ flowchart LR
 ```  
 ```mermaid
 flowchart LR
-	aMU2html[actMemUpdate2.html] --> aMU2js[actMemUpdate2.js] --> UACS[UpdateActConditionServlet.java]
+	aMU2html[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js[actMemUpdate2.js] 
+	-->|Fetch1 Request, 將資料轉為JSON傳入| UACS[UpdateActConditionServlet.java]
 	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
+	aMU2js -->|Fetch1 Done, then Fetch2 Req| UAIS[UpdateActImageServlet]
+	--> APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
 ```
 ```mermaid
 flowchart LR
