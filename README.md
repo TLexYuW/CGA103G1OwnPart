@@ -312,6 +312,7 @@ graph TB
 	end
 	
 	acDP -->|Click'修改文章'| UAS
+	UAS -->|Validation ? 有權修改文章 : 無權修改文章| acDP
 	UAS -->|getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
