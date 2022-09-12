@@ -1,14 +1,8 @@
 ---
-tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
+tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL, ![](https://img.shields.io/badge/Java-8|11|17-green.svg)
 ---
-|    ![](https://img.shields.io/badge/Java-green.svg)    | ![](https://img.shields.io/badge/JavaScript-yellow.svg) |  
-|:------------------------------------------------------:|:-------------------------------------------------------:|
-| ![](https://img.shields.io/badge/version-8-green.svg)  |    ![](https://img.shields.io/badge/ES6-yellow.svg)     |
-| ![](https://img.shields.io/badge/version-11-green.svg) |                                                         |
-| ![](https://img.shields.io/badge/version-17-green.svg) |                                                         |
-|   ![](https://img.shields.io/badge/JSP+EL-green.svg)   |                                                         |
-|  ![](https://img.shields.io/badge/Servlet-green.svg)   |                                                         |
-![L](https://img.shields.io/badge/JavaScript-yellow.svg)　![L](https://img.shields.io/badge/JavaScript-yellow.svg) ![](https://img.shields.io/badge/Java-green.svg) 
+![](https://img.shields.io/badge/Java-8|11|17-green.svg)![](https://img.shields.io/badge/JavaScript-ES6-yellow.svg) ![](https://img.shields.io/badge/JSP+EL-green.svg)                           ![](https://img.shields.io/badge/Servlet-green.svg)                   
+
 
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
