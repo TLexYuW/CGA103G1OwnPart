@@ -95,7 +95,7 @@ flowchart
 	aMQhtml[actMemQuery.html] -->|Click Query Button| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
 	-->|Call getOwnActParti Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	
-	DB --> AD --> AS -->|回傳該會員已參加之揪團活動| GOAS -->|JavaBeanToJSON| aMQjs -->|Dynamically Create Element| aMQhtml
+	DB --> AD --> AS -->|回傳該會員已參加之揪團活動| GOAS -->|Response JavaBeanToJSON| aMQjs -->|Dynamically Create Element| aMQhtml
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
@@ -154,11 +154,16 @@ graph
 - 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`
 ###### 加入揪團活動
 ```mermaid
-flowchart LR
+graph BT
+	subgraph Step2
+	aDJP2[actDetailJoinPage.html ] --> aDJ2[actDetailJoin.js] --> JAS[JoinActServlet.java] -->
+	JAS --> aDJ2 --> aDJP2
+	end
+	
+	subgraph Step1
 	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
-	GOAS -->|Response - GSON&JSON| gOADP --> aDJP
-	aDJP[actDetailJoinPage.html ] --> aDJ[actDetailJoin.js] --> JAS[JoinActServlet.java]
-	JAS --> aDJ --> aDJP
+	GOAS -->|Response - JavaBeanToJSON| gOADP --> aDJP
+	end
 ``` 
 - 點選列表內其中之一活動，進入該活動詳細頁面，
 - 點擊`確定加入`按鈕，畫面顯示`加入成功`訊息
