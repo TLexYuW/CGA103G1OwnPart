@@ -64,16 +64,15 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 graph 
-	subgraph Step2
+	subgraph Step3
 	aC3[actCreate.html] -->|Click '創建揪團' 觸發事件| cA3[createAct.js] 
 	-->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS2[ActPicService.java]
 	--> APD[AcPicDAO.java] -->|存入byte array| DB3[(Database)]
 	end
 	
-	subgraph Step1.5
-	CAS2 -->|Response| cA2[createAct.js]  -->|Res.ok?成功訊息:失敗訊息| aC2[actCreate.html]
-	CAS2[CreateActServlet.java] 
+	subgraph Step2
+	aC2[actCreate.html] -->|Click '創建揪團' 觸發事件| cA2[createAct.js] -->|Fetch1 Request, DataToJSON| CAS2[CreateActServlet.java] 
 	-->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
 	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB2[(Database)]
 	end
