@@ -263,13 +263,13 @@ graph
 ```mermaid
 graph TB
 	
-	subgraph 文章詳細頁面
+	subgraph Servlet
 	direction BT
 	GOAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
-	subgraph 文章詳細頁面
+	subgraph Servlet
 	direction BT
 	GOAS[GetOneAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
@@ -280,7 +280,14 @@ graph TB
 	acCP[acCardPage.jsp]
 	end
 	
-	acCP -->|Click任一文章| acC
+	subgraph 文章詳細頁面
+	direction BT
+	acDP[acDetailPage.jsp]
+	end
+	
+	acCP -->|Click任一文章| GOAS
+	GOAS -->|getRequestDispatcher.forward| acDP
+	
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
 ##### 文章修改頁面
