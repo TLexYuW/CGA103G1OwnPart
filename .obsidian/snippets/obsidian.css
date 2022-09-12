@@ -1,12 +1,13 @@
-/* svg[id^="m"][width][height][viewBox] {
+svg[id^="m"][width][height][viewBox] {
   width: auto;
   height: auto;
-} */
-/* div.mermaid {
+}
+div.mermaid {
   text-align: left;
   width: 100%;
-} */
-span{
-  /* float: left; */
+}
+span img{
+  padding: 10px;
+  float: left;
 }
 
