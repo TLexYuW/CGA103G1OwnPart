@@ -100,6 +100,7 @@ flowchart LR
 	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create List| aMU2html
 ```
 ![](https://i.imgur.com/xTga3rY.jpg)
+![](https://i.imgur.com/SMNFJhV.png)
 
 ```mermaid
 flowchart LR
