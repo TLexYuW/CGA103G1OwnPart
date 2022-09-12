@@ -263,13 +263,13 @@ graph
 ```mermaid
 graph TB
 	
-	subgraph 新增文章
+	subgraph 文章詳細頁面
 	direction BT
 	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
-	subgraph 新增文章圖片
+	subgraph 文章詳細頁面
 	direction BT
 	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
