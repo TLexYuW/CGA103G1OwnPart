@@ -4,7 +4,7 @@
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
-## 目錄 TOC
+## 目錄TOC
 1. [首頁切版 Home Page - Header Footer 公板](#首頁)
 2. [揪團活動 Activity](#揪團活動-Activity)
    - [使用技術 Tech](#Tech)
@@ -56,6 +56,7 @@ flowchart LR
 	
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
+:obs_up_curly_arrow_glyph:[top](#目錄TOC)
 #### 實作功能
 **會員可於平台網站內進行以下操作**
 ##### 會員中心頁面
@@ -129,7 +130,8 @@ graph TB
    - 於欄位輸入主辦活動編號，並點擊`搜尋`，可以列出該活動所有資料
    - 再點擊`修改活動條件`，即可修改活動資料，接著點選`儲存`再按`送出更新揪團資料`，修改成功則會回傳成功訊息
    - 若修改欄位有空白處或不符合處，則會顯示錯誤訊息提醒。
-[目錄](#目錄 TOC)
+   
+:obs_up_curly_arrow_glyph:[top](#目錄TOC)
 
 ##### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
@@ -174,6 +176,9 @@ graph
 - 若已加入過，則回傳訊息告知`你已經加入過此活動`
 - 如活動人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
 - 若為其他錯誤，則顯示`加入失敗`
+
+:obs_up_curly_arrow_glyph:[top](#目錄TOC)
+
 
 ### 討論區Forum
 #### Tech
