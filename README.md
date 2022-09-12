@@ -2,7 +2,7 @@
 tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
 <img src="https://img.shields.io/badge/Java-8|11|17-Green.svg"><img src="https://img.shields.io/badge/JSP-Green.svg"><img src="https://img.shields.io/badge/EL-Green.svg"><img src="https://img.shields.io/badge/Servlet-Green.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-Gold.svg"><img src="https://img.shields.io/badge/JQuery-Yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
-<img src="https://img.shields.io/badge?logo=F7DF1E">
+<img src="https://img.shields.io/static/v1?message=css3&logo=CSS3&labelColor=5c5c5c&color=1182c3&logoColor=white&label=%20&style=plastic">
 
 <br>
 
