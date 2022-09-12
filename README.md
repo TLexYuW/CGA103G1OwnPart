@@ -265,13 +265,13 @@ graph TB
 	
 	subgraph 文章詳細頁面
 	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| CAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
+	GOAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
 	subgraph 文章詳細頁面
 	direction BT
-	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	GOAS[GetOneAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
 	end
 	
