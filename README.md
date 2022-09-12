@@ -164,9 +164,10 @@ graph
 	end
 	
 	subgraph Step1
-	DB --> AS --> GOAS -->|Response - JavaBeanToJSON| gOADP --> aDJP
-	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
-	--> AS[ActService.java] --> DB[(Database)]
+	DB --> ASAPS --> GOASGOAP -->|Response - JavaBeanToJSON & byte array| gOADP --> aDJP
+	aSLPhtml[actSearchListPage.html] -->|Click其中一個活動進行跳轉頁面| aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] 
+	-->|Fetch Request| GOASGOAP[GetOneActServlet.java & GetOneActPicServlet.java ]
+	--> ASAPS[ActService.java & ActPicService.java] --> DB[(Database)]
 	end
 ``` 
 - 點選列表內其中之一活動，進入該活動詳細頁面，
