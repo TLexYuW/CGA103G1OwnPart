@@ -8,9 +8,7 @@ tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootst
 | ![](https://img.shields.io/badge/version-17-green.svg) |                                                         |
 |   ![](https://img.shields.io/badge/JSP+EL-green.svg)   |                                                         |
 |  ![](https://img.shields.io/badge/Servlet-green.svg)   |                                                         |
-<div>![](https://img.shields.io/badge/JavaScript-yellow.svg)</div>
-![](https://img.shields.io/badge/JavaScript-yellow.svg) ![](https://img.shields.io/badge/Java-green.svg) 
-
+![L](https://img.shields.io/badge/JavaScript-yellow.svg)　![L](https://img.shields.io/badge/JavaScript-yellow.svg) ![](https://img.shields.io/badge/Java-green.svg) 
 
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
