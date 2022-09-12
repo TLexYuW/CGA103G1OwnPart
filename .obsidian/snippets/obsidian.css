@@ -6,3 +6,6 @@ div.mermaid {
   text-align: left;
   width: 100%;
 }
+.badge{
+  float: left;
+}
