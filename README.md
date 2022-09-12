@@ -217,16 +217,16 @@ flowchart LR
 ##### 新增文章頁面
 ```mermaid
 graph 
-	subgraph One
+	subgraph 文章各項資料
 	acCP -->|EL Call Service| AcSI[AcServiceImpl.java]
-	acCP[acCardPage.jsp] --> GOASGOAIS[GetOneAcServlet.java & GetOneAcImageServlet.java] 
-	--> AcSI[AcServiceImpl.java & AcPicService] --> H[DAO/Hibernate] --> DB[Database]
+	acCP[acCardPage.jsp] --> GOAS[GetOneAcServlet.java] 
+	--> AcSIAcPS[AcServiceImpl.java & AcPicService] --> H[DAO/Hibernate] --> DB[Database]
 	end
 	
-	subgraph Two
-	acCP -->|EL Call Service| AcSI[AcServiceImpl.java]
-	acCP[acCardPage.jsp] --> GOASGOAIS[GetOneAcServlet.java & GetOneAcImageServlet.java] 
-	--> AcSI[AcServiceImpl.java & AcPicService] --> H[DAO/Hibernate] --> DB[Database]
+	subgraph 文章圖片
+	acCP2 -->|EL Call Service| AcSI2[AcServiceImpl.java]
+	acCP2[acCardPage.jsp] --> GOAIS[GetOneAcImageServlet.java] 
+	--> AcPS[AcPicService] --> DAO[DAO/JDBC] --> DB2[Database]
 	end	
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
