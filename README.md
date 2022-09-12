@@ -2,9 +2,9 @@
 tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
 
-<div class="badge" style="padding: 7px;"><img src="https://img.shields.io/badge/Java-Green.svg"/></div>
-<div class="badge" style="padding: 7px;"><img src="https://img.shields.io/badge/Java-Green.svg"/></div>
-<div class="badge" style="padding: 7px;"><img src="https://img.shields.io/badge/Java-Green.svg"/></div><br>
+<img src="https://img.shields.io/badge/Java-Green.svg"/>
+<img src="https://img.shields.io/badge/Java-Green.svg"/>
+<img src="https://img.shields.io/badge/Java-Green.svg"/><br>
 
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
