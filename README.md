@@ -291,13 +291,13 @@ graph TB
 graph TB
 	subgraph Servlet
 	direction BT
-	GOAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
+	UAS[UpdateAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
 	subgraph Servlet
 	direction BT
-	GOAS[GetOneAcServlet.java] --> APS[AcPicService.java] 
+	UAS[UpdateAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
 	end
 	
@@ -311,8 +311,8 @@ graph TB
 	acDP[acDetailPage.jsp]
 	end
 	
-	acDP -->|Click'修改文章'| GOAS
-	GOAS -->|getRequestDispatcher.forward| acU
+	acDP -->|Click'修改文章'| UAS
+	UAS -->|getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
