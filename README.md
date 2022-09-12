@@ -102,13 +102,29 @@ flowchart
 
 ###### 修改揪團活動條件
 ```mermaid
-flowchar
-	subgraph choice1
+flowchart TB
+	subgraph Choice3
+	aMU2html3[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js3[actMemUpdate2.js] 
+	-->|Fetch1 Request, Data轉為JSON傳入| UACS[UpdateActConditionServlet.java]
+	--> AS3[ActService.java] --> AD3[ActDAO.java] --> DB3[(Database)]
+	aMU2js3 -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
+	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB3[(Database)]
+	end
+
+	subgraph Choice2
+	aMU2html2[actMemUpdate2.html] -->|於欄位輸入編號,Click '搜尋' 觸發事件| aMU2js2[actMemUpdate2.js]
+	--> GMOAS[GetMemOneActServlet.java]
+	--> AS2[ActService.java] --> AD2[ActDAO.java] --> DB2[(Database)]
+	DB2 --> AD2 --> AS2 --> GMOAS --> aMU2js2 --> aMU2html2
+	end
+
+	subgraph Choice1
 	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] 
 	-->|Fetch Request| GAHS[GetActHostServlet.java]
 	-->|Call getHostAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create List| aMU2html
 	end
+	
 ```
 ```mermaid
 flowchart LR
@@ -119,11 +135,11 @@ flowchart LR
 ```  
 ```mermaid
 flowchart LR
-	aMU2html[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js[actMemUpdate2.js] 
+	aMU2html3[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js3[actMemUpdate2.js] 
 	-->|Fetch1 Request, Data轉為JSON傳入| UACS[UpdateActConditionServlet.java]
-	--> AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
-	aMU2js -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
-	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB[(Database)]
+	--> AS3[ActService.java] --> AD3[ActDAO.java] --> DB3[(Database)]
+	aMU2js3 -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
+	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB3[(Database)]
 ```
    - 點擊`查詢主辦之活動列表`，可以列出自己創建的主辦活動編號及標題名稱
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`
