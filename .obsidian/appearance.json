@@ -4,7 +4,6 @@
   "theme": "obsidian",
   "translucency": false,
   "enabledCssSnippets": [
-    "media-grid-snippet",
     "obsidian"
   ],
   "baseFontSizeAction": true

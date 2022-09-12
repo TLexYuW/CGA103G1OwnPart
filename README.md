@@ -1,7 +1,12 @@
 ---
-tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL, ![](https://img.shields.io/badge/Java-8|11|17-green.svg)
+tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
-![](https://img.shields.io/badge/Java-8|11|17-green.svg)![](https://img.shields.io/badge/JavaScript-ES6-yellow.svg) ![](https://img.shields.io/badge/JSP+EL-green.svg)                           ![](https://img.shields.io/badge/Servlet-green.svg)                   
+<img src="https://img.shields.io/badge/Java-8|11|17-green.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
+
+![L](https://img.shields.io/badge/Java-8|11|17-green.svg)
+![L](https://img.shields.io/badge/JavaScript-ES6-yellow.svg) 
+![L](https://img.shields.io/badge/JSP+EL-green.svg)
+![L](https://img.shields.io/badge/Servlet-green.svg)                   
 
 
 
