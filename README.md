@@ -281,8 +281,6 @@ graph TB
 	end
 	
 	acCP -->|Click任一文章| acC
-	CAS -->|Validation ? VO : ErrorMessags| acC
-
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
 ##### 文章修改頁面
