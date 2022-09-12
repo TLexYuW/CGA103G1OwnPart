@@ -1,8 +1,9 @@
 ---
 tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
-<img src="https://img.shields.io/badge/Java-8|11|17-green.svg"><img src="https://img.shields.io/badge/JSP-green.svg"><img src="https://img.shields.io/badge/EL-green.svg"><img src="https://img.shields.io/badge/Servlet-green.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JQuery-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
-
+<img src="https://img.shields.io/badge/Java-8|11|17-Green.svg"><img src="https://img.shields.io/badge/JSP-Green.svg"><img src="https://img.shields.io/badge/EL-Green.svg"><img src="https://img.shields.io/badge/Servlet-Green.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-Gold.svg"><img src="https://img.shields.io/badge/JQuery-Yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
+<img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
+#F7DF1E
 <br>
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
