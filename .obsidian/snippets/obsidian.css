@@ -6,10 +6,11 @@ div.mermaid {
   text-align: left;
   width: 100%;
 }
-.badge{
-  position: relative;
-  left: 1px;
-}
-img{
+img.badge{
   padding: 7px;
+  float: left;
 }
+/* img{
+  padding: 7px;
+  float: left;
+} */
