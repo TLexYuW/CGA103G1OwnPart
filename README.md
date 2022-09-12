@@ -136,16 +136,16 @@ graph TB
 ###### 揪團活動查詢
 ```mermaid
 graph 
-	subgraph Step2
-	DB2 --> APS --> GOAPS -->|byte array| aSLPjs2 --> aSLP2
+	subgraph Step1.5
+	DB2 --> APS --> GOAPS -->|byte array| aSLPjs2 -->|直接回傳至img標籤| aSLP2
 	aSLP2[actSearchListPage.html ] -->|Click '全部 radio'| aSLPjs2[actSearchListPage.js] 
-	-->|<img>Request| GOAPS[GetOneActPicServlet.java] -->|Call getOneActPic Method| APS[ActPicService.java] --> DB2[Database]
+	-->|<img>Request| GOAPS[GetOneActPicServlet.java] -->|Call getOneActPic Method| APS[ActPicService.java] --> DB2[(Database)]
 	end
 	
 	subgraph Step1
 	DB --> AS --> GAAS -->|DataToJSON| aSLPjs -->|Dynamically Create Element| aSLP
 	aSLP[actSearchListPage.html ] -->|Click '全部 radio'| aSLPjs[actSearchListPage.js] 
-	-->|$.ajax Request| GAAS[GetAllActServlet.java] -->|Call getAll Method| AS[ActService.java] --> DB[Database]
+	-->|$.ajax Request| GAAS[GetAllActServlet.java] -->|Call getAll Method| AS[ActService.java] --> DB[(Database)]
 	end
 
 ```     
