@@ -216,14 +216,19 @@ flowchart LR
 **會員可於討論區內進行以下操作**
 ##### 新增文章頁面
 ```mermaid
-graph 
+graph LR
 	subgraph 文章瀏覽頁面
+	direction BT
 	acCP[acCardPage.jsp]
 	end
 	
 	subgraph 新增文章
-	a[acCreate.jsp]
-	end	
+	direction BT
+	acC[acCreate.jsp]
+	end
+
+	acCP -->|Click '發表文章'| acC
+	
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
 - 發表文章成功，則會呈現於文章瀏覽頁面上。
