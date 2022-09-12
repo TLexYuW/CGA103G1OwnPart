@@ -1,10 +1,12 @@
 ---
 tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
-<div style="padding: 0px 0px 0px 0px;"><img src="https://img.shields.io/badge/Java-Green.svg"/></div>
+
+<div style=" float:left; padding: 0px 0px 0px 0px;"><img src="https://img.shields.io/badge/Java-Green.svg"/></div>![L](https://img.shields.io/badge/Java-Green.svg)
+
 <div style="padding: 0px 2px 0px 0px;"><img src="https://img.shields.io/badge/Java-Green.svg"/></div>
 
-
+ ![L](https://img.shields.io/badge/Java-Green.svg) ![L](https://img.shields.io/badge/Java-Green.svg)
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
