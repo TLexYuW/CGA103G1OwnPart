@@ -4,7 +4,9 @@ svg[id^="m"][width][height][viewBox] {
 }
 div.mermaid {
   text-align: left;
-  
+  text-justify: auto;
+  height: 100%;
+  width: 100%;
 }
 span img{
   padding: 10px;
