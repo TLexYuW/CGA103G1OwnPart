@@ -311,7 +311,7 @@ graph TB
 	acDP[acDetailPage.jsp]
 	end
 	
-	acDP -->|Click任一文章| GOAS
+	acDP -->|Click'修改文章'| GOAS
 	GOAS -->|getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
