@@ -76,7 +76,7 @@ graph TB
 	aC3[actCreate.html] -->|Click '創建揪團' 觸發事件| cA3[createAct.js] 
 	-->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS2[ActPicService.java]
-	--> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
+	--> APD[AcPicDAO.java] -->|存入byte array| DB3[(Database)]
 ```
 ```mermaid
 flowchart LR
