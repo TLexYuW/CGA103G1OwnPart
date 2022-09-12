@@ -99,6 +99,8 @@ flowchart LR
 	-->|Call getHostAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create List| aMU2html
 ```
+![](https://i.imgur.com/xTga3rY.jpg)
+
 ```mermaid
 flowchart LR
 	aMU2html[actMemUpdate2.html] -->|於欄位輸入編號,Click '搜尋' 觸發事件| aMU2js[actMemUpdate2.js]
