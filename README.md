@@ -92,10 +92,10 @@ graph
 ###### 查詢揪團紀錄
 ```mermaid
 flowchart
-	aMQhtml[actMemQuery.html] -->|點擊Query觸發事件| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
+	aMQhtml[actMemQuery.html] -->|Click Query Button| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
 	-->|Call getOwnActParti Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	
-	DB --> AD --> AS -->|回傳該會員已參加之揪團活動| GOAS -->|將JavaBean轉JSON格式| aMQjs -->|動態生成List呈現於網頁| aMQhtml
+	DB --> AD --> AS -->|回傳該會員已參加之揪團活動| GOAS -->|JavaBeanToJSON| aMQjs -->|Dynamically Create Element| aMQhtml
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
@@ -105,7 +105,7 @@ flowchart
 graph TB
 	subgraph Choice3
 	aMU2html3[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js3[actMemUpdate2.js] 
-	-->|Fetch1 Request, Data轉為JSON傳入| UACS[UpdateActConditionServlet.java]
+	-->|Fetch1 Request, DataToJSON| UACS[UpdateActConditionServlet.java]
 	--> AS3[ActService.java] --> AD3[ActDAO.java] --> DB3[(Database)]
 	aMU2js3 -->|Fetch1 Done, then Fetch2 Request| UAIS[UpdateActImageServlet]
 	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB3[(Database)]
