@@ -1,22 +1,9 @@
 package com.act.model;
 
-import static com.util.JdbcUtil.PASSWORD;
-import static com.util.JdbcUtil.URL;
-import static com.util.JdbcUtil.USERNAME;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.persistence.criteria.CriteriaBuilder.In;
-
-import com.act_participant.model.ActParticipantService;
 
 public class ActService {
 	
