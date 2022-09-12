@@ -64,14 +64,14 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 graph 
-	subgraph Step3
+	subgraph Step2
 	aC3[actCreate.html] -->|Click '創建揪團' 觸發事件| cA3[createAct.js] 
 	-->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS2[ActPicService.java]
 	--> APD[AcPicDAO.java] -->|存入byte array| DB3[(Database)]
 	end
 	
-	subgraph Step2
+	subgraph Step1.5
 	aC2[actCreate.html] -->|Click '創建揪團' 觸發事件| cA2[createAct.js] -->|Fetch1 Request, DataToJSON| CAS2[CreateActServlet.java] 
 	-->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
 	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB2[(Database)]
@@ -91,7 +91,7 @@ graph
    - 若後端發生錯誤，回傳失敗，則顯示`創建揪團活動失敗`
 ###### 查詢揪團紀錄
 ```mermaid
-flowchart LR
+flowchart
 	aMQhtml[actMemQuery.html] -->|點擊Query觸發事件| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
 	-->|Call getOwnActParti Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	
