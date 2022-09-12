@@ -3,11 +3,12 @@
   "livePreview": false,
   "readableLineLength": false,
   "defaultViewMode": "preview",
-  "showLineNumber": true,
+  "showLineNumber": false,
   "attachmentFolderPath": "",
   "fileSortOrder": "alphabetical",
-  "lineWrap": true,
+  "lineWrap": false,
   "alwaysUpdateLinks": true,
   "showFrontmatter": false,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "foldIndent": true
 }
