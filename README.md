@@ -297,7 +297,7 @@ graph TB
 	
 	subgraph Servlet
 	direction BT
-	UAS[UpdateAcServlet.java] --> APS[AcPicService.java] 
+	UASG[UpdateAcServlet.doGet] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
 	end
 
@@ -305,7 +305,7 @@ graph TB
 	
 	subgraph 文章修改頁面
 	direction BT
-	acU[acUpdate.jsp]
+	acU[acUpdate.jsp] --> UASP[UpdateAcServlet.doPost] --> [] --> []
 	end
 	
 	subgraph 文章詳細頁面
@@ -316,34 +316,6 @@ graph TB
 	acDP -->|Click'修改文章'| UAS
 	UAS -->|Validation ? 有權修改文章 : 無權修改文章+ErrorMessages| acDP
 	UAS -->|有權 -> getRequestDispatcher.forward| acU
-```
-```mermaid
-graph TB
-	subgraph Servlet
-	direction BT
-	UAS[UpdateAcServlet.java] --> ASI[AcServiceImpl.java] 
-	--> H[DAO/Hibernate] --> DB[(Database)]
-	end
-	
-	subgraph Servlet
-	direction BT
-	UAS[UpdateAcServlet.java] --> APS[AcPicService.java] 
-	--> DAO[DAO/JDBC] --> DB[(Database)]
-	end
-	
-	subgraph 文章修改頁面
-	direction BT
-	acU[acUpdate.jsp]
-	end
-	
-	subgraph 文章詳細頁面
-	direction BT
-	acDP[acDetailPage.jsp]
-	end
-	
-	acDP -->|Click'修改文章'| UAS
-	UAS -->|Validation ? 有權修改文章 : 無權修改文章+ErrorMessages| acDP
-	UAS -->|getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
