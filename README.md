@@ -156,15 +156,17 @@ graph
 ```mermaid
 graph 
 	subgraph Step2
-	aDJP2[actDetailJoinPage.html ] --> aDJ2[actDetailJoin.js] --> JAS[JoinActServlet.java] --> AS2[ActService.java] --> DB2[(Database)]
-	JAS --> APS[ActParticipantService.java] --> DB2
-	JAS --> aDJ2 --> aDJP2
+	DB2 --> AS2 --> JAS --> aDJ2 --> aDJP2
+	aDJP2[actDetailJoinPage.html ] -->|Click '加入'| aDJ2[actDetailJoin.js] 
+	--> JAS[JoinActServlet.java] 
+	--> AS2[ActService.java & ActParticipantService.java] 
+	-->|將該會員編號及活動編號存入| DB2[(Database)]
 	end
 	
 	subgraph Step1
+	DB --> AS --> GOAS -->|Response - JavaBeanToJSON| gOADP --> aDJP
 	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
 	--> AS[ActService.java] --> DB[(Database)]
-	GOAS -->|Response - JavaBeanToJSON| gOADP --> aDJP
 	end
 ``` 
 - 點選列表內其中之一活動，進入該活動詳細頁面，
