@@ -12,6 +12,9 @@
 <img src="https://img.shields.io/static/v1?label=&logo=MySQL&logoColor=white&message=MySQL&color=CA6F1E">　
 <img src="https://img.shields.io/static/v1?label=&logo=EclipseIDE&logoColor=white&message=Eclipse IDE&color=darkblue">
 
+<br>
+
+
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 

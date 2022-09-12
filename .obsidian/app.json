@@ -6,7 +6,7 @@
   "showLineNumber": false,
   "attachmentFolderPath": "",
   "fileSortOrder": "alphabetical",
-  "lineWrap": false,
+  "lineWrap": true,
   "alwaysUpdateLinks": true,
   "showFrontmatter": false,
   "strictLineBreaks": false,
