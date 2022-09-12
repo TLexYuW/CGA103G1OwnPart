@@ -6,3 +6,7 @@ div.mermaid {
   text-align: left;
   width: 100%;
 }
+
+div{
+  display: inline;
+}
