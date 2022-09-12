@@ -6,6 +6,6 @@ div.mermaid {
   text-align: left;
   width: 100%;
 }
-.badge{
-  display: inline-block;
+.table{
+  border: none;
 }

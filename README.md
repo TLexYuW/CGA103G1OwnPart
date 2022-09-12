@@ -1,8 +1,10 @@
 ---
-tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
+tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
+| <img src="https://img.shields.io/badge/Java-Green.svg"/> | <img src="https://img.shields.io/badge/Java-Green.svg"/> |
+| --------------------------------------------------------:| --------------------------------------------------------:|
+|                                                          |                                                          |
 
-<img src="https://img.shields.io/badge/Java-Green.svg"/>
 <img src="https://img.shields.io/badge/Java-Green.svg"/>
 <img src="https://img.shields.io/badge/Java-Green.svg"/><br>
 
