@@ -1,16 +1,13 @@
-svg[id^="m"][width][height][viewBox] {
+/* svg[id^="m"][width][height][viewBox] {
   width: auto;
   height: auto;
-}
-div.mermaid {
+} */
+/* div.mermaid {
   text-align: left;
   width: 100%;
-}
-/* img{
-  padding: 7px;
-  float: left;
 } */
-#badge{
+.badge{
   padding: 7px;
-  float: left;
+  flex-flow:nowrap ;
 }
+
