@@ -2,6 +2,7 @@
 tags: Java, Java8Stream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
 ![L](https://img.shields.io/badge/Java-Green.svg) ![L](https://img.shields.io/badge/Java-Green.svg)
+![](https://img.shields.io/badge/Github-Youtube-red?link=http://Github.com&link=http://youtube.com&logo=Github)
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
