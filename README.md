@@ -218,11 +218,15 @@ flowchart LR
 ```mermaid
 graph 
 	subgraph One
-	acCP[acCardPage.jsp] --> [GetOneAcServlet.java & GetOneAcImageServlet.java] 
-	--> [AcServiceImpl.java] --> [DAO/Hibernate] --> DB[Database]
+	acCP -->|EL Call Service| AcSI[AcServiceImpl.java]
+	acCP[acCardPage.jsp] --> GOASGOAIS[GetOneAcServlet.java & GetOneAcImageServlet.java] 
+	--> AcSI[AcServiceImpl.java & AcPicService] --> H[DAO/Hibernate] --> DB[Database]
 	end
 	
 	subgraph Two
+	acCP -->|EL Call Service| AcSI[AcServiceImpl.java]
+	acCP[acCardPage.jsp] --> GOASGOAIS[GetOneAcServlet.java & GetOneAcImageServlet.java] 
+	--> AcSI[AcServiceImpl.java & AcPicService] --> H[DAO/Hibernate] --> DB[Database]
 	end	
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
