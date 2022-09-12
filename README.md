@@ -154,14 +154,16 @@ graph
 - 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`
 ###### 加入揪團活動
 ```mermaid
-graph BT
+graph 
 	subgraph Step2
-	aDJP2[actDetailJoinPage.html ] --> aDJ2[actDetailJoin.js] --> JAS[JoinActServlet.java] -->
+	aDJP2[actDetailJoinPage.html ] --> aDJ2[actDetailJoin.js] --> JAS[JoinActServlet.java] --> AS2[ActService.java] --> DB2[(Database)]
+	JAS --> APS[ActParticipantService.java] --> DB2
 	JAS --> aDJ2 --> aDJP2
 	end
 	
 	subgraph Step1
 	aDJP[actDetailJoinPage.html ] --> gOADP[getOneActDetailPage.js] -->|Fetch Request| GOAS[GetOneActServlet.java]
+	--> AS[ActService.java] --> DB[(Database)]
 	GOAS -->|Response - JavaBeanToJSON| gOADP --> aDJP
 	end
 ``` 
