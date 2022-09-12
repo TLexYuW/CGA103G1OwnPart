@@ -63,19 +63,25 @@ flowchart LR
 ##### 會員中心頁面
 ###### 創建揪團活動
 ```mermaid
-flowchart 
+graph BT
+	subgraph one
 	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, DataToJSON| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS 
 	-->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
+	end
+	subgraph two
+	CAS[CreateActServlet.java] -->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
+	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB[(Database)]
+	end
 ```
 ```mermaid
-flowchart 
+flowchart LR
 	CAS[CreateActServlet.java] -->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
 	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB[(Database)]
 ```
 ```mermaid
-flowchart 
+flowchart LR
 	cA[createAct.js] -->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS[ActPicService.java]
 	--> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
