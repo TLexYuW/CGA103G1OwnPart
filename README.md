@@ -1,11 +1,15 @@
 ---
 tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
-|     |     |
-| --- | --- |
-<span>![L](https://img.shields.io/badge/Java-8|11|17-Green.svg)![L](https://img.shields.io/badge/Java-8|11|17-Green.svg)</span>
+| ![](https://img.shields.io/badge/Java-green.svg)       | ![](https://img.shields.io/badge/JavaScript-yellow.svg) |     |     |     |     |     |     |     |     |     |     |
+| ------------------------------------------------------ | ------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![](https://img.shields.io/badge/version-8-green.svg)  | ![](https://img.shields.io/badge/ES6-yellow.svg)        |     |     |     |     |     |     |     |     |     |     |
+| ![](https://img.shields.io/badge/version-11-green.svg) |                                                         |     |     |     |     |     |     |     |     |     |     |
+| ![](https://img.shields.io/badge/version-17-green.svg) |                                                         |     |     |     |     |     |     |     |     |     |     |
+|                                                        |                                                         |     |     |     |     |     |     |     |     |     |     |
 
-![L](https://img.shields.io/badge/Java-8|11|17-reen.svg) 
+
+
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
