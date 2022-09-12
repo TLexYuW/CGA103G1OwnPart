@@ -265,7 +265,7 @@ graph TB
 	
 	subgraph 文章詳細頁面
 	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	acC[acCreate.jsp] -->|Click '發表'| CAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
