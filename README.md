@@ -101,7 +101,7 @@ flowchart
 ###### 修改揪團活動條件
 ```mermaid
 graph TB
-	subgraph Choice3
+	subgraph SubmitButton
 	aMU2html3[actMemUpdate2.html] -->|Click '送出' 觸發事件| aMU2js3[actMemUpdate2.js] 
 	-->|Fetch1 Request, DataToJSON| UACS[UpdateActConditionServlet.java]
 	--> AS3[ActService.java] --> AD3[ActDAO.java] --> DB3[(Database)]
@@ -109,14 +109,14 @@ graph TB
 	-->|Call alterActPic Method| APS[AcPicService.java] --> APD[AcPicDAO.java] -->|存入byte array, 更新圖片| DB3[(Database)]
 	end
 
-	subgraph Choice2
+	subgraph InputSearchButton
 	DB2 --> AD2 --> AS2 --> GMOAS --> aMU2js2 --> aMU2html2
 	aMU2html2[actMemUpdate2.html] -->|於欄位輸入編號,Click '搜尋' 觸發事件| aMU2js2[actMemUpdate2.js]
 	--> GMOAS[GetMemOneActServlet.java]
 	--> AS2[ActService.java] --> AD2[ActDAO.java] --> DB2[(Database)]
 	end
 
-	subgraph Choice1
+	subgraph QueryButton
 	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create Element| aMU2html
 	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] 
 	-->|Fetch Request| GAHS[GetActHostServlet.java]
