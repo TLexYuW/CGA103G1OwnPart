@@ -218,8 +218,10 @@ flowchart LR
 ```mermaid
 graph 
 	subgraph One
-	[acCardPage.jsp] --> [GetOneAcServlet.java & GetOneAcImageServlet.java] --> [] -->
+	acCP[acCardPage.jsp] --> [GetOneAcServlet.java & GetOneAcImageServlet.java] 
+	--> [AcServiceImpl.java] --> [DAO/Hibernate] --> DB[Database]
 	end
+	
 	subgraph Two
 	end	
 ```
