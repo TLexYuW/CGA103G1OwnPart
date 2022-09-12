@@ -1,10 +1,13 @@
 ---
 tags: JQuery, Ajax, Fetch, JSON, Bootstrap, MySQL
 ---
-<img src="https://img.shields.io/badge/Java-8|11|17-white.svg"><img src="https://img.shields.io/badge/JSP-white.svg"><img src="https://img.shields.io/badge/EL-white.svg"><img src="https://img.shields.io/badge/Servlet-white.svg"><img src="https://img.shields.io/static/v1?label=%20&logo=Hibernate&logoColor=808000&&message=Hibernate&color=white">
+<img src="https://img.shields.io/badge/Java-8|11|17-red.svg"><img src="https://img.shields.io/badge/JSP-red.svg"><img src="https://img.shields.io/badge/EL-red.svg"><img src="https://img.shields.io/badge/Servlet-red.svg"><img src="https://img.shields.io/static/v1?label=%20&logo=Hibernate&logoColor=808000&&message=Hibernate&color=white">
 <img src="https://img.shields.io/static/v1?label=%20&logo=JavaScript&logoColor=FFD700&&message=ES6&color=gray"><img src="https://img.shields.io/static/v1?label=%20&logo=CSS3&logoColor=white&&message=CSS3&color=1182c3"><img src="https://img.shields.io/static/v1?label=%20&logo=HTML5&logoColor=white&&message=HTML5&color=FF8C00"><img src="https://img.shields.io/static/v1?label=%20&logo=jQuery&logoColor=white&&message=jQuery&color=skyblue">
-<img src="https://img.shields.io/static/v1?label=%20&logo=jQuery&logoColor=white&&message=jQuery&color=skyblue">
-
+<img src="https://img.shields.io/static/v1?label=%20&logo=Apache Maven&logoColor=white&&message=JSON&color=black">
+<img src="https://img.shields.io/static/v1?label=%20&logo=JSON&logoColor=white&&message=JSON&color=black">
+<img src="https://img.shields.io/static/v1?label=%20&logo=JSON&logoColor=white&&message=JSON&color=black">
+<img src="https://img.shields.io/badge/Maven-F4A460.svg">
+Apache Maven
 <br>
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
