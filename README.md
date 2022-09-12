@@ -315,7 +315,7 @@ graph TB
 	
 	acDP -->|Click'修改文章'| UAS
 	UAS -->|Validation ? 有權修改文章 : 無權修改文章+ErrorMessages| acDP
-	UAS -->|getRequestDispatcher.forward| acU
+	UAS -->|有權 -> getRequestDispatcher.forward| acU
 ```
 ```mermaid
 graph TB
@@ -350,7 +350,7 @@ graph TB
 - 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
 - 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
 
-*⤴️ [top](#目錄TOC) *
+⤴️ [top](#目錄TOC) 
 
 ### ProjectTree
 ```bash
