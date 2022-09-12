@@ -26,6 +26,10 @@
 4. [ProjectTree](#ProjectTree)
 
 ### 首頁
+```mermaid
+graph 
+	homePage.jsp
+```
 ![L](https://i.imgur.com/150VwUa.png)
 
 ### 揪團活動
@@ -131,7 +135,7 @@ graph TB
    - 再點擊`修改活動條件`，即可修改活動資料，接著點選`儲存`再按`送出更新揪團資料`，修改成功則會回傳成功訊息
    - 若修改欄位有空白處或不符合處，則會顯示錯誤訊息提醒。
    
-⤴️ [top](#目錄TOC)
+*⤴️ [top](#目錄TOC) *
 
 ##### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
@@ -177,7 +181,7 @@ graph
 - 如活動人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
 - 若為其他錯誤，則顯示`加入失敗`
 
-⤴️ [top](#目錄TOC)
+*⤴️ [top](#目錄TOC) *
 
 
 ### 討論區Forum
@@ -212,8 +216,9 @@ flowchart LR
 **會員可於討論區內進行以下操作**
 ##### 新增文章頁面
 ```mermaid
-graph LR
+graph 
 	subgraph One
+	[acCardPage.jsp] --> [GetOneAcServlet.java & GetOneAcImageServlet.java] --> [] -->
 	end
 	subgraph Two
 	end	
@@ -243,7 +248,7 @@ flowchart LR
 - 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
 - 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
 
-# ⤴️ [top](#目錄TOC)
+*⤴️ [top](#目錄TOC) *
 
 ### ProjectTree
 ```bash
@@ -383,3 +388,4 @@ flowchart LR
                 |-- homePageBanner.file
                 `-- memSidebar.file
 ```
+*⤴️ [top](#目錄TOC) *
