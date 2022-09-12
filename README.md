@@ -261,14 +261,54 @@ graph
 - 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
 ##### 文章詳細頁面
 ```mermaid
-flowchart LR
+graph TB
 	
+	subgraph 新增文章
+	direction BT
+	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	--> H[DAO/Hibernate] --> DB[(Database)]
+	end
+	
+	subgraph 新增文章圖片
+	direction BT
+	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	--> DAO[DAO/JDBC] --> DB[(Database)]
+	end
+	
+	subgraph 文章瀏覽頁面
+	direction BT
+	acCP[acCardPage.jsp]
+	end
+	
+	acCP -->|Click任一文章| acC
+	CAS -->|Validation ? VO : ErrorMessags| acC
+
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
 ##### 文章修改頁面
 ```mermaid
-flowchart LR
+graph TB
 	
+	subgraph 新增文章
+	direction BT
+	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	--> H[DAO/Hibernate] --> DB[(Database)]
+	end
+	
+	subgraph 新增文章圖片
+	direction BT
+	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	--> DAO[DAO/JDBC] --> DB[(Database)]
+	end
+	
+	subgraph 文章瀏覽頁面
+	direction BT
+	acCP[acCardPage.jsp]
+	end
+	
+	acCP -->|Click '發表文章'| acC
+	CAS -->|Validation ? VO : ErrorMessags| acC
+
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
