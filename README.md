@@ -136,9 +136,12 @@ graph TB
 ###### 揪團活動查詢
 ```mermaid
 graph LR
-	aSLP[actSearchListPage.html ] --> aSLPjs[actSearchListPage.js] 
-	--> GAAS[GetAllActServlet.java] --> AS[ActService.java] --> DB[Database]
-	aSLPjs --> GOAPS[GetOneActPicServlet.java] --> APS[ActPicService.java] --> DB
+	aSLP[actSearchListPage.html ] -->|Click '全部 radio'| aSLPjs[actSearchListPage.js] 
+	-->|$.ajax Request| GAAS[GetAllActServlet.java] -->|Call getAll Method| AS[ActService.java] --> DB[Database]
+	
+	aSLPjs -->|<img>Request| GOAPS[GetOneActPicServlet.java] -->|Call getOneActPic Method| APS[ActPicService.java] --> DB
+
+	DB --> APS --> GOAPS -->
 ```     
 - 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
 - 若無揪團活動，則顯示 `目前無任何揪團活動`
