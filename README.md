@@ -2,8 +2,9 @@
 tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
 <img src="https://img.shields.io/badge/Java-8|11|17-Green.svg"><img src="https://img.shields.io/badge/JSP-Green.svg"><img src="https://img.shields.io/badge/EL-Green.svg"><img src="https://img.shields.io/badge/Servlet-Green.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-Gold.svg"><img src="https://img.shields.io/badge/JQuery-Yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
-<img src="https://img.shields.io/static/v1?message=css3&logo=CSS3&labelColor=5c5c5c&color=1182c3&logoColor=white&label=%20&style=plastic">
-
+<img src="https://img.shields.io/static/v1?message=ES6&logo=Javascript&labelColor=5c5c5c&color=FFD700&logoColor=FFD700&label=%20&style=plastic">
+<img src="https://img.shields.io/static/v1?message=CSS3&logo=CSS3&labelColor=1182c3&color=5c5c5c&logoColor=white&label=%20&style=plastic">
+5c5c5c
 <br>
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
