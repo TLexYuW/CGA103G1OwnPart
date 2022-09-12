@@ -228,7 +228,6 @@ graph
 	DB2 --> DAO --> AcPS --> GOAIS -->|Response byte array| acCP2
 	acCP2[acCardPage.jsp] -->|Request| GOAIS[GetOneAcImageServlet.java] 
 	--> AcPS[AcPicService] --> DAO[DAO/JDBC] --> DB2[(Database)]
-	acCP2 -->|EL Call Service| AcSI2[AcServiceImpl.java] --> DAO --> DB2
 	end	
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
