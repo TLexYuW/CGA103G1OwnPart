@@ -216,24 +216,28 @@ flowchart LR
 **會員可於討論區內進行以下操作**
 ##### 新增文章頁面
 ```mermaid
-graph LR
+graph TB
+	
+	subgraph 新增文章
+	direction BT
+	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	--> H[DAO/Hibernate] --> DB[(Database)]
+	end
+	
+	subgraph 新增文章圖片
+	direction BT
+	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	--> DAO[DAO/JDBC] --> DB[(Database)]
+	end
+	
 	subgraph 文章瀏覽頁面
 	direction BT
 	acCP[acCardPage.jsp]
 	end
 	
-	subgraph 新增文章
-	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| [CreateAcServlet.java] --> [AcServiceImpl.java] --> 
-	end
-	
-	subgraph 新增文章圖片
-	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| [CreateAcServlet.java] --> [AcPicService.java] --> 
-	end
-	
 	acCP -->|Click '發表文章'| acC
-	
+	CAS -->|Validation ? VO : ErrorMessags| acC
+
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
 - 發表文章成功，則會呈現於文章瀏覽頁面上。
