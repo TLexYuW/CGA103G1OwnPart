@@ -64,31 +64,27 @@ flowchart LR
 ###### 創建揪團活動
 ```mermaid
 graph TB
+	subgraph Step1
 	aC[actCreate.html] -->|Click '創建揪團' 觸發事件| cA[createAct.js] -->|Fetch1 Request, DataToJSON| CAS[CreateActServlet.java] 
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB -->|取得Auto_Increment編號| AD -->|回傳Auto_Increment| AS -->|回傳Auto_Increment| CAS 
 	-->|Response| cA -->|Res.ok?成功訊息:失敗訊息| aC
+	end
 	
+	subgraph Step2
 	aC2[actCreate.html] -->|Click '創建揪團' 觸發事件| cA2[createAct.js] -->|Fetch1 Request, DataToJSON| CAS2[CreateActServlet.java] 
 	-->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
 	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB2[(Database)]
+	end
 	
+	subgraph Step3
 	aC3[actCreate.html] -->|Click '創建揪團' 觸發事件| cA3[createAct.js] 
 	-->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
 	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS2[ActPicService.java]
 	--> APD[AcPicDAO.java] -->|存入byte array| DB3[(Database)]
+	end
 ```
-```mermaid
-flowchart LR
-	CAS[CreateActServlet.java] -->|將回傳的AI編號設為Parameter傳入, Call addActParticipant Method| APS[ActParticipantService.java] 
-	-->|主辦者同時也是參加者,新增參加者| APDAO[ActParticipantDAO.java] --> DB2[(Database)]
-```
-```mermaid
-flowchart LR
-	cA[createAct.js] -->|Fetch1 Done, then Fetch2 Request| UAIS[UploadActImageServlet.java] 
-	-->|取得AI編號傳入Method當參數, Call uploadActPic Method| APS[ActPicService.java]
-	--> APD[AcPicDAO.java] -->|存入byte array| DB[(Database)]
-```
+
 - 會員選擇`創建揪團活動`，跳出
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
    - 資料填寫完畢並無誤，再次點擊，會顯示`創建揪團活動成功`且將錯誤訊息及欄位資料清空，以方便立刻創建下一個揪團活動，不須刷新頁面。
