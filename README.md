@@ -119,7 +119,7 @@ graph TB
 	end
 
 	subgraph Choice1
-	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create List| aMU2html
+	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create Element| aMU2html
 	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] 
 	-->|Fetch Request| GAHS[GetActHostServlet.java]
 	-->|Call getHostAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
@@ -135,13 +135,19 @@ graph TB
 ##### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
 ```mermaid
-graph LR
+graph 
+	subgraph Step2
+	DB2 --> APS --> GOAPS -->|byte array| aSLPjs2 --> aSLP2
+	aSLP2[actSearchListPage.html ] -->|Click '全部 radio'| aSLPjs2[actSearchListPage.js] 
+	-->|<img>Request| GOAPS[GetOneActPicServlet.java] -->|Call getOneActPic Method| APS[ActPicService.java] --> DB2[Database]
+	end
+	
+	subgraph Step1
+	DB --> AS --> GAAS -->|DataToJSON| aSLPjs -->|Dynamically Create Element| aSLP
 	aSLP[actSearchListPage.html ] -->|Click '全部 radio'| aSLPjs[actSearchListPage.js] 
 	-->|$.ajax Request| GAAS[GetAllActServlet.java] -->|Call getAll Method| AS[ActService.java] --> DB[Database]
-	
-	aSLPjs -->|<img>Request| GOAPS[GetOneActPicServlet.java] -->|Call getOneActPic Method| APS[ActPicService.java] --> DB
+	end
 
-	DB --> APS --> GOAPS -->
 ```     
 - 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
 - 若無揪團活動，則顯示 `目前無任何揪團活動`
