@@ -27,6 +27,7 @@
 ### 首頁
 ![L](https://i.imgur.com/150VwUa.png)
 
+
 ### 揪團活動
 #### Tech
 ```mermaid
@@ -93,14 +94,14 @@ flowchart LR
 
 ###### 修改揪團活動條件
 ```mermaid
-flowchart LR
+flowchart
 	aMU2html[actMemUpdate2.html] -->|Click '查詢主辦活動列表' 觸發事件| aMU2js[actMemUpdate2.js] 
 	-->|Fetch Request| GAHS[GetActHostServlet.java]
 	-->|Call getHostAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	DB --> AD --> AS -->|JavaBean| GAHS -->|JavaBeanToJSON| aMU2js -->|Dynamically Create List| aMU2html
 ```
-![](https://i.imgur.com/xTga3rY.jpg)
-![](https://i.imgur.com/SMNFJhV.png)
+
+
 
 ```mermaid
 flowchart LR
