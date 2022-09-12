@@ -6,8 +6,11 @@
   text-align: left;
   width: 100%;
 } */
-.badge{
+img{
   padding: 7px;
-  flex-flow:nowrap ;
+  /* float: left; */
+}
+span{
+  float: left;
 }
 
