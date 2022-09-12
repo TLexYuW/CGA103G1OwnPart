@@ -217,6 +217,19 @@ flowchart LR
 ##### 新增文章頁面
 ```mermaid
 graph 
+	subgraph 文章瀏覽頁面
+	acCP[acCardPage.jsp]
+	end
+	
+	subgraph 新增文章
+	a[acCreate.jsp]
+	end	
+```
+- 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
+- 發表文章成功，則會呈現於文章瀏覽頁面上。
+##### 文章瀏覽頁面
+```mermaid
+graph 
 	subgraph 文章各項資料
 	DB --> H --> AcSI --> GOAS -->|Response VO| acCP
 	acCP[acCardPage.jsp] -->|Request| GOAS[GetOneAcServlet.java] 
@@ -229,13 +242,6 @@ graph
 	acCP2[acCardPage.jsp] -->|Request| GOAIS[GetOneAcImageServlet.java] 
 	--> AcPS[AcPicService] --> DAO[DAO/JDBC] --> DB2[(Database)]
 	end	
-```
-- 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
-- 發表文章成功，則會呈現於文章瀏覽頁面上。
-##### 文章瀏覽頁面
-```mermaid
-flowchart LR
-	
 ```
 - 如果討論區沒有任何文章，則顯示`目前沒有文章`
 - 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
