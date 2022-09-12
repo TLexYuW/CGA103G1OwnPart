@@ -56,7 +56,7 @@ flowchart LR
 	
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
-:obs_up_curly_arrow_glyph:[top](#目錄TOC)
+⤴️ [top](#目錄TOC)
 #### 實作功能
 **會員可於平台網站內進行以下操作**
 ##### 會員中心頁面
@@ -131,7 +131,7 @@ graph TB
    - 再點擊`修改活動條件`，即可修改活動資料，接著點選`儲存`再按`送出更新揪團資料`，修改成功則會回傳成功訊息
    - 若修改欄位有空白處或不符合處，則會顯示錯誤訊息提醒。
    
-:obs_up_curly_arrow_glyph:[top](#目錄TOC)
+⤴️[top](#目錄TOC)
 
 ##### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
@@ -177,7 +177,7 @@ graph
 - 如活動人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
 - 若為其他錯誤，則顯示`加入失敗`
 
-:obs_up_curly_arrow_glyph:[top](#目錄TOC)
+⤴️ [top](#目錄TOC)
 
 
 ### 討論區Forum
