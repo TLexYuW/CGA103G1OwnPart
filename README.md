@@ -217,7 +217,6 @@ flowchart LR
 ##### 新增文章頁面
 ```mermaid
 graph TB
-	
 	subgraph 新增文章
 	direction BT
 	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
@@ -237,7 +236,6 @@ graph TB
 	
 	acCP -->|Click '發表文章'| acC
 	CAS -->|Validation ? VO : ErrorMessags| acC
-
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
 - 發表文章成功，則會呈現於文章瀏覽頁面上。
@@ -262,7 +260,6 @@ graph
 ##### 文章詳細頁面
 ```mermaid
 graph TB
-	
 	subgraph Servlet
 	direction BT
 	GOAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
@@ -287,33 +284,35 @@ graph TB
 	
 	acCP -->|Click任一文章| GOAS
 	GOAS -->|getRequestDispatcher.forward| acDP
-	
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
 ##### 文章修改頁面
 ```mermaid
 graph TB
-	
-	subgraph 新增文章
+	subgraph Servlet
 	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	GOAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
-	subgraph 新增文章圖片
+	subgraph Servlet
 	direction BT
-	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	GOAS[GetOneAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
 	end
 	
-	subgraph 文章瀏覽頁面
+	subgraph 文章修改頁面
 	direction BT
-	acCP[acCardPage.jsp]
+	acU[acUpdate.jsp]
 	end
 	
-	acCP -->|Click '發表文章'| acC
-	CAS -->|Validation ? VO : ErrorMessags| acC
-
+	subgraph 文章詳細頁面
+	direction BT
+	acDP[acDetailPage.jsp] --> acU
+	end
+	
+	acCP -->|Click任一文章| GOAS
+	GOAS -->|getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
