@@ -305,7 +305,12 @@ graph TB
 	
 	subgraph 文章修改頁面
 	direction BT
-	acU[acUpdate.jsp] --> UASP[UpdateAcServlet.doPost] --> [] --> []
+	acU[acUpdate.jsp] --> UASP[UpdateAcServlet.doPost] --> ASIalter[AcServiceImpl.alterAc] --> H
+	end
+	
+	subgraph 文章修改頁面
+	direction BT
+	acU[acUpdate.jsp] --> UASP[UpdateAcServlet.doPost] --> APSupdate[AcPicService.updateImage] --> H
 	end
 	
 	subgraph 文章詳細頁面
