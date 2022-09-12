@@ -224,9 +224,14 @@ graph LR
 	
 	subgraph 新增文章
 	direction BT
-	acC[acCreate.jsp] --> [CreateAcServlet.java] --> [] --> 
+	acC[acCreate.jsp] -->|Click '發表'| [CreateAcServlet.java] --> [AcServiceImpl.java] --> 
 	end
-
+	
+	subgraph 新增文章圖片
+	direction BT
+	acC[acCreate.jsp] -->|Click '發表'| [CreateAcServlet.java] --> [AcPicService.java] --> 
+	end
+	
 	acCP -->|Click '發表文章'| acC
 	
 ```
