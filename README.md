@@ -308,10 +308,10 @@ graph TB
 	
 	subgraph 文章詳細頁面
 	direction BT
-	acDP[acDetailPage.jsp] --> acU
+	acDP[acDetailPage.jsp]
 	end
 	
-	acCP -->|Click任一文章| GOAS
+	acDP -->|Click任一文章| GOAS
 	GOAS -->|getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
