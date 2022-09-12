@@ -2,8 +2,8 @@
 tags: Java, JavaStream, JavaScript, JQuery, Ajax, Fetch, JSON, HTML, CSS, Bootstrap, JSP, EL, Servlet, Hibernate, MySQL
 ---
 <img src="https://img.shields.io/badge/Java-8|11|17-Green.svg"><img src="https://img.shields.io/badge/JSP-Green.svg"><img src="https://img.shields.io/badge/EL-Green.svg"><img src="https://img.shields.io/badge/Servlet-Green.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-Gold.svg"><img src="https://img.shields.io/badge/JQuery-Yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg"><img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg">
-<img src="https://img.shields.io/static/v1?message=ES6&logo=Javascript&labelColor=5c5c5c&color=FFD700&logoColor=FFD700&label=%20&style=plastic">
-<img src="https://img.shields.io/static/v1?label=&logoColor=white&&message=CSS3&color=1182c3">
+
+<img src="https://img.shields.io/static/v1?label=%20&logo=JavaScript&logoColor=FFD700&&message=ES6&color=gray"><img src="https://img.shields.io/static/v1?label=%20&logo=CSS3&logoColor=white&&message=CSS3&color=1182c3"><img src="https://img.shields.io/static/v1?label=%20&logo=HTML5&logoColor=white&&message=HTML5&color=FF8C00">
 5c5c5c
 <br>
 
