@@ -5,7 +5,7 @@
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
-## 目錄TOC
+# 目錄TOC
 1. [首頁切版 Home Page - Header Footer 公板](#首頁)
 2. [實作功能說明 Function Description](#實作功能)
 	1. [揪團活動 Activity](#揪團活動-Activity)
@@ -21,11 +21,11 @@
 		1. [使用技術 Tech](#Tech)
 		2. [新增文章頁面 Create an Article](#新增文章頁面) 
 		3. [文章瀏覽頁面 Article List Page](#文章瀏覽頁面) 
-	   - [文章詳細頁面 One Detailed Article Page](#文章詳細頁面) 
-	   - [文章修改頁面 Update Article Content](#文章修改頁面) 
-4. [ProjectTree](#ProjectTree)
+		4. [文章詳細頁面 One Detailed Article Page](#文章詳細頁面) 
+		5.  [文章修改頁面 Update Article Content](#文章修改頁面) 
+3. [ProjectTree](#ProjectTree)
 
-### 首頁
+## 首頁
 ```mermaid
 graph 
 	homePage.jsp
@@ -33,7 +33,9 @@ graph
 ![L](https://i.imgur.com/150VwUa.png)
 ⤴️ [top](#目錄TOC) 
 
-### 揪團活動
+## 實作功能
+
+### 會員中心頁面-揪團活動
 #### Tech
 ```mermaid
 flowchart LR
@@ -63,14 +65,13 @@ flowchart LR
 ```
 ⤴️ [top](#目錄TOC)
 
-#### 實作功能
-##### 會員中心頁面
+#### 
 ```mermaid
 flowchart
 	m[memPage.html]
 ```
 **會員可於平台網站內進行以下操作**
-###### 創建揪團活動
+##### 創建揪團活動
 ```mermaid
 graph 
 	subgraph Step2
@@ -100,7 +101,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-###### 查詢揪團紀錄
+##### 查詢揪團紀錄
 ```mermaid
 flowchart
 	aMQhtml[actMemQuery.html] -->|Click Query Button| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
@@ -113,7 +114,7 @@ flowchart
 
 ⤴️ [top](#目錄TOC) 
 
-###### 修改揪團活動條件
+##### 修改揪團活動條件
 ```mermaid
 graph TB
 	subgraph SubmitButton
@@ -147,7 +148,7 @@ graph TB
 
 ⤴️ [top](#目錄TOC) 
 
-##### 揪團活動瀏覽頁面
+#### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
 ```mermaid
 graph 
