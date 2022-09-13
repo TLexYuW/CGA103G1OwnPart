@@ -3,10 +3,6 @@
                                          "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-<!-- 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property> -->
-<!-- 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cga103g1?useSSL=false&amp;serverTimezone=UTC</property> -->
-<!-- 		<property name="hibernate.connection.username">root</property> -->
-<!-- 		<property name="hibernate.connection.password">TibameYu04</property> -->
 		
 		<property name="hibernate.connection.datasource">java:comp/env/jdbc/TestDB</property>
 		
@@ -17,12 +13,6 @@
 		<property name="hibernate.format_sql">true</property>
 		
 		<mapping class="com.ac.model.AcVO"/>
-<!-- 		<mapping class="com.ac_reply.model.AcReplyVo"/> -->
-<!-- 		<mapping class="com.ac_rp.model.AcRpVo"/> -->
-<!-- 		<mapping class="com.ac_msg.model.AcMsgVo"/> -->
-		
-<!-- 		<mapping class="com.ac_type.model.AcTypeVo"/> -->
-<!-- 		<mapping class="com.ac_pic.model.AcPicVo"/> -->
 		
 	</session-factory>
 </hibernate-configuration>

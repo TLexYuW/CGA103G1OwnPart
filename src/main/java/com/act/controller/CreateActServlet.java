@@ -23,7 +23,6 @@ import com.act_participant.model.ActParticipantService;
 import com.act_participant.model.ActParticipantVO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.testany.model.testAc;
 import com.util.LocalDateTimeDeserializer;
 import com.util.LocalDateTimeSerializer;
 
