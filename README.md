@@ -8,13 +8,12 @@
 # 目錄TOC
 1. [首頁切版 Home Page - Header Footer 公板](#首頁)
 2. [實作功能說明 Function Description](#實作功能)
-	1. [揪團活動 Activity](#揪團活動-Activity)
+	1. [會員中心頁面 Member Center](#會員中心頁面-揪團活動)
 		1. [使用技術 Tech](#Tech)
-		2. [會員中心頁面 Member Center](#會員中心頁面)
-			1. [創建揪團活動 Create Activity](#創建揪團活動)
-			2. [查詢揪團紀錄 Query Joined Activity](#查詢揪團紀錄)
-			3. [修改揪團活動條件 Update Member Host Activity Conditions](#修改揪團活動條件)
-		3. [揪團活動瀏覽頁面 Activity Search Page](#揪團活動瀏覽頁面) 
+		2. [創建揪團活動 Create Activity](#創建揪團活動)
+		3. [查詢揪團紀錄 Query Joined Activity](#查詢揪團紀錄)
+		4. [修改揪團活動條件 Update Member Host Activity Conditions](#修改揪團活動條件)
+		5. [揪團活動瀏覽頁面 Activity Search Page](#揪團活動瀏覽頁面) 
 			1. [揪團活動查詢 Query Specific Activity](#揪團活動查詢) 
 			2. [加入揪團活動 Join Activity](#加入揪團活動)  
 	2. [討論區 Forum](#討論區Forum)
@@ -36,6 +35,12 @@ graph
 ## 實作功能
 
 ### 會員中心頁面-揪團活動
+**會員可於平台網站內進行以下操作**
+```mermaid
+flowchart
+	m[memPage.html]
+```
+
 #### Tech
 ```mermaid
 flowchart LR
@@ -65,13 +70,7 @@ flowchart LR
 ```
 ⤴️ [top](#目錄TOC)
 
-#### 
-```mermaid
-flowchart
-	m[memPage.html]
-```
-**會員可於平台網站內進行以下操作**
-##### 創建揪團活動
+#### 創建揪團活動
 ```mermaid
 graph 
 	subgraph Step2
@@ -101,7 +100,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-##### 查詢揪團紀錄
+#### 查詢揪團紀錄
 ```mermaid
 flowchart
 	aMQhtml[actMemQuery.html] -->|Click Query Button| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
@@ -114,7 +113,7 @@ flowchart
 
 ⤴️ [top](#目錄TOC) 
 
-##### 修改揪團活動條件
+#### 修改揪團活動條件
 ```mermaid
 graph TB
 	subgraph SubmitButton
@@ -148,8 +147,13 @@ graph TB
 
 ⤴️ [top](#目錄TOC) 
 
-#### 揪團活動瀏覽頁面
-###### 揪團活動查詢
+
+### 揪團活動瀏覽頁面
+```mermaid
+flowchart
+	aSLP[actSearchListPage.html]
+```
+#### 揪團活動查詢
 ```mermaid
 graph 
 	subgraph Step1.5
@@ -171,7 +175,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-###### 加入揪團活動
+#### 加入揪團活動
 ```mermaid
 graph 
 	subgraph Step2
@@ -198,6 +202,7 @@ graph
 ⤴️ [top](#目錄TOC) 
 
 ### 討論區Forum
+**會員可於討論區內進行以下操作**
 #### Tech
 ```mermaid
 flowchart LR
@@ -227,9 +232,7 @@ flowchart LR
 ```
 ⤴️ [top](#目錄TOC) 
 
-#### 實作功能
-**會員可於討論區內進行以下操作**
-##### 新增文章頁面
+#### 新增文章頁面
 ```mermaid
 graph TB
 	subgraph 新增文章
@@ -257,7 +260,7 @@ graph TB
 
 ⤴️ [top](#目錄TOC) 
 
-##### 文章瀏覽頁面
+#### 文章瀏覽頁面
 ```mermaid
 graph 
 	subgraph 文章各項資料
@@ -278,7 +281,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-##### 文章詳細頁面
+#### 文章詳細頁面
 ```mermaid
 graph TB
 	subgraph Servlet
