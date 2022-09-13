@@ -1,5 +1,6 @@
 <span><img src="https://img.shields.io/badge/Java-8|11|17-red.svg"/>　<img src="https://img.shields.io/badge/JSP-red.svg"/>　<img src="https://img.shields.io/badge/EL-red.svg">　<img src="https://img.shields.io/badge/Servlet-red.svg">　<img src="https://img.shields.io/static/v1?label=%20&logo=Hibernate&logoColor=808000&&message=Hibernate&color=white">　<img src="https://img.shields.io/static/v1?label=%20&logo=JavaScript&logoColor=white&&message=ES6&color=FFD700">　<img src="https://img.shields.io/static/v1?label=%20&logo=CSS3&logoColor=white&&message=CSS3&color=1182c3">　<img src="https://img.shields.io/static/v1?label=%20&logo=HTML5&logoColor=white&&message=HTML5&color=FF8C00">　<img src="https://img.shields.io/badge/Ajax-Fetch-FFD700.svg">　<img src="https://img.shields.io/static/v1?label=%20&logo=jQuery&logoColor=white&&message=jQuery&color=skyblue">　<img src="https://img.shields.io/static/v1?label=%20&logo=JSON&logoColor=white&&message=JSON&color=gray">　<img src="https://img.shields.io/static/v1?label=%20&logo=Apache Maven&logoColor=F4A460&&message=Maven&color=white">　<img src="https://img.shields.io/static/v1?label=&logo=Bootstrap&logoColor=white&message=Bootstrap&color=8E44AD">　<img src="https://img.shields.io/static/v1?label=&logo=MySQL&logoColor=white&message=MySQL&color=CA6F1E">　<img src="https://img.shields.io/static/v1?label=&logo=EclipseIDE&logoColor=white&message=Eclipse IDE&color=darkblue">
 </span>
+<br>
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
@@ -31,6 +32,7 @@ graph
 	homePage.jsp
 ```
 ![L](https://i.imgur.com/150VwUa.png)
+⤴️ [top](#目錄TOC) 
 
 ### 揪團活動
 #### Tech
@@ -61,6 +63,7 @@ flowchart LR
 	DB -->|JDBC| M -->|JavaBean| S -->|JavaBean| Svl -->|Ajax & Fetch & JSON| W
 ```
 ⤴️ [top](#目錄TOC)
+
 #### 實作功能
 **會員可於平台網站內進行以下操作**
 ##### 會員中心頁面
@@ -87,11 +90,13 @@ graph
 	-->|Call createAct Method| AS[ActService.java] --> AD[ActDAO.java] --> DB[(Database)]
 	end
 ```
-
 - 會員選擇`創建揪團活動`，跳出
    - 若任一欄位空白或資料有誤，點擊`創建揪團`按鈕，則會回傳`錯誤訊息`於各欄位旁提示
    - 資料填寫完畢並無誤，再次點擊，會顯示`創建揪團活動成功`且將錯誤訊息及欄位資料清空，以方便立刻創建下一個揪團活動，不須刷新頁面。
    - 若後端發生錯誤，回傳失敗，則顯示`創建揪團活動失敗`
+
+⤴️ [top](#目錄TOC) 
+
 ###### 查詢揪團紀錄
 ```mermaid
 flowchart
@@ -102,6 +107,8 @@ flowchart
 ```
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
+
+⤴️ [top](#目錄TOC) 
 
 ###### 修改揪團活動條件
 ```mermaid
@@ -134,8 +141,8 @@ graph TB
    - 於欄位輸入主辦活動編號，並點擊`搜尋`，可以列出該活動所有資料
    - 再點擊`修改活動條件`，即可修改活動資料，接著點選`儲存`再按`送出更新揪團資料`，修改成功則會回傳成功訊息
    - 若修改欄位有空白處或不符合處，則會顯示錯誤訊息提醒。
-   
-*⤴️ [top](#目錄TOC) *
+
+⤴️ [top](#目錄TOC) 
 
 ##### 揪團活動瀏覽頁面
 ###### 揪團活動查詢
@@ -157,6 +164,9 @@ graph
 - 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
 - 若無揪團活動，則顯示 `目前無任何揪團活動`
 - 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`
+
+⤴️ [top](#目錄TOC) 
+
 ###### 加入揪團活動
 ```mermaid
 graph 
@@ -181,8 +191,7 @@ graph
 - 如活動人數已達最多人數限制，則回傳訊息告知`活動已超過最大人數限制，無法加入`
 - 若為其他錯誤，則顯示`加入失敗`
 
-*⤴️ [top](#目錄TOC) *
-
+⤴️ [top](#目錄TOC) 
 
 ### 討論區Forum
 #### Tech
@@ -212,26 +221,38 @@ flowchart LR
 	
 	DB -->|Hibernate| M -->|JavaBean| S -->|JavaBean| Svl -->|JavaBean| J
 ```
+⤴️ [top](#目錄TOC) 
+
 #### 實作功能
 **會員可於討論區內進行以下操作**
 ##### 新增文章頁面
 ```mermaid
-graph LR
+graph TB
+	subgraph 新增文章
+	direction BT
+	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	--> H[DAO/Hibernate] --> DB[(Database)]
+	end
+	
+	subgraph 新增文章圖片
+	direction BT
+	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	--> DAO[DAO/JDBC] --> DB[(Database)]
+	end
+	
 	subgraph 文章瀏覽頁面
 	direction BT
 	acCP[acCardPage.jsp]
 	end
 	
-	subgraph 新增文章
-	direction BT
-	acC[acCreate.jsp]
-	end
-
 	acCP -->|Click '發表文章'| acC
-	
+	CAS -->|Validation ? VO : ErrorMessags| acC
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
 - 發表文章成功，則會呈現於文章瀏覽頁面上。
+
+⤴️ [top](#目錄TOC) 
+
 ##### 文章瀏覽頁面
 ```mermaid
 graph 
@@ -250,23 +271,77 @@ graph
 ```
 - 如果討論區沒有任何文章，則顯示`目前沒有文章`
 - 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
+
+⤴️ [top](#目錄TOC) 
+
 ##### 文章詳細頁面
 ```mermaid
-flowchart LR
+graph TB
+	subgraph Servlet
+	direction BT
+	GOAS[GetOneAcServlet.java] --> ASI[AcServiceImpl.java] 
+	--> H[DAO/Hibernate] --> DB[(Database)]
+	end
 	
+	subgraph Servlet
+	direction BT
+	GOAS[GetOneAcServlet.java] --> APS[AcPicService.java] 
+	--> DAO[DAO/JDBC] --> DB[(Database)]
+	end
+	
+	subgraph 文章瀏覽頁面
+	direction BT
+	acCP[acCardPage.jsp]
+	end
+	
+	subgraph 文章詳細頁面
+	direction BT
+	acDP[acDetailPage.jsp]
+	end
+	
+	acCP -->|Click任一文章| GOAS
+	GOAS -->|getRequestDispatcher.forward| acDP
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
+
+⤴️ [top](#目錄TOC) 
+
 ##### 文章修改頁面
 ```mermaid
-flowchart LR
+graph TB
 	
+	subgraph Servlet
+	UASG[UpdateAcServlet.doGet] --> APS[AcPicService.java] 
+	--> DAO[DAO/JDBC] --> DB[(Database)]
+	end
+	
+	subgraph Servlet
+	UASG[UpdateAcServlet.doGet] --> ASI[AcServiceImpl.java] 
+	--> H[DAO/Hibernate] --> DB[(Database)]
+	end
+
+	subgraph 文章修改頁面
+	acU[acUpdate.jsp] --> UASP[UpdateAcServlet.doPost] --> ASIalter[AcServiceImpl.alterAc] --> H
+	end
+	
+	subgraph 文章修改頁面
+	acU[acUpdate.jsp] --> UASP[UpdateAcServlet.doPost] --> APSupdate[AcPicService.updateImage] --> H
+	end
+	
+	subgraph 文章詳細頁面
+	acDP[acDetailPage.jsp]
+	end
+	
+	acDP -->|Click'修改文章'| UASG
+	UASG -->|Validation ? 有權修改文章 : 無權修改文章+ErrorMessages| acDP
+	UASG -->|有權 -> getRequestDispatcher.forward| acU
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
 - 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
 - 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
 
-*⤴️ [top](#目錄TOC) *
+⤴️ [top](#目錄TOC) 
 
 ### ProjectTree
 ```bash
@@ -406,4 +481,4 @@ flowchart LR
                 |-- homePageBanner.file
                 `-- memSidebar.file
 ```
-*⤴️ [top](#目錄TOC) *
+⤴️ [top](#目錄TOC) 
