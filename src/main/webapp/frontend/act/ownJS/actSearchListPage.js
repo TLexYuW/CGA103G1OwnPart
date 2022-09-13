@@ -47,8 +47,13 @@ let actArr = [];
     filterAct.addEventListener('click', function(){
       const locV  = locVChange(Number(loc.value));
       const minCountV  = Number(minCount.value);
+      console.log(datepickerF);
+      console.log(datepickerOutF);
       let datepickerFV  = datepickerF.val();
       let datepickerOutFV  = datepickerOutF.val();
+      console.log(datepickerFV);
+      console.log(datepickerOutFV);
+      console.log(datepickerFV < actArr[0].act_enroll_begin);
       const typeV  = Number(type.value);
       let copyArr = [];
       let j = 0;
