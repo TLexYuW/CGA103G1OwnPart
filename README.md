@@ -67,7 +67,8 @@ flowchart LR
 #### 實作功能
 ##### 會員中心頁面
 ```mermaid
-m[memPage.html]
+flowchart
+	m[memPage.html]
 ```
 **會員可於平台網站內進行以下操作**
 ###### 創建揪團活動
