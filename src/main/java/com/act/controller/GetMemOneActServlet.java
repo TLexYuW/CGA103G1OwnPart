@@ -35,7 +35,7 @@ public class GetMemOneActServlet extends HttpServlet {
         System.out.println("MemPage Fetch Request -> GetMemOneActServlet"); 
         
         HttpSession actSession = req.getSession();       
-        Integer memNo = (Integer) actSession.getAttribute("memNo1");
+        Integer memNo1 = (Integer) actSession.getAttribute("memNo1");
 		ActService actService = new ActService();
 		
 		BufferedReader br = req.getReader();
@@ -47,9 +47,9 @@ public class GetMemOneActServlet extends HttpServlet {
 		ActVO actVO = new ActVO();
 		Stream<ActVO> actStream = actService.getAll().stream();
 		if(actStream.anyMatch(act -> act.getAct_no() == actfromFront.getAct_no())) {
-			actVO = actStream
+			actVO = actService.getAll().stream()
 					.filter(act -> act.getAct_no() == actfromFront.getAct_no())
-					.filter(act -> act.getMen_no() == memNo)
+					.filter(act -> act.getMen_no() == memNo1)
 					.findFirst().get();
 			String JsonString = gson.toJson(actVO);
 			res.getWriter().write(JsonString);
