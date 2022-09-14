@@ -1,32 +1,30 @@
-<span><img src="https://img.shields.io/badge/Java-8|11|17-red.svg"/>　<img src="https://img.shields.io/badge/JSP-red.svg"/>　<img src="https://img.shields.io/badge/EL-red.svg">　<img src="https://img.shields.io/badge/Servlet-red.svg">　<img src="https://img.shields.io/static/v1?label=%20&logo=Hibernate&logoColor=808000&&message=Hibernate&color=white">　<img src="https://img.shields.io/static/v1?label=%20&logo=JavaScript&logoColor=white&&message=ES6&color=FFD700">　<img src="https://img.shields.io/static/v1?label=%20&logo=CSS3&logoColor=white&&message=CSS3&color=1182c3">　<img src="https://img.shields.io/static/v1?label=%20&logo=HTML5&logoColor=white&&message=HTML5&color=FF8C00">　<img src="https://img.shields.io/badge/Ajax-Fetch-FFD700.svg">　<img src="https://img.shields.io/static/v1?label=%20&logo=jQuery&logoColor=white&&message=jQuery&color=skyblue">　<img src="https://img.shields.io/static/v1?label=%20&logo=JSON&logoColor=white&&message=JSON&color=gray">　<img src="https://img.shields.io/static/v1?label=%20&logo=Apache Maven&logoColor=F4A460&&message=Maven&color=white">　<img src="https://img.shields.io/static/v1?label=&logo=Bootstrap&logoColor=white&message=Bootstrap&color=8E44AD">　<img src="https://img.shields.io/static/v1?label=&logo=MySQL&logoColor=white&message=MySQL&color=CA6F1E">　<img src="https://img.shields.io/static/v1?label=&logo=EclipseIDE&logoColor=white&message=Eclipse IDE&color=darkblue">
+<span><img src="https://img.shields.io/badge/Java-8|11|17-red.svg"/>　<img src="https://img.shields.io/badge/JSP-red.svg"/>　<img src="https://img.shields.io/badge/EL-red.svg">　<img src="https://img.shields.io/badge/Servlet-red.svg">　<img src="https://img.shields.io/static/v1?label=%20&logo=Hibernate&logoColor=808000&&message=Hibernate&color=white">　<img src="https://img.shields.io/static/v1?label=%20&logo=JavaScript&logoColor=white&&message=ES6&color=FFD700">　<img src="https://img.shields.io/static/v1?label=%20&logo=CSS3&logoColor=white&&message=CSS3&color=1182c3">　<img src="https://img.shields.io/static/v1?label=%20&logo=HTML5&logoColor=white&&message=HTML5&color=orange">　<img src="https://img.shields.io/badge/Ajax-Fetch-FFD700.svg">　<img src="https://img.shields.io/static/v1?label=%20&logo=jQuery&logoColor=white&&message=jQuery&color=skyblue">　<img src="https://img.shields.io/static/v1?label=%20&logo=JSON&logoColor=white&&message=JSON&color=gray">　<img src="https://img.shields.io/static/v1?label=%20&logo=Apache Maven&logoColor=F4A460&&message=Maven&color=white">　<img src="https://img.shields.io/static/v1?label=&logo=Bootstrap&logoColor=white&message=Bootstrap&color=8E44AD">　<img src="https://img.shields.io/static/v1?label=&logo=MySQL&logoColor=white&message=MySQL&color=blue">　<img src="https://img.shields.io/static/v1?label=&logo=EclipseIDE&logoColor=white&message=Eclipse IDE&color=darkblue">　<img src="https://img.shields.io/static/v1?label=&logo=ApacheTomcat&logoColor=black&message=ApacheTomcat&color=orange">
 </span>
 <br>
 
 # CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
-## 目錄TOC
+# 目錄TOC
 1. [首頁切版 Home Page - Header Footer 公板](#首頁)
-2. [揪團活動 Activity](#揪團活動-Activity)
-   - [使用技術 Tech](#Tech)
-   - [實作功能說明 Function Description](#實作功能)
-     - [會員中心頁面 Member Center](#會員中心頁面)
-	     1. [創建揪團活動 Create Activity](#創建揪團活動)
-	     2. [查詢揪團紀錄 Query Joined Activity](#查詢揪團紀錄)
-	     3. [修改揪團活動條件 Update Member Host Activity Conditions](#修改揪團活動條件)
-     - [揪團活動瀏覽頁面 Activity Search Page](#揪團活動瀏覽頁面) 
-	     1. [揪團活動查詢 Query Specific Activity](#揪團活動查詢) 
-	     2. [加入揪團活動 Join Activity](#加入揪團活動)  
-3. [討論區 Forum](#討論區Forum)
-   - [使用技術 Tech](#Tech)
-   - [實作功能說明 Function Description](#實作功能)
-	   - [新增文章頁面 Create an Article](#新增文章頁面) 
-	   - [文章瀏覽頁面 Article List Page](#文章瀏覽頁面) 
-	   - [文章詳細頁面 One Detailed Article Page](#文章詳細頁面) 
-	   - [文章修改頁面 Update Article Content](#文章修改頁面) 
-4. [ProjectTree](#ProjectTree)
+2. [實作功能說明 Function Description](#實作功能)
+	1. [會員中心頁面 Member Center](#會員中心頁面-揪團活動)
+		1. [使用技術 Tech](#Tech)
+		2. [創建揪團活動 Create Activity](#創建揪團活動)
+		3. [查詢揪團紀錄 Query Joined Activity](#查詢揪團紀錄)
+		4. [修改揪團活動條件 Update Member Host Activity Conditions](#修改揪團活動條件)
+		5. [揪團活動瀏覽頁面 Activity Search Page](#揪團活動瀏覽頁面) 
+			1. [揪團活動查詢 Query Specific Activity](#揪團活動查詢) 
+			2. [加入揪團活動 Join Activity](#加入揪團活動)  
+	2. [討論區 Forum](#討論區Forum)
+		1. [使用技術 Tech](#Tech)
+		2. [新增文章頁面 Create an Article](#新增文章頁面) 
+		3. [文章瀏覽頁面 Article List Page](#文章瀏覽頁面) 
+		4. [文章詳細頁面 One Detailed Article Page](#文章詳細頁面) 
+		5.  [文章修改頁面 Update Article Content](#文章修改頁面) 
+3. [ProjectTree](#ProjectTree)
 
-### 首頁
+## 首頁
 ```mermaid
 graph 
 	homePage.jsp
@@ -34,7 +32,15 @@ graph
 ![L](https://i.imgur.com/150VwUa.png)
 ⤴️ [top](#目錄TOC) 
 
-### 揪團活動
+## 實作功能
+
+### 會員中心頁面-揪團活動
+**會員可於平台網站內進行以下操作**
+```mermaid
+flowchart
+	m[memPage.html]
+```
+
 #### Tech
 ```mermaid
 flowchart LR
@@ -64,10 +70,7 @@ flowchart LR
 ```
 ⤴️ [top](#目錄TOC)
 
-#### 實作功能
-**會員可於平台網站內進行以下操作**
-##### 會員中心頁面
-###### 創建揪團活動
+#### 創建揪團活動
 ```mermaid
 graph 
 	subgraph Step2
@@ -97,7 +100,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-###### 查詢揪團紀錄
+#### 查詢揪團紀錄
 ```mermaid
 flowchart
 	aMQhtml[actMemQuery.html] -->|Click Query Button| aMQjs[actMemQuery.js] -->|Fetch Request| GOAS[GetOwnActServlet.java]
@@ -110,7 +113,7 @@ flowchart
 
 ⤴️ [top](#目錄TOC) 
 
-###### 修改揪團活動條件
+#### 修改揪團活動條件
 ```mermaid
 graph TB
 	subgraph SubmitButton
@@ -144,8 +147,13 @@ graph TB
 
 ⤴️ [top](#目錄TOC) 
 
-##### 揪團活動瀏覽頁面
-###### 揪團活動查詢
+
+### 揪團活動瀏覽頁面
+```mermaid
+flowchart
+	aSLP[actSearchListPage.html]
+```
+#### 揪團活動查詢
 ```mermaid
 graph 
 	subgraph Step1.5
@@ -167,7 +175,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-###### 加入揪團活動
+#### 加入揪團活動
 ```mermaid
 graph 
 	subgraph Step2
@@ -194,6 +202,7 @@ graph
 ⤴️ [top](#目錄TOC) 
 
 ### 討論區Forum
+**會員可於討論區內進行以下操作**
 #### Tech
 ```mermaid
 flowchart LR
@@ -223,9 +232,7 @@ flowchart LR
 ```
 ⤴️ [top](#目錄TOC) 
 
-#### 實作功能
-**會員可於討論區內進行以下操作**
-##### 新增文章頁面
+#### 新增文章頁面
 ```mermaid
 graph TB
 	subgraph 新增文章
@@ -253,7 +260,7 @@ graph TB
 
 ⤴️ [top](#目錄TOC) 
 
-##### 文章瀏覽頁面
+#### 文章瀏覽頁面
 ```mermaid
 graph 
 	subgraph 文章各項資料
@@ -274,7 +281,7 @@ graph
 
 ⤴️ [top](#目錄TOC) 
 
-##### 文章詳細頁面
+#### 文章詳細頁面
 ```mermaid
 graph TB
 	subgraph Servlet
@@ -306,7 +313,7 @@ graph TB
 
 ⤴️ [top](#目錄TOC) 
 
-##### 文章修改頁面
+#### 文章修改頁面
 ```mermaid
 graph TB
 	
