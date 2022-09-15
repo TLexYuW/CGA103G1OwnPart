@@ -108,12 +108,12 @@ flowchart
 	
 	DB --> AD --> AS -->|回傳該會員已參加之揪團活動| GOAS -->|Response JavaBeanToJSON| aMQjs -->|Dynamically Create Element| aMQhtml
 ```
-![L](https://i.imgur.com/D1ecjUI.png)
-   - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
 
-![L](https://i.imgur.com/nKDBntz.png)
+   - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
+![L](https://i.imgur.com/D1ecjUI.png)
 
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
+![L](https://i.imgur.com/nKDBntz.png)
 
 ⤴️ [top](#目錄TOC) 
 
