@@ -111,6 +111,7 @@ flowchart
 ![L](https://i.imgur.com/D1ecjUI.png)
    - 點擊`查詢已參加之活動` ，會顯示所有已報名參加之活動列表
 
+![L](https://i.imgur.com/nKDBntz.png)
 
    - 如無參與任何活動，則回傳訊息`目前您無參加任何活動`
 
