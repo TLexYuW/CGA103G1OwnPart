@@ -188,8 +188,6 @@ graph
 ![L](https://i.imgur.com/S7xbuT8.png)
 ![L](https://i.imgur.com/PvzVSsU.png)
 
-
-
 ⤴️ [top](#目錄TOC) 
 
 #### 加入揪團活動
