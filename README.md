@@ -2,7 +2,8 @@
 </span>
 <br>
 
-# CGA103G1 - Project Practice ( 旅遊平台 - 揪團活動&討論區 功能實作 ) 
+# CGA103G1 - Project Practice 
+## 旅遊平台 - 揪團活動 & 討論區 功能實作
 *專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
 
 # 目錄TOC
@@ -178,9 +179,12 @@ graph
 
 ```     
 - 於活動瀏覽頁選擇想要的條件進行`搜尋各類活動`，並產生清單列表 
+![L](https://i.imgur.com/W06Emyj.png)
 
 - 若無揪團活動，則顯示 `目前無任何揪團活動`
-- 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`
+![L](https://i.imgur.com/W1yXn9f.png)
+
+- 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`，反之顯示特定條件下之活動
 
 ⤴️ [top](#目錄TOC) 
 
