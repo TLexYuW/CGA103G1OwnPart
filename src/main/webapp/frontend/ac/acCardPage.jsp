@@ -56,7 +56,7 @@
   
 </section>
 
-
+	<script src="/CGA103G1/frontend/homePage.js"></script>
 
 	<%-- footer --%>
 	<%@ include file="/frontend/footer.file" %>

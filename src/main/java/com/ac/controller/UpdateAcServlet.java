@@ -33,7 +33,6 @@ public class UpdateAcServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
-	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -44,6 +43,7 @@ public class UpdateAcServlet extends HttpServlet {
 		HttpSession session = req.getSession();
         Integer memNo1 = (Integer) session.getAttribute("memNo1");
         Integer memNo2 = (Integer) session.getAttribute("memNo2");
+        
 		AcServiceImpl acServiceImpl = new AcServiceImpl();
 		AcPicService acPicService = new AcPicService();
 		List<AcPicVO> acPicList = new LinkedList<AcPicVO>();
@@ -59,10 +59,11 @@ public class UpdateAcServlet extends HttpServlet {
 				.stream()
 				.filter(ac -> ac.getAc_no() == acNo).findFirst().get().getMem_no();
 		System.out.println("發表此篇文章的會員編號：" + findAcMenNo);
-		if (findAcMenNo == memNo2) {
+		if (findAcMenNo == memNo1) {
 			if ("alterAc".equals(action)) {				
 				/***************************查詢完成,準備轉交(Send the Success view)************/
 				String param = "?title="  + acVO.getAc_title() +
+						"&no="  + acVO.getAc_no() +
 						"&content="  + acVO.getAc_content() +
 						"&type=" + acVO.getAc_type_no() +
 						"&image="  + acPicVO.getAc_pic_img();
@@ -91,7 +92,12 @@ public class UpdateAcServlet extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		System.out.println("request 過來了，updateAcServlet doPost");
 		String action = req.getParameter("action");
+		Integer acNo = Integer.parseInt(req.getParameter("no"));
 		
+		HttpSession session = req.getSession();
+        Integer memNo1 = (Integer) session.getAttribute("memNo1");
+        Integer memNo2 = (Integer) session.getAttribute("memNo2");
+        
 		if ("確定修改".equals(action)) { 			
 //			Integer acNo = Integer.valueOf(req.getParameter("acNo"));
 //			System.out.println(acNo);
@@ -149,11 +155,11 @@ public class UpdateAcServlet extends HttpServlet {
 			acVo.setAc_type_no(value);
 			acVo.setAc_content(content);
 			acVo.setAc_time(time);
-			acVo.setAc_no(3);
-			acVo.setMem_no(3);
+			acVo.setAc_no(acNo);
+			acVo.setMem_no(memNo1);
 			AcPicVO acPicVO = new AcPicVO();
 			acPicVO.setAc_pic_img(image);
-			acPicVO.setAc_no(3);
+			acPicVO.setAc_no(acNo);
 	
 
 			/*************************** 2.開始新增資料 ***************************************/

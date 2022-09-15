@@ -16,7 +16,7 @@
 <meta charset="UTF-8">
 <title>文章詳細頁</title>
 
- 	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+ 	<script src="<%=request.getContextPath()%>/frontend/assets/js/jquery.min.js" type="text/javascript"></script>
 
 	<%-- CSS --%>
 	<%@ include file="/frontend/commonCSS.file" %>
@@ -69,6 +69,8 @@
  	</div>
   </div>
 </section>
+
+	<script src="/CGA103G1/frontend/homePage.js"></script>
 	
 	<script type="text/javascript">
 		let typeArr = ["競技", "運動", "遊記", "行程", "交通", "住宿", "景點", "購物", "飲食"]

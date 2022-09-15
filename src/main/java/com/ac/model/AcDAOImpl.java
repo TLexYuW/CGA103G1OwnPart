@@ -18,19 +18,19 @@ public class AcDAOImpl implements AcDAO {
 		acVo.setAc_update(0);
         getSession().save(acVo);
 //        transaction.commit();
-		return 1;
+		return acVo.getAc_no();
 	}
 
 	@Override
 	public Integer update(AcVO acVo) {
-		Transaction transaction = getSession().beginTransaction();
+//		Transaction transaction = getSession().beginTransaction();
 		AcVO ac = getSession().load(AcVO.class, acVo.getAc_no());
 		ac.setAc_title(acVo.getAc_title());
 		ac.setAc_content(acVo.getAc_content());
 		ac.setAc_time(acVo.getAc_time());
 		ac.setAc_type_no(acVo.getAc_type_no());
 		getSession().update(ac);
-		transaction.commit();
+//		transaction.commit();
 		return 1;
 	}
 
