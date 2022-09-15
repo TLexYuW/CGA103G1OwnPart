@@ -185,6 +185,9 @@ graph
 ![L](https://i.imgur.com/W1yXn9f.png)
 
 - 若進行條件篩選後，無任何符合條件之揪團活動，則訊息顯示`沒有符合篩選之揪團活動`，反之顯示特定條件下之活動
+![](https://i.imgur.com/S7xbuT8.png)
+
+
 
 ⤴️ [top](#目錄TOC) 
 
