@@ -97,6 +97,9 @@ graph
 ![L](https://i.imgur.com/sduFFv4.png)
 
 - 資料填寫完畢並無誤，再次點擊，會顯示`創建揪團活動成功`且將錯誤訊息及欄位資料清空，以方便立刻創建下一個揪團活動，不須刷新頁面。
+![L](https://i.imgur.com/SGf2ryK.png)
+![L](https://i.imgur.com/AiUwgp0.png)
+
 - 若後端發生錯誤，回傳失敗，則顯示`創建揪團活動失敗`
 
 ⤴️ [top](#目錄TOC) 
