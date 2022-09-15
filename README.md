@@ -35,11 +35,11 @@ graph
 ## 實作功能
 
 ### 會員中心頁面-揪團活動
-**會員可於平台網站內進行以下操作**
 ```mermaid
 flowchart
 	m[memPage.html]
 ```
+![L](https://i.imgur.com/7aC8Ljs.png)
 
 #### Tech
 ```mermaid
