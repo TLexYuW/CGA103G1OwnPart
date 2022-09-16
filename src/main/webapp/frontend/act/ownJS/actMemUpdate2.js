@@ -256,10 +256,15 @@ search.addEventListener('click', function(){
            let output = "";
            console.log(actVo);
            if(actVo === "查無此揪團活動編號"){
-               let msg = `
-               <h1 class="text-center" style="color: red;">${actVo}</h1>
-               `;
-               mainContent.innerHTML = msg; 
+                let msg = `
+                <h1 class="text-center" style="color: red;">${actVo}</h1>
+                `;
+                mainContent.innerHTML = msg; 
+            }else if(actVo === "該活動非您主辦，請查詢編號再次輸入"){
+                let msg = `
+                <h1 class="text-center" style="color: red;">${actVo}</h1>
+                `;
+                mainContent.innerHTML = msg; 
             }else{
                actTypeConvert(actVo);
                locationConvert(actVo);

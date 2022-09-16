@@ -36,6 +36,8 @@ public class GetMemOneActServlet extends HttpServlet {
         
         HttpSession actSession = req.getSession();       
         Integer memNo1 = (Integer) actSession.getAttribute("memNo1");
+        Integer memNo2 = (Integer) actSession.getAttribute("memNo2");
+        Integer memNo3 = (Integer) actSession.getAttribute("memNo3");
 		ActService actService = new ActService();
 		
 		BufferedReader br = req.getReader();
@@ -47,12 +49,22 @@ public class GetMemOneActServlet extends HttpServlet {
 		ActVO actVO = new ActVO();
 		Stream<ActVO> actStream = actService.getAll().stream();
 		if(actStream.anyMatch(act -> act.getAct_no() == actfromFront.getAct_no())) {
-			actVO = actService.getAll().stream()
+			Boolean isActVoExist = actService.getAll().stream()
 					.filter(act -> act.getAct_no() == actfromFront.getAct_no())
-					.filter(act -> act.getMen_no() == memNo1)
-					.findFirst().get();
-			String JsonString = gson.toJson(actVO);
-			res.getWriter().write(JsonString);
+					.anyMatch(act -> act.getMen_no() == memNo3);
+			System.out.println("isActVoExist: " + isActVoExist);
+			
+			if (isActVoExist) {
+				actVO = actService.getAll().stream()
+						.filter(act -> act.getAct_no() == actfromFront.getAct_no())
+						.filter(act -> act.getMen_no() == memNo3)
+						.findFirst().get();
+				String JsonString = gson.toJson(actVO);
+				res.getWriter().write(JsonString);
+			}else {
+				String JsonString = gson.toJson("該活動非您主辦，請查詢編號再次輸入");
+				res.getWriter().write(JsonString);
+			}
 		}else {
 			String JsonString = gson.toJson("查無此揪團活動編號");
 			res.getWriter().write(JsonString);

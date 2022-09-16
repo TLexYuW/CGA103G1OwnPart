@@ -33,11 +33,13 @@ public class GetActHostServlet extends HttpServlet {
         res.setCharacterEncoding("UTF-8");
         System.out.println("Fetch Request -> GetActHostServlet");
         HttpSession session = req.getSession();
-        Integer memNo = (Integer) session.getAttribute("memNo1");
-        
+        Integer memNo1 = (Integer) session.getAttribute("memNo1");
+        Integer memNo2 = (Integer) session.getAttribute("memNo2");
+        Integer memNo3 = (Integer) session.getAttribute("memNo3");
+
         
         ActService actService = new ActService();
-		List<ActVO> actList = actService.getHostAct(memNo);		
+		List<ActVO> actList = actService.getHostAct(memNo3);		
         GsonBuilder gsonBuilder = new GsonBuilder();  
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());      
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());

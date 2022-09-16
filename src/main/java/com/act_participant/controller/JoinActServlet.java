@@ -2,6 +2,7 @@ package com.act_participant.controller;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import com.act.model.ActService;
 import com.act_participant.model.ActParticipantService;
+import com.act_participant.model.ActParticipantVO;
 import com.google.gson.Gson;
 import com.mem.model.MemService;
 
@@ -29,35 +31,53 @@ public class JoinActServlet extends HttpServlet {
 		Integer actNo =  (Integer) session.getAttribute("actNo");
 		Integer memNo1 =  (Integer) session.getAttribute("memNo1");
 		Integer memNo2 = (Integer) session.getAttribute("memNo2");
-		String memLoginAcc = (String) session.getAttribute("memNo1Acc");
+		Integer memNo3 = (Integer) session.getAttribute("memNo3");
+
+		String memLoginAcc1 = (String) session.getAttribute("memNoAcc1");
+		String memLoginAcc2 = (String) session.getAttribute("memNoAcc2");
+		String memLoginAcc3 = (String) session.getAttribute("memNoAcc3");
+	
 		MemService memService = new MemService();
-		String memAcc = memService.getOneMem(1).getMem_email();
+		String memAcc = memService.getOneMem(3).getMem_email();
 		Gson gson = new Gson();
 		ActService actService = new ActService();
 		ActParticipantService actParticipantService = new ActParticipantService();
-		boolean isJoin = actParticipantService.getAll().stream().anyMatch(actP -> actP.getMem_no() == memNo1);
+		
+		List<ActParticipantVO> findActPartiMenNoList = 
+		actParticipantService.getAll().stream().filter(actP -> actP.getAct_no() == actNo).toList();		
+		findActPartiMenNoList.forEach(System.out::println);
+		boolean isJoin = false;
+		
+		for (ActParticipantVO actParticipantVO : findActPartiMenNoList) {
+			if(actParticipantVO.getMem_no() == memNo3) {
+				isJoin = true;
+			}
+		}		
+		
+		System.out.println("isJoin = " + isJoin);
+		
+		Integer actMaxCount =
+				actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_max_count();
+		System.out.println("actMaxCount: " + actMaxCount);
+		Integer actCurrentCount =
+				actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_current_count();
+		System.out.println("actCurrentCount: " + actCurrentCount);
+		
 		if(!isJoin) {
-			if ((memAcc).equals(memLoginAcc)) {
+			if ((memAcc).equals(memLoginAcc3) && actMaxCount > actCurrentCount) {
 			    LocalDateTime currentTime = LocalDateTime.now();
-				actParticipantService.addActParticipant(actNo, memNo1, currentTime);
-				Integer actMaxCount =
-						actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_max_count();
-				Integer actCurrentCount =
-						actService.getAll().stream().filter(act -> act.getAct_no() == actNo).findFirst().get().getAct_current_count();
-				String resInfo ="";
-				if(actMaxCount > actCurrentCount) {				
-					actService.updateActPeopleAmount(actNo, memNo1);
-					resInfo = gson.toJson("加入成功");
-				}else {
-					resInfo =  gson.toJson("活動已超過最大限制人數，無法加入");
-				}
+				actParticipantService.addActParticipant(actNo, memNo3, currentTime);			
+				String resInfo ="";			
+				actService.updateActPeopleAmount(actNo, actCurrentCount+1);
+				resInfo = gson.toJson("加入成功");
 				res.getWriter().write(resInfo);
 			}else {
-				String resInfo = gson.toJson("加入失敗");
+				String resInfo = gson.toJson("加入失敗，活動已超過最大限制人數，無法加入");
 				res.getWriter().write(resInfo);	
 			}
 		}else {
-			res.getWriter().write("你已經加入過此活動！");
+			String resInfo = gson.toJson("你已經加入過此活動！");
+			res.getWriter().write(resInfo);
 		}
 	}
 

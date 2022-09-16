@@ -28,9 +28,9 @@ public class setSessionValueServlet extends HttpServlet {
         session.setAttribute("memNo1", memNo1);
         session.setAttribute("memNo2", memNo2);
         session.setAttribute("memNo3", memNo3);
-        session.setAttribute("memNo1Acc", "Q123434565@gmail.com");
-        session.setAttribute("memNo2Acc", "A138775451@gmail.com");
-        session.setAttribute("memNo3Acc", "D129242193@gmail.com");
+        session.setAttribute("memNoAcc1", "Q123434565@gmail.com");
+        session.setAttribute("memNoAcc2", "A138775451@gmail.com");
+        session.setAttribute("memNoAcc3", "D129242193@gmail.com");
         String memNo1Acc = (String) session.getAttribute("memNo1Acc");
         String memNo2Acc = (String) session.getAttribute("memNo2Acc");
         String memNo3Acc = (String) session.getAttribute("memNo3Acc");
