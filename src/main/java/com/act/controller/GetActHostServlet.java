@@ -39,7 +39,7 @@ public class GetActHostServlet extends HttpServlet {
 
         
         ActService actService = new ActService();
-		List<ActVO> actList = actService.getHostAct(memNo3);		
+		List<ActVO> actList = actService.getHostAct(memNo1);		
         GsonBuilder gsonBuilder = new GsonBuilder();  
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());      
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());

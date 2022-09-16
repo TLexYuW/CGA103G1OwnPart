@@ -51,13 +51,13 @@ public class GetMemOneActServlet extends HttpServlet {
 		if(actStream.anyMatch(act -> act.getAct_no() == actfromFront.getAct_no())) {
 			Boolean isActVoExist = actService.getAll().stream()
 					.filter(act -> act.getAct_no() == actfromFront.getAct_no())
-					.anyMatch(act -> act.getMen_no() == memNo3);
+					.anyMatch(act -> act.getMen_no() == memNo1);
 			System.out.println("isActVoExist: " + isActVoExist);
 			
 			if (isActVoExist) {
 				actVO = actService.getAll().stream()
 						.filter(act -> act.getAct_no() == actfromFront.getAct_no())
-						.filter(act -> act.getMen_no() == memNo3)
+						.filter(act -> act.getMen_no() == memNo1)
 						.findFirst().get();
 				String JsonString = gson.toJson(actVO);
 				res.getWriter().write(JsonString);

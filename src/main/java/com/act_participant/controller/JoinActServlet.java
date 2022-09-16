@@ -33,12 +33,12 @@ public class JoinActServlet extends HttpServlet {
 		Integer memNo2 = (Integer) session.getAttribute("memNo2");
 		Integer memNo3 = (Integer) session.getAttribute("memNo3");
 
-		String memLoginAcc1 = (String) session.getAttribute("memNoAcc1");
-		String memLoginAcc2 = (String) session.getAttribute("memNoAcc2");
-		String memLoginAcc3 = (String) session.getAttribute("memNoAcc3");
+		String memLoginEmail1 = (String) session.getAttribute("memNoEmail1");
+		String memLoginEmail2 = (String) session.getAttribute("memNoEmail2");
+		String memLoginEmail3 = (String) session.getAttribute("memNoEmail3");
 	
 		MemService memService = new MemService();
-		String memAcc = memService.getOneMem(3).getMem_email();
+		String memEmail = memService.getOneMem(3).getMem_email();
 		Gson gson = new Gson();
 		ActService actService = new ActService();
 		ActParticipantService actParticipantService = new ActParticipantService();
@@ -64,7 +64,7 @@ public class JoinActServlet extends HttpServlet {
 		System.out.println("actCurrentCount: " + actCurrentCount);
 		
 		if(!isJoin) {
-			if ((memAcc).equals(memLoginAcc3) && actMaxCount > actCurrentCount) {
+			if ((memEmail).equals(memLoginEmail3) && actMaxCount > actCurrentCount) {
 			    LocalDateTime currentTime = LocalDateTime.now();
 				actParticipantService.addActParticipant(actNo, memNo3, currentTime);			
 				String resInfo ="";			

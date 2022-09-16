@@ -39,8 +39,8 @@ public class ActService {
 		actVO.setAct_type_no(actVO.getAct_type_no());
 		actVO.setAct_title(actVO.getAct_title());
 		actVO.setAct_content(actVO.getAct_content());
-		actVO.setAct_min_count(actVO.getAct_max_count());
-		actVO.setAct_max_count(actVO.getAct_min_count());
+		actVO.setAct_min_count(actVO.getAct_min_count());
+		actVO.setAct_max_count(actVO.getAct_max_count());
 		actVO.setAct_enroll_begin(actVO.getAct_enroll_begin());
 		actVO.setAct_enroll_end(actVO.getAct_enroll_end());
 		actVO.setAct_start(actVO.getAct_start());			
