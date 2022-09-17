@@ -232,7 +232,6 @@ graph
 ⤴️ [top](#目錄TOC) 
 
 ### 討論區Forum
-**會員可於討論區內進行以下操作**
 #### Tech
 ```mermaid
 flowchart LR
@@ -286,6 +285,8 @@ graph TB
 	CAS -->|Validation ? VO : ErrorMessags| acC
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
+![L](https://i.imgur.com/5IHGVFu.png)
+
 - 發表文章成功，則會呈現於文章瀏覽頁面上。
 
 ⤴️ [top](#目錄TOC) 
@@ -308,6 +309,8 @@ graph
 ```
 - 如果討論區沒有任何文章，則顯示`目前沒有文章`
 - 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
+\
+
 
 ⤴️ [top](#目錄TOC) 
 
