@@ -232,7 +232,6 @@ graph
 ⤴️ [top](#目錄TOC) 
 
 ### 討論區Forum
-**會員可於討論區內進行以下操作**
 #### Tech
 ```mermaid
 flowchart LR
@@ -286,6 +285,8 @@ graph TB
 	CAS -->|Validation ? VO : ErrorMessags| acC
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
+![L](https://i.imgur.com/5IHGVFu.png)
+
 - 發表文章成功，則會呈現於文章瀏覽頁面上。
 
 ⤴️ [top](#目錄TOC) 
@@ -308,6 +309,7 @@ graph
 ```
 - 如果討論區沒有任何文章，則顯示`目前沒有文章`
 - 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
+![L](https://i.imgur.com/tQwYwWV.png)
 
 ⤴️ [top](#目錄TOC) 
 
@@ -340,6 +342,8 @@ graph TB
 	GOAS -->|getRequestDispatcher.forward| acDP
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
+![L](https://i.imgur.com/IN5QAF2.png)
+
 
 ⤴️ [top](#目錄TOC) 
 
@@ -375,14 +379,21 @@ graph TB
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
+![L](https://i.imgur.com/HJlcXH1.png)
+
 - 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
+![L](https://i.imgur.com/FucpB05.png)
+
 - 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
+![L](https://i.imgur.com/JKOW3lX.png)
+![L](https://i.imgur.com/YUGZ3Q0.png)
 
 ⤴️ [top](#目錄TOC) 
 
-### ProjectTree
+## ProjectTree
 ```bash
-.$ tree -L 7 -I 'target|test|imgs|assets|css|fonts|js|webfonts|backend|testany'
+.$ tree -L 7 -I 'target|test|imgs|assets|css|fonts|js|webfonts|backend|testany|bin'
+.
 |-- pom.xml
 `-- src
     `-- main
@@ -402,7 +413,8 @@ graph TB
         |       |       `-- AcVO.java
         |       |-- ac_pic
         |       |   |-- controller
-        |       |   |   `-- GetOneAcImageServlet.java
+        |       |   |   |-- GetOneAcImageServlet.java
+        |       |   |   `-- UploadAcImageServlet.java
         |       |   `-- model
         |       |       |-- AcPicDAO.java
         |       |       |-- AcPicService.java
@@ -457,25 +469,24 @@ graph TB
         |       |       |-- I_MemDAO.java
         |       |       |-- MemDAO.java
         |       |       |-- MemService.java
-        |       |       |-- MemVO.java
-        |       |       `-- MemjdbcDAO.java
+        |       |       `-- MemVO.java
         |       `-- util
         |           |-- CoreDao.java
         |           |-- CoreService.java
+        |           |-- DataSourceUtil.java
         |           |-- HibernateFilter.java
         |           |-- HibernateListener.java
         |           |-- HibernateUtil.java
         |           |-- JdbcUtil.java
         |           |-- LocalDateTimeDeserializer.java
         |           |-- LocalDateTimeSerializer.java
-        |           |-- ......
         |           `-- setSessionValueServlet.java
         |-- resources
         |   `-- hibernate.cfg.xml
         `-- webapp
             |-- META-INF
             |   |-- context.xml
-            |   `-- ......
+            |   `-- selfUse.txt
             |-- WEB-INF
             |   `-- web.xml
             `-- frontend
@@ -484,7 +495,9 @@ graph TB
                 |   |-- acCreate.jsp
                 |   |-- acDetailPage.jsp
                 |   |-- acSelfCardPage.jsp
-                |   `-- acUpdate.jsp
+                |   |-- acUpdate.jsp
+                |   `-- ownJS
+                |       `-- createAc.js
                 |-- act
                 |   |-- actBanner.html
                 |   |-- actCreate.html
@@ -508,7 +521,7 @@ graph TB
                 |       |-- includeActBanner.js
                 |       |-- includeFooterHeader.js
                 |       |-- includePart.js
-                |       `-- ......
+                |       `-- moment.js
                 |-- commonCSS.file
                 |-- commonJS.file
                 |-- footer.file
