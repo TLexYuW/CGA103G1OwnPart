@@ -3,7 +3,7 @@
 <Resource auth="Container" 
     driverClassName="com.mysql.cj.jdbc.Driver" 
     maxIdle="10" maxTotal="20" maxWaitMillis="-1" 
-    name="jdbc/TestDB" password="密碼" 
+    name="jdbc/TestDB" password="00112125" 
     type="javax.sql.DataSource" 
-    url="jdbc:mysql://localhost:3306/DB?serverTimezone=Asia/Taipei" username="root"/>
+    url="jdbc:mysql://localhost:3306/cga103g1own?serverTimezone=Asia/Taipei" username="root"/>
 </Context>
