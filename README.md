@@ -154,16 +154,18 @@ graph TB
    - 若無任何主辦活動，則回傳訊息`目前您無任何主辦活動`提示
 ![L](https://i.imgur.com/B3VR6bu.png)
 
+   - 於欄位輸入主辦活動編號，並點擊`搜尋`，若輸入編號錯誤，則回傳`查無此活動編號`提示
+![L](https://i.imgur.com/HMmF2tr.png)
 
-   - 於欄位輸入主辦活動編號，並點擊`搜尋`，可以列出此編號活動所有資料
+   - 活動編號正確，即可以列出此編號活動所有資料
    - 再點擊`修改活動條件`，即可修改活動資料
    - 接著點選`儲存`再按`送出更新揪團資料`，修改成功則會回傳成功訊息
-
+![L](https://i.imgur.com/j7MOUaj.png)
+![L](https://i.imgur.com/ftoDtr1.png)
 
    - 若修改欄位有空白處或不符合處，則會顯示錯誤訊息提醒 (Validation Function 同 actCreat.js)
 
 ⤴️ [top](#目錄TOC) 
-
 
 ### 揪團活動瀏覽頁面
 ```mermaid
