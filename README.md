@@ -379,8 +379,13 @@ graph TB
 ```
 - 點選修改文章，若此篇文章非該會員發表，則顯示錯誤訊息`無權修改此文章`
 - 若是，則跳轉至修改頁面，呈現此篇文章所有資料欄位，並進行修改
+![L](https://i.imgur.com/HJlcXH1.png)
+
 - 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
 - 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
+![L](https://i.imgur.com/JKOW3lX.png)
+![L](https://i.imgur.com/YUGZ3Q0.png)
+
 
 ⤴️ [top](#目錄TOC) 
 
