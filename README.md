@@ -382,14 +382,15 @@ graph TB
 ![L](https://i.imgur.com/HJlcXH1.png)
 
 - 修改欄位若有空白或不符規定，則顯示`錯誤訊息`提醒
+![L](https://i.imgur.com/FucpB05.png)
+
 - 修改成功後，文章瀏覽頁面及詳細頁面會呈現文章最新資料
 ![L](https://i.imgur.com/JKOW3lX.png)
 ![L](https://i.imgur.com/YUGZ3Q0.png)
 
-
 ⤴️ [top](#目錄TOC) 
 
-### ProjectTree
+## ProjectTree
 ```bash
 .$ tree -L 7 -I 'target|test|imgs|assets|css|fonts|js|webfonts|backend|testany'
 |-- pom.xml
