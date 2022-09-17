@@ -109,6 +109,7 @@ public class CreateAcServlet extends HttpServlet {
 			// }
 			
 			/*************************** 2.開始新增資料 ***************************************/
+
 			AcServiceImpl acServiceImpl = new AcServiceImpl();
 			acVO.setMem_no(memNo1);
 			acVO.setAc_time(LocalDateTime.now());
