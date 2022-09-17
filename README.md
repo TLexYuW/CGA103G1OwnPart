@@ -309,8 +309,7 @@ graph
 ```
 - 如果討論區沒有任何文章，則顯示`目前沒有文章`
 - 有，則以Card呈現 文章圖片、文章標題、文章更新時間、文章內容
-\
-
+![L](https://i.imgur.com/tQwYwWV.png)
 
 ⤴️ [top](#目錄TOC) 
 
@@ -343,6 +342,8 @@ graph TB
 	GOAS -->|getRequestDispatcher.forward| acDP
 ```
 - 從文章瀏覽頁內點選任一文章，跳轉至該文章詳細頁面，顯示該篇文章所有資訊
+![L](https://i.imgur.com/IN5QAF2.png)
+
 
 ⤴️ [top](#目錄TOC) 
 
