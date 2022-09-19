@@ -266,13 +266,13 @@ flowchart LR
 graph TB
 	subgraph 新增文章
 	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	acC[acCreate.jsp] -->|Click '發表'| cA[createAc.js] -->|Fetch| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
 	subgraph 新增文章圖片
 	direction BT
-	CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	cA -->|Fetch| CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
 	end
 	
@@ -282,7 +282,7 @@ graph TB
 	end
 	
 	acCP -->|Click '發表文章'| acC
-	CAS -->|Validation ? VO : ErrorMessags| acC
+	cA -->|Validation ? VO : ErrorMessags| acC
 ```
 - 如輸入欄位空白或不符規範，則顯示`錯誤訊息`提示
 ![L](https://i.imgur.com/5IHGVFu.png)
