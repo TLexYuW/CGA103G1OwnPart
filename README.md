@@ -266,13 +266,13 @@ flowchart LR
 graph TB
 	subgraph 新增文章
 	direction BT
-	acC[acCreate.jsp] -->|Click '發表'| cA[createAc.js] -->|Fetch| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
+	acC[acCreate.jsp] -->|Click '發表'| cA[createAc.js] -->|fetch request| CAS[CreateAcServlet.java] --> ASI[AcServiceImpl.java] 
 	--> H[DAO/Hibernate] --> DB[(Database)]
 	end
 	
 	subgraph 新增文章圖片
 	direction BT
-	cA -->|Fetch| CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
+	cA -->|fetch request| CAS[CreateAcServlet.java] --> APS[AcPicService.java] 
 	--> DAO[DAO/JDBC] --> DB[(Database)]
 	end
 	
