@@ -69,9 +69,5 @@ public class GetMemOneActServlet extends HttpServlet {
 			String JsonString = gson.toJson("查無此揪團活動編號");
 			res.getWriter().write(JsonString);
 		}
-		
-		
-  
 	}
-
 }
