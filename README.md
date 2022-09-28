@@ -4,7 +4,7 @@
 
 # CGA103G1 - Project Practice 
 ## 旅遊平台 - 揪團活動 & 討論區 功能實作
-*專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/MyCorpLexTW/CGA103G1)*
+*專題整合 URL︰[CGA103G1 TravelPlatform](https://github.com/TLexYuW/TravelPlatform-CGA103G1/tree/main)*
 
 # 目錄TOC
 1. [首頁切版 Home Page - Header Footer 公板](#首頁)
